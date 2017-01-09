@@ -1,0 +1,776 @@
+/****************************************************************
+ * Body style
+ ***************************************************************/
+body, html{
+	min-width: 480px;
+	background: #fff;
+	width: 100%;
+	margin: 0;
+	padding: 0
+}
+
+/***************************************************************
+ * The container
+ ***************************************************************/
+.admin-container{
+	width: 100%;
+	position: relative;
+}
+
+/****************************************************************
+ * Header style
+ ***************************************************************/
+header{
+	line-height: 50px;
+	min-width: 480px;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-image: -webkit-linear-gradient(top, #065099 0%, #03307a 100%);
+	background-image:      -o-linear-gradient(top, #065099 0%, #03307a 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#065099), to(#03307a));
+	background-image:         linear-gradient(to bottom, #065099 0%, #03307a 100%);
+	z-index: 99;
+	padding-left: 15px;
+}
+
+/* Header link */
+
+.header-title{
+	color: #fff;
+	font-weight: bold;
+	font-size: 1.5em;
+
+}
+
+.header-title:hover{
+	color: #fff;
+	text-decoration: none;
+}
+
+header a{
+	color: #fff;
+}
+
+header a:hover, header a:visited{
+	color: #fff;
+	font-size: bold;
+}
+
+.header-right{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.admin-menu-toggle{
+	background: transparent;
+	border: 0;
+	color: white;
+	margin-top: 10px;
+	line-height: 40px;
+	width: 40px;
+}
+
+.admin-menu-toggle:hover{
+	background: #03307a;
+	border-radius: 5px;
+}
+
+.hi{
+	padding: 0 10px;
+	color: #ccc;
+}
+
+.hi, .see{
+	float: left;
+}
+
+.see a{
+	padding: 0 10px;
+	display: block;
+	background: #044d92;
+}
+
+.see a:hover, .see a:active{
+	text-decoration: none;
+	background: #03305a;
+}
+
+
+
+ /***************************************************************
+  * Left bar style
+  **************************************************************/
+.left-bar{
+	background: #044d92;
+	position: fixed;
+	top: 50px;
+	left: 0;
+	bottom: 0;
+	width: 200px;
+	z-index: 99;
+	display: none;
+}
+
+/* Leftbar item */
+.left-bar a{
+	width: 100%;
+	line-height: 50px;
+	color: #fff;
+	display: block;
+	padding-left: 15px;
+	font-size: 1.1em;
+}
+
+.left-bar-active{
+	background-color: #03305a;
+}
+
+.left-bar a:hover{
+	text-decoration: none;
+	background-color: #03305a;
+}
+
+/***************************************************************
+ * Main content
+ ***************************************************************/
+.main{
+	background: #fff;
+	margin-top: 50px;
+	position: relative;
+	padding: 20px 20px 0 20px;
+}
+/* Hide the greeting */
+.sm-hide{
+	display: none;
+}
+
+
+/************************************************************
+ * Content
+ ***********************************************************/
+.title{
+	position: relative;
+	width: 100%;
+	margin-bottom: 3em;
+}
+
+.title a{
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	color: white;
+	font-size: 1.1em;
+}
+
+
+.title a:hover{
+	background: #265a88;
+}
+
+.title a div{
+	float: left;
+	padding: 10px 15px;
+}
+
+.icon{
+	border-right: 1px solid #fff;
+}
+
+
+.filter div{
+	padding: 5px;
+}
+
+.filter{
+	border-bottom: 1px solid #bce8f1;
+	padding-bottom: 10px;
+}
+
+
+/*********************************
+ *  Produts Table
+ ********************************/
+
+ /* Check column width */
+.check-box{
+	width: 20px;
+}
+
+/* Column action width */
+.table-action{
+	width: 100px;
+	display: none;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+/* Column action, status sm */
+.table-action-show,
+.table-status-show{
+	width: 100px;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+/* Column status width */
+.table-status{
+	width: 100px;
+	display: none;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+.table-group{
+	width: 150px
+}
+
+
+/* Column color width */
+.table-color{
+	width: 100px;
+	display: none;
+	text-align: center;
+	vertical-align: middle !important;
+}
+
+/* Column price width */
+.table-price{
+	width: 150px;
+	display: none;
+	text-align: right;
+	vertical-align: middle !important;
+}
+
+/* Vertical align checkbox */
+.check-box{
+	vertical-align: middle !important;
+}
+
+/* Item image */
+.td-image{
+	float: left;
+	height: 50px;
+	width: 50px;
+}
+
+/* Item name */
+.td-product-name{
+	float: left;
+	padding: 0 0 0 5px;
+}
+
+/* Item details */
+.td-details{
+	font-size: 0.8em;
+	font-style: italic;
+}
+
+/* Old price style */
+.td-old-price{
+	text-decoration: line-through;
+	color: #999;
+}
+
+/* Price cells */
+.td-price{
+	text-align: right;
+}
+
+/* Color column span */
+.table-color span{
+	padding: 3px;
+	border-radius: 3px;
+}
+
+.table-product{
+	position: relative;
+}
+
+.delete-all{
+	padding-top: 10px;
+	border-top: 1px solid #d9edf7;
+}
+
+.expand{
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	display: block;
+	width: 40px;
+	line-height: 40px;
+	text-align: center;
+	color: #999;
+}
+
+.expand:hover{
+	color: #000;
+}
+
+.expanded{
+	line-height: 25px;
+	display: none;
+}
+
+table tr:hover{
+	background-color: #d9edf7 !important
+}
+
+.delete-all button{
+	background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+	background-image:      -o-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
+	background-image:         linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
+	color: white;
+}
+
+.delete-all button:hover, .delete-all button:focus{
+	background: #c12e2a;
+	color: white;
+}
+/****** End product table**************/
+
+
+/******************************************
+ * The Form
+ *****************************************/
+
+
+.form-add{
+	margin-top: 15px;
+}
+
+.red{
+	color: red;
+}
+
+.input-60{
+	line-height: 35px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	position: relative;
+	height: 35px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+
+.input-60 input{
+	width: 100%;
+	opacity: 0;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	z-index: 3;
+	position: absolute;
+	cursor: pointer;
+}
+
+.browser{
+	position: absolute;
+	top: 1px;
+	right: 1px;
+	line-height: 31px;
+	width: 31px;
+	text-align: center;
+	z-index: 2;
+	background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%);
+	background-image:      -o-linear-gradient(top, #337ab7 0%, #265a88 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88));
+	background-image:         linear-gradient(to bottom, #337ab7 0%, #265a88 100%);
+	color: white;
+	border-radius: 4px;
+}
+
+.hoder{
+	color: #ccc;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.close{
+	position: absolute;
+	top: 5px;
+	right: 35px;
+	z-index: 99;
+}
+
+#image-list .input-60{
+	margin-top: 15px;
+}
+
+.error{
+	color: red;
+	font-weight: lighter;
+}
+
+#screen{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 100;
+	display: none;
+	overflow-y: auto;
+}
+
+.lazy-loading{
+	text-align: center;
+	color: #fff;
+	margin-top: 20%;
+}
+
+#connect-error{
+	display: none;
+}
+
+/**
+ * Custom pagination links
+ */
+ .ci-pagination{
+ 	text-align: center;
+ }
+
+ .ci-pagination a{
+ 	display: inline-block;
+ 	line-height: 30px;
+ 	padding: 0 10px;
+ 	text-align: center;
+ 	color: white;
+ 	text-shadow: 0 1px 0 #fff;
+ 	background-image: -webkit-linear-gradient(top, #5bc0de 0%, #2aabd2 100%);
+ 	background-image:      -o-linear-gradient(top, #5bc0de 0%, #2aabd2 100%);
+ 	background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc0de), to(#2aabd2));
+ 	background-image:         linear-gradient(to bottom, #5bc0de 0%, #2aabd2 100%);
+ 	margin: 0 3px;
+ 	border-radius: 4px;
+ }
+
+ .ci-pagination a:hover{
+ 	text-decoration: none;
+ 	background: #2aabd2;
+ }
+
+ .current{
+ 	display: inline-block;
+ 	line-height: 30px;
+ 	padding: 0 10px;
+ 	text-align: center;
+ 	text-shadow: 0 1px 0 #000;
+ 	background-image: -webkit-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+ 	background-image:      -o-linear-gradient(top, #fff 0%, #e0e0e0 100%);
+ 	background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#e0e0e0));
+ 	background-image:         linear-gradient(to bottom, #fff 0%, #e0e0e0 100%);
+ 	margin: 0 3px;
+ 	border-radius: 4px;
+ 	color: black;
+ }
+
+#old-list,
+#old-image{
+	margin-top: 3px;
+}
+/********************************************************************************************
+ * Switch Button
+ *******************************************************************************************/
+ /* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 19px;
+  margin-top: 10px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.success{
+	color: green;
+}
+
+.middle{
+	vertical-align: middle !important;
+}
+
+.td-email{
+	width: 200px;
+	display: none;
+}
+
+/*************************************************************
+ * Banner list
+ ************************************************************/
+
+.banner-list{
+	width: 100%;
+}
+
+.banner-item{
+	width: 100%;
+	text-align: center;
+	margin-bottom: 20px;
+	overflow-x: hidden;
+}
+
+.banner{
+	position: relative;
+	text-align: center;
+	width: 100%;
+}
+
+.banner-content{
+	position: absolute;
+	text-align: center;
+	top: 1em;
+	width: 100%;
+	color: white;
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+.banner-content div{
+	margin-bottom: 0.5em;
+}
+
+
+/*********************************************************************************************
+ * Order popup
+ ********************************************************************************************/
+.popup{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	line-height: 30px 
+}
+
+.order-item{
+	width: 99%;
+	background: white;
+	min-height: 300px;
+	margin:1% auto;
+	position: relative;
+	border-radius: 5px;
+	padding-bottom: 15px;
+}
+
+.popup-close{
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+	color: #ccc;
+	z-index: 1;
+}
+
+.popup-close:hover{
+	color: #000;
+}
+
+/******************
+| Dashboard style |
+******************/
+.statistic td{
+	padding: 10px;
+	background: #f9fdf7;
+}
+
+.statistic{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 3px;
+	font-weight: bold;
+}
+
+.statistic tr td:first-child{
+	color: #265a88
+}
+
+.statistic tr td:last-child{
+	color: #A64949
+}
+
+.grad-btn{
+	background-image: -webkit-linear-gradient(top, #337ab7 0%, #265a88 100%) !important;
+	background-image:      -o-linear-gradient(top, #337ab7 0%, #265a88 100%) !important;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#265a88)) !important;
+	background-image:         linear-gradient(to bottom, #337ab7 0%, #265a88 100%) !important;
+	color: white !important;
+}	
+
+.notification{
+	width: 100%;
+	margin-top: 5em;
+	font-size: 1.1em;
+	line-height: 40px;
+	color: #265a88;
+	padding: 15px;
+}
+
+.notification a{
+	font-weight: bold;
+	color: #A64949
+}
+
+.filter-form input,
+.filter-form button,
+.filter-form select{
+	margin: 5px 0;
+}
+
+
+
+/*********************************************************************************************
+ * Apply for screen width greater than 768px
+ ********************************************************************************************/
+@media (min-width: 768px){
+
+	
+
+}
+
+/*********************************************************************************************
+ * Apply for screen width greater than 992px
+ ********************************************************************************************/
+@media (min-width: 992px){
+
+	.admin-menu-toggle{
+		display: none;
+	}
+
+	.sm-hide{
+		display: inline;
+	}
+
+	.left-bar{
+		display: block !important;
+	}
+
+	.main{
+		margin-left: 200px;
+	}
+
+	.name-filter .form-control, .cate-filter .form-control{
+		width: 90%;
+	}
+
+	.input-90{
+		width: 90%;
+	}
+
+	.input-60{
+		width: 60%;
+	}
+
+	.table-action-show,
+	.table-status-show{
+		width: 120px;
+	}
+
+	.td-email{
+		display: table-cell;
+	}
+
+	.order-item{
+		width: 90%;
+		margin: 5% auto;
+	}
+}
+
+.checkbox label{
+	margin-right: 15px;
+}
+
+#image-error{
+	display: block;
+}
+
+/*********************************************************************************************
+ * Apply for screen width greater than 1200px
+ ********************************************************************************************/
+@media (min-width: 1200px){
+	.table-action{
+		display: table-cell;
+	}
+
+	.table-status{
+		display: table-cell;
+	}
+
+	.table-color{
+		display: table-cell;
+	}
+
+	.table-price{
+		display: table-cell;
+	}
+
+	.expand, .expanded{
+		display: none !important;
+	}
+
+	.close{
+		display: none;
+	}
+
+	.input-60:hover .close{
+		display: block;
+	}
+
+	.banner-item{
+		width: 50%;
+		float: left;
+	}
+
+	.order-item{
+		width: 80%;
+		margin: 10% auto;
+	}
+}
