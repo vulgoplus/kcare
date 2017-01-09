@@ -233,7 +233,6 @@ body{
 	font-size: 2em;
 	font-weight: bold;
 	color: white;
-	height: 150px;
 	line-height: 50px;
 }
 
@@ -364,7 +363,7 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 20;
-	display: none;
+	display: block;
 }
 
 .signup-form{
@@ -398,6 +397,11 @@ input.error{
 	font-size: 16px;
 }
 
+#to, #age{
+	background: #eee;
+	cursor: not-allowed;
+}
+
 
 /****************************************/
 
@@ -423,7 +427,6 @@ input.error{
 	} 
 
 	.signup-form{
-		margin-top: 10%;
 		font-size: 1.3em;
 		overflow: hidden;
 		height: auto;
@@ -459,4 +462,19 @@ input.error{
 	.intro-content{
 		height: 500px;
 	}
+
+	.cost-head{
+		height: 150px;
+	}
+
+	#price-list th{
+		background: #ddd;
+	}
+
+	#price-list th, #price-list td{
+		padding: 10px;
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+
 }

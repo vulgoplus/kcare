@@ -51,4 +51,13 @@ $(document).ready(function(){
 			}
 		});
 	});
+
+	$('#from').datepicker({
+		dateFormat: 'dd-mm-yy'
+	});
+
+	$('#birth').datepicker({
+		defaultDate: '05-11-1994',
+		dateFormat : 'dd-mm-yy'
+	});
 });

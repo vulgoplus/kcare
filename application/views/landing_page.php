@@ -7,8 +7,10 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick-theme.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/jquery-ui.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/common.js') ?>"></script>
@@ -18,10 +20,10 @@
 <div class="header">
 	<img src="<?php echo base_url('public/images/logo.png') ?>" class="logo">
 	<div class="banner">
-		<div class="slide1">
+		<div class="slide5">
 			<div class="slide-content">
 				<b>Ung thư ngày càng trẻ hóa</b><br>
-				15 triệu người trên toàn cầu <br> mắc bệnh ung thư mỗi năm và ngày càng trẻ hóa
+				15 triệu người trên toàn cầu mắc bệnh ung <br> thư mỗi năm và ngày càng trẻ hóa
 			</div>
 		</div>
 		<div class="slide2">
@@ -42,10 +44,10 @@
 				Nếu phát hiện kịp thời ngay từ <br> giai đoạn đầu và có chế độ điều trị hợp lý
 			</div>
 		</div>
-		<div class="slide5">
+		<div class="slide1">
 			<div class="slide-content">
 				<b>Hãy tham gia bảo hiểm K-care ngay hôm nay</b><br>
-				Là cách tốt nhất để bảo vệ bạn và chính gia đình bạn <br> trong tương lai
+				Là cách tốt nhất để bảo vệ bạn <br> và chính gia đình bạn trong tương lai
 			</div>
 		</div>
 		<div class="slide6">
@@ -277,41 +279,75 @@
 	<br clear="all">
 </div>
 <div class="screen">
-	<div class="col-md-10 col-md-offset-1 signup-form">
+	<div class="col-md-12 signup-form">
 		<span class="close"><i class="fa fa-times-circle"></i></span>
-		<div class="col-md-6 col-md-push-6">
-			<form method="post" action="<?php echo base_url('admin/customers/add') ?>" id="signup-form">
-				<h3><b>Vui lòng điền thông tin vào đây</b></h3>
-				<div class="form-group">
-					<label>Họ và tên:</label>
-					<input type="text" name="name" class="form-control" placeholder="Họ và Tên">
+		<div class="col-md-7">
+			<h1>TÍNH PHÍ</h1>
+			<div class="form-group form-horizontal">
+				<label class="control-label col-sm-4">Chương trình: </label>
+				<div class="col-sm-8">
+					<select id="program" class="form-control">
+						<option value="0">------Chọn chương trình bảo hiểm-------</option>
+						<option value="1">Chương trình I</option>
+						<option value="2">Chương trình II</option>
+						<option value="3">Chương trình III</option>
+					</select>
 				</div>
-				<div class="form-group">
-					<label>Địa chỉ:</label>
-					<input type="text" name="address" class="form-control" placeholder="Địa chỉ">
+				
+				<div id="total-amount">
+					&nbsp;
 				</div>
-				<div class="form-group">
-					<label>Số điện thoại:</label>
-					<input type="text" name="phone" class="form-control" placeholder="Số điện thoại">
+				<table id="price-list">
+					<thead>
+						<tr>
+							<th colspan="2">BH bệnh ung thư</th>
+							<th colspan="2">Trợ cấp nằm viện</th>
+							<th rowspan="2">Tử vong do bệnh ung thư</th>
+							<th rowspan="2">Tử vong do tai nạn</th>
+						</tr>
+						<tr>
+							<th>Giai đoạn sớm</th>
+							<th>Giai đoạn trễ</th>
+							<th>Giai đoạn sớm</th>
+							<th>Giai đoạn trễ</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>62,500,000</td>
+							<td>250,000,000</td>
+							<td>500,000/ngày, tối đa 30 ngày/cả đời</td>
+							<td>500,000/ngày, tối đa 60 ngày/cả đời</td>
+							<td>12,500,000</td>
+							<td>12,500,000</td>
+						</tr>
+					</tbody>
+				</table>
+				<br clear="all">
+				<div class="col-md-4">
+					Thời hạn bảo hiểm: 
 				</div>
-				<div class="form-group">
-					<label>Email:</label>
-					<input type="email" name="email" placeholder="Email" class="form-control">
+				<div class="col-md-8 limited">
+					<input type="text" id="from"> đến <input type="text" id="to" readonly="readonly">	
 				</div>
-				<button type="submit" class="btn btn-danger">Đăng ký</button>
-			</form>
+				<br clear="all"> <br>
+				<div class="col-md-4">
+					Ngày sinh: 
+				</div>
+				<div class="col-md-8 limited">
+					<input type="text" id="birth"> tuổi <input type="text" id="age" readonly="readonly">	
+				</div><br clear="all"><br>
+				<div class="col-md-4">
+					Giới tính
+				</div>
+				<div class="col-md-8">
+					<input type="radio" name="male"> Nam  &nbsp;&nbsp;&nbsp;
+					<input type="radio" name="female"> Nữ	
+				</div>
+			</div>
 		</div>
-		<div class="col-md-6 col-md-pull-6">
-			<h2>Vì sao nên chọn Bảo Việt K-Care</h2>
-			<ul>
-				<li>Quyền lợi bảo hiểm được thanh toán theo khoản trọn gói cho khách hàng, giúp khách hàng chủ động tài chính đúng vào thời điểm họ cảm thấy có ít lựa chọn.</li>
-				<li>Quyền lợi bảo hiểm được chi trả ngay sau lần chuẩn đoán đầu tiên khi khách hàng cần đến nhất.</li>
-				<li>Quyền lợi bảo hiểm được đảm bảo tự động tái tục theo chu kỳ 10 năm mà không cần thẩm định gì thêm.</li>
-				<li>Phí bảo hiểm hấp dẫn với thủ tục tham gia đơn giản và thuận tiện.</li>
-				<li>Phí bảo hiểm được áp dụng cùng khung tỷ lệ phí theo định kỳ 10 năm.</li>
-				<li>Phí bảo hiểm được thanh toán trong suốt thời hạn của hợp đồng bảo hiểm và được tái tục hàng năm.</li>
-				<li>Quyền lợi bảo hiểm lên tới 1 tỉ đồng</li>
-			</ul>
+		<div class="col-md-5">
+			
 		</div>
 	</div>
 </div>
