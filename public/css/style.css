@@ -4,12 +4,18 @@
 }
 
 @font-face {
-    font-family: BreeSerif;
-    src: url(../fonts/BreeSerif.otf);
+    font-family: MyriadPro;
+    src: url(../fonts/MYRIADPRO-LIGHTSEMICN.OTF);
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url(../fonts/MYRIADPRO-BOLDSEMICN.OTF);
+    font-weight: bold;
 }
 
 *{
-	font-family: BreeSerif;
+	font-family: MyriadPro;
 }
 
 body{
@@ -401,7 +407,7 @@ input.error{
 	}
 
 	.banner div{
-		font-size: 1.3em;
+		font-size: 1.2em;
 	}
 
 	.tile-2, .tile-3, .tile-6{
