@@ -280,7 +280,7 @@
 	<div class="col-md-10 col-md-offset-1 signup-form">
 		<span class="close"><i class="fa fa-times-circle"></i></span>
 		<div class="col-md-6 col-md-push-6">
-			<form method="post" action="http://google.com" id="signup-form">
+			<form method="post" action="<?php echo base_url('admin/customers/add') ?>" id="signup-form">
 				<h3><b>Vui lòng điền thông tin vào đây</b></h3>
 				<div class="form-group">
 					<label>Họ và tên:</label>
