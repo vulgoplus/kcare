@@ -10,6 +10,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/common.js') ?>"></script>
 	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('public/images/icon.png') ?>">
 </head>
@@ -279,24 +280,26 @@
 	<div class="col-md-10 col-md-offset-1 signup-form">
 		<span class="close"><i class="fa fa-times-circle"></i></span>
 		<div class="col-md-6 col-md-push-6">
-			<h3><b>Vui lòng điền thông tin vào đây</b></h3>
-			<div class="form-group">
-				<label>Họ và tên:</label>
-				<input type="text" name="name" class="form-control" placeholder="Họ và Tên">
-			</div>
-			<div class="form-group">
-				<label>Địa chỉ:</label>
-				<input type="text" name="address" class="form-control" placeholder="Địa chỉ">
-			</div>
-			<div class="form-group">
-				<label>Số điện thoại:</label>
-				<input type="text" name="phone" class="form-control" placeholder="Số điện thoại">
-			</div>
-			<div class="form-group">
-				<label>Email:</label>
-				<input type="email" name="email" placeholder="Email" class="form-control">
-			</div>
-			<button type="submit" class="btn btn-danger">Đăng ký</button>
+			<form method="post" action="http://google.com" id="signup-form">
+				<h3><b>Vui lòng điền thông tin vào đây</b></h3>
+				<div class="form-group">
+					<label>Họ và tên:</label>
+					<input type="text" name="name" class="form-control" placeholder="Họ và Tên">
+				</div>
+				<div class="form-group">
+					<label>Địa chỉ:</label>
+					<input type="text" name="address" class="form-control" placeholder="Địa chỉ">
+				</div>
+				<div class="form-group">
+					<label>Số điện thoại:</label>
+					<input type="text" name="phone" class="form-control" placeholder="Số điện thoại">
+				</div>
+				<div class="form-group">
+					<label>Email:</label>
+					<input type="email" name="email" placeholder="Email" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-danger">Đăng ký</button>
+			</form>
 		</div>
 		<div class="col-md-6 col-md-pull-6">
 			<h2>Vì sao nên chọn Bảo Việt K-Care</h2>

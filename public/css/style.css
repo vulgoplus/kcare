@@ -379,6 +379,20 @@ body{
 	top: 0;
 }
 
+input.error{
+	border: 1px red solid;
+}
+
+
+.error{
+	font-weight: lighter;
+	color: red;
+	font-style: italic;
+	font-family: tahoma;
+	font-size: 16px;
+}
+
+
 /****************************************/
 
 @media (min-width: 992px){
