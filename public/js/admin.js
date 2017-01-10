@@ -26,8 +26,8 @@ $(document).ready(function(){
 	/**
 	 * Check all checkbox
 	 */
-	$('#checkAll').change(function(){
-		$('.select').prop('checked',$(this).prop('checked'));
+	$('#check-all').change(function(){
+		$('input[name="id[]"]').prop('checked',$(this).prop('checked'));
 	});
 
 	/**
@@ -50,38 +50,6 @@ $(document).ready(function(){
 		}
 	});
 
-	/**
-	 * Admin input file
-	 */
-	$("#add-image").click(function(){
-		$("#image-list").append(
-			'<div>'+
-			'<div class="input-60">'+
-				'<span class="hoder">Chưa chọn ảnh nào!</span>'+
-				'<input type="file" name="list[]" class="image">'+
-				'<div class="browser">'+
-					'<i class="fa fa-plus"></i>'+
-				'</div>'+
-				'<a href="javascript:void" class="close"><i class="fa fa-close"></i></a>'+
-			'</div>'+
-			'<span class="red"></span>'+
-			'</div>'
-		);
-	});
-
-	/**
-	 * Close input file
-	 */
-	$(document).on('click','.close',function(){
-		$(this).parent().parent().remove();
-	});		
-
-	/**
-	 * Hide alert
-	 */
-	$(document).on('click','.alert',function(){
-		$(this).fadeOut();
-	});
 
 	/**
 	 * Delete a row
@@ -106,15 +74,11 @@ $(document).ready(function(){
 		}
 	});
 
-	$('input[name="sale"]').keyup(function(e){
-		$(this).val($(this).val().replace(/[^0-9]/,''));
-	});
 
-	
 	/**
-	 * Change categories status
+	 * Change status
 	 */
-	$('.input-status').click(function(e){
+	$('.change-status').click(function(e){
 		e.preventDefault();
 		var x = $(this);
 		$("#screen").show();
@@ -129,8 +93,7 @@ $(document).ready(function(){
 				$('#screen').hide();
 			},
 			error: function(){
-				$('#screen').hide();
-				$("#connect-error").show();
+				alert("Lỗi mạng!");
 			}
 		});
 	});

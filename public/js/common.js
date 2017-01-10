@@ -214,7 +214,10 @@ $(document).ready(function(){
 		}
 	});
 
+	//Hide success message
 	$('.save-success').click(function(){
 		$(this).hide();
 	});
+
+	$
 });
