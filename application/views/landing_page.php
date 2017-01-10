@@ -7,10 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick-theme.css') ?>">
-	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/jquery-ui.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
-	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-ui.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/common.js') ?>"></script>
@@ -280,11 +278,12 @@
 </div>
 <div class="screen">
 	<div class="col-md-12 signup-form">
-		<span class="close"><i class="fa fa-times-circle"></i></span>
+		<span class="closex"><i class="fa fa-times"></i></span>
 		<div class="col-md-4">
 			<h1>TÍNH PHÍ</h1>
+			<hr>
 			<div class="form-group form-horizontal">
-				<label class="control-label col-sm-4">Chương trình: </label>
+				<label class="control-label col-sm-4" style="text-align: left; padding: 0">Chương trình: </label>
 				<div class="col-sm-8">
 					<select id="program" class="form-control">
 						<option value="0">------Chọn chương trình bảo hiểm-------</option>
@@ -292,63 +291,104 @@
 						<option value="2">Chương trình II</option>
 						<option value="3">Chương trình III</option>
 					</select>
+				</div><br clear="all">
+				<br>
+				<div id="price">
+					Bảng tóm tắt quyền lợi bảo hiểm theo chương trình bạn đã chọn (loại tiền VND)
+					<div id="total-amount">
+						&nbsp;
+					</div>
+					<table id="price-list">
+						<thead>
+							<tr>
+								<th colspan="2">BH bệnh ung thư</th>
+								<th colspan="2">Trợ cấp nằm viện</th>
+								<th rowspan="2">Tử vong do bệnh ung thư</th>
+								<th rowspan="2">Tử vong do tai nạn</th>
+							</tr>
+							<tr>
+								<th>Giai đoạn sớm</th>
+								<th>Giai đoạn trễ</th>
+								<th>Giai đoạn sớm</th>
+								<th>Giai đoạn trễ</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td id="col-1"></td>
+								<td id="col-2""></td>
+								<td id="col-3"></td>
+								<td id="col-4"></td>
+								<td id="col-5"></td>
+								<td id="col-6"></td>
+							</tr>
+						</tbody>
+					</table>
+					<br clear="all">
 				</div>
-				
-				<div id="total-amount">
-					&nbsp;
-				</div>
-				<table id="price-list">
-					<thead>
-						<tr>
-							<th colspan="2">BH bệnh ung thư</th>
-							<th colspan="2">Trợ cấp nằm viện</th>
-							<th rowspan="2">Tử vong do bệnh ung thư</th>
-							<th rowspan="2">Tử vong do tai nạn</th>
-						</tr>
-						<tr>
-							<th>Giai đoạn sớm</th>
-							<th>Giai đoạn trễ</th>
-							<th>Giai đoạn sớm</th>
-							<th>Giai đoạn trễ</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr>
-							<td>62,500,000</td>
-							<td>250,000,000</td>
-							<td>500,000/ngày, tối đa 30 ngày/cả đời</td>
-							<td>500,000/ngày, tối đa 60 ngày/cả đời</td>
-							<td>12,500,000</td>
-							<td>12,500,000</td>
-						</tr>
-					</tbody>
-				</table>
-				<br clear="all">
-				<div class="col-md-4">
-					Tuổi:
+				<div class="col-md-4" style="padding: 0">
+					<b>Tuổi:</b>
 				</div>
 				<div class="col-md-8">
 					<select name="age" id="age">
+						<option value="0">--Tuổi--</option>
 						<?php for($i = 16; $i <= 65; $i++): ?>
 							<option value="<?php echo $i ?>"><?php echo $i ?></option>
 						<?php endfor;  ?>
 					</select>
 				</div>
 				<br clear="all"><br>
-				<div class="col-md-4">
-					Giới tính:
+				<div class="col-md-4" style="padding: 0">
+					<b>Giới tính:</b>
 				</div>
 				<div class="col-md-8">
-					<input type="radio" name="sex" value="male" checked="checked"> Nam  &nbsp;&nbsp;&nbsp;
+					<input type="radio" name="sex" value="male" checked="checked" id="sex"> Nam  &nbsp;&nbsp;&nbsp;
 					<input type="radio" name="sex" value="female"> Nữ	
-				</div>
+				</div><br clear="all">
+				<hr>
+				<h3 id="cost">Phí bảo hiểm/năm: <span class="total"></span> VNĐ</h3>
+				<input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
 			</div>
 		</div>
-		<div class="col-md-4">
-			
+		<div class="col-md-4 table-responsive" style="padding-left: 30px; padding-right: 30px">
+			<h1>ĐĂNG KÝ</h1>
+			<hr>
+			<form id="signup-form">
+				<div class="form-group">
+					<label>Họ và tên: </label>
+					<input type="text" name="name" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Email: </label>
+					<input type="email" name="email" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Địa chỉ: </label>
+					<input type="text" name="address" class="form-control">
+				</div>
+				<div class="form-group">
+					<label>Số điện thoại: </label>
+					<input type="text" name="phone" class="form-control">
+				</div>
+				<button type="submit" class="btn btn-danger">Đăng ký</button>
+			</form>
 		</div>
-		<div class="col-md-4">
-			
+		<div class="col-md-4" style="padding: 20px">
+			<div class="order-info">
+				<div class="order-heading">
+					<h1>THÔNG TIN ĐƠN HÀNG</h1>
+					Sản phẩm: Bảo hiệm bệnh ưng thư
+				</div>
+				<div class="order-body">
+					<i class="fa fa-calendar"></i> Thời hạn bảo hiểm: <b id="deadline"></b><br>
+					<i class="fa fa-user"></i> Người được bảo hiểm: <b id="customer-name"></b><br>
+					<i class="fa fa-cog"></i> Tuổi: <b id="b-age"></b><br>
+					<i class="fa fa-calendar"></i> Số năm tham gia: <b>10 năm</b><br>
+					<i class="fa fa-dollar"></i> Cách thức thanh toán: <b>Từng năm một</b> <br>
+					<hr style="color: #ccc">
+					<i class="fa fa-money"></i> <b>Phí bảo hiểm: <span class="total"></span></b><br>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
