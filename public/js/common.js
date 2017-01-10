@@ -12,6 +12,7 @@ $(document).ready(function(){
 	$('.signup a').click(function(e){
 		e.preventDefault();
 		$('.screen').show();
+		$('.save-success').hide();
 	});
 
 	$('.signup-form').click(function(e){
@@ -37,17 +38,39 @@ $(document).ready(function(){
 		}
 	});
 
-	$('#signup-from').submit(function(e){
+
+	//Signup request
+	$('#signup-form').submit(function(e){
 		e.preventDefault();
+		var flag = true;
+		if($('#program').val()==0){
+			$('#program-error').text('Chọn chương trình bạn muốn đăng ký!');
+			flag = false;
+		}else{
+			$('#program-error').text('');
+		}
+
+		if($('#age').val()==0){
+			$('#age-error').text('Chọn tuổi của bạn!');
+			flag = false;
+		}else{
+			$('#age-error').text('');
+		}
+
+		if(!flag)
+			return false;
+		$('.save-success').show();
+		$('.save-success').html('<i class="fa fa-spinner fa-pulse"></i>');
+
 		$.ajax({
-			url: $('#signup-from').attr('action'),
-			data: $('#signup-from').serialize(),
+			url: $('#signup-form').attr('action'),
+			data: $('#signup-form').serialize(),
 			type: 'POST',
 			success: function(data){
-				alert(data);
+				$('.save-success').text('Bạn đã đăng ký thành công, chúng tôi sẽ liên hệ với bạn sớm nhất để hoàn tất hợp đồng!');
 			},
 			error: function(){
-
+				alert('Có lỗi xảy ra!');
 			}
 		});
 	});
@@ -65,6 +88,12 @@ $(document).ready(function(){
 
 	//Order age
 	$('#age').change(function(){
+		$('input[name="age"]').val($('#age').val());
+
+		if($('#age').val()!=0){
+			$('#age-error').text('');
+		}
+
 		if($(this).val()!=0){
 			$('#b-age').text($(this).val());
 		}else{
@@ -95,6 +124,11 @@ $(document).ready(function(){
 
 	//Change program table
 	$("#program").change(function(){
+		$('input[name="program"]').val($('#program').val());
+		if($('#program').val()!=0){
+			$('#program-error').text('');
+		}
+
 		switch($('#program').val()){
 			case '1':
 				$('#price').show();
@@ -132,6 +166,7 @@ $(document).ready(function(){
 				break;
 		}
 
+		//Age change action: Ajax request
 		if($('#age').val() != 0 && $('#program').val() !=0){
 			$.ajax({
 				url: $('#base_url').val()+'admin/customers/get_price',
@@ -154,7 +189,9 @@ $(document).ready(function(){
 		}
 	});
 
+	//Sex change action: ajax request
 	$('input[name="sex"]').change(function(){
+		$('input[name="sex"]').val($('#sex').is(':checked')?1:0);
 		if($('#age').val() != 0 && $('#program').val() !=0){
 			$.ajax({
 				url: $('#base_url').val()+'admin/customers/get_price',
@@ -175,5 +212,9 @@ $(document).ready(function(){
 		}else{
 			$('#cost').hide();
 		}
+	});
+
+	$('.save-success').click(function(){
+		$(this).hide();
 	});
 });

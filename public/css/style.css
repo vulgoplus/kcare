@@ -399,10 +399,6 @@ input.error{
 	font-family: tahoma;
 }
 
-#age{
-	padding: 2px;
-	border-radius: 2px;
-}
 
 .order-info{
 	line-height: 30px;
@@ -445,6 +441,11 @@ input.error{
 
 #cost{
 	display: none;
+}
+
+.save-success{
+	color: green;
+	cursor: pointer;
 }
 
 /****************************************/

@@ -20,5 +20,9 @@
 			$this->db->where($data);
 			return $this->db->get('price_list')->result_array()[0]['price'];
 		}
+
+		public function add($customer){
+			$this->db->insert('customers',$customer);
+		}
 	}
 ?>

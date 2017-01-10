@@ -282,7 +282,7 @@
 		<div class="col-md-4">
 			<h1>TÍNH PHÍ</h1>
 			<hr>
-			<div class="form-group form-horizontal">
+			<form class="form-group form-horizontal" id="pseudo">
 				<label class="control-label col-sm-4" style="text-align: left; padding: 0">Chương trình: </label>
 				<div class="col-sm-8">
 					<select id="program" class="form-control">
@@ -291,6 +291,7 @@
 						<option value="2">Chương trình II</option>
 						<option value="3">Chương trình III</option>
 					</select>
+					<label class="error" id="program-error"></label>
 				</div><br clear="all">
 				<br>
 				<div id="price">
@@ -330,12 +331,13 @@
 					<b>Tuổi:</b>
 				</div>
 				<div class="col-md-8">
-					<select name="age" id="age">
+					<select name="age" id="age" class="form-control" style="width: 100px">
 						<option value="0">--Tuổi--</option>
 						<?php for($i = 16; $i <= 65; $i++): ?>
 							<option value="<?php echo $i ?>"><?php echo $i ?></option>
 						<?php endfor;  ?>
 					</select>
+					<label class="error" id="age-error"></label>
 				</div>
 				<br clear="all"><br>
 				<div class="col-md-4" style="padding: 0">
@@ -348,12 +350,12 @@
 				<hr>
 				<h3 id="cost">Phí bảo hiểm/năm: <span class="total"></span> VNĐ</h3>
 				<input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
-			</div>
+			</form>
 		</div>
-		<div class="col-md-4 table-responsive" style="padding-left: 30px; padding-right: 30px">
+		<div class="col-md-4" style="padding-left: 30px; padding-right: 30px">
 			<h1>ĐĂNG KÝ</h1>
 			<hr>
-			<form id="signup-form">
+			<form id="signup-form" action="<?php echo base_url('admin/customers/add') ?>" method="post">
 				<div class="form-group">
 					<label>Họ và tên: </label>
 					<input type="text" name="name" class="form-control">
@@ -370,7 +372,13 @@
 					<label>Số điện thoại: </label>
 					<input type="text" name="phone" class="form-control">
 				</div>
+				<input type="hidden" name="program">
+				<input type="hidden" name="age">
+				<input type="hidden" name="sex" value="1">
 				<button type="submit" class="btn btn-danger">Đăng ký</button>
+				<div class="save-success">
+					
+				</div>
 			</form>
 		</div>
 		<div class="col-md-4" style="padding: 20px">
