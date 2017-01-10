@@ -281,7 +281,7 @@
 <div class="screen">
 	<div class="col-md-12 signup-form">
 		<span class="close"><i class="fa fa-times-circle"></i></span>
-		<div class="col-md-7">
+		<div class="col-md-4">
 			<h1>TÍNH PHÍ</h1>
 			<div class="form-group form-horizontal">
 				<label class="control-label col-sm-4">Chương trình: </label>
@@ -325,28 +325,29 @@
 				</table>
 				<br clear="all">
 				<div class="col-md-4">
-					Thời hạn bảo hiểm: 
-				</div>
-				<div class="col-md-8 limited">
-					<input type="text" id="from"> đến <input type="text" id="to" readonly="readonly">	
-				</div>
-				<br clear="all"> <br>
-				<div class="col-md-4">
-					Ngày sinh: 
-				</div>
-				<div class="col-md-8 limited">
-					<input type="text" id="birth"> tuổi <input type="text" id="age" readonly="readonly">	
-				</div><br clear="all"><br>
-				<div class="col-md-4">
-					Giới tính
+					Tuổi:
 				</div>
 				<div class="col-md-8">
-					<input type="radio" name="male"> Nam  &nbsp;&nbsp;&nbsp;
-					<input type="radio" name="female"> Nữ	
+					<select name="age" id="age">
+						<?php for($i = 16; $i <= 65; $i++): ?>
+							<option value="<?php echo $i ?>"><?php echo $i ?></option>
+						<?php endfor;  ?>
+					</select>
+				</div>
+				<br clear="all"><br>
+				<div class="col-md-4">
+					Giới tính:
+				</div>
+				<div class="col-md-8">
+					<input type="radio" name="sex" value="male" checked="checked"> Nam  &nbsp;&nbsp;&nbsp;
+					<input type="radio" name="sex" value="female"> Nữ	
 				</div>
 			</div>
 		</div>
-		<div class="col-md-5">
+		<div class="col-md-4">
+			
+		</div>
+		<div class="col-md-4">
 			
 		</div>
 	</div>

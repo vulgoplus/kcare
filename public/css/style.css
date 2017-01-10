@@ -397,9 +397,9 @@ input.error{
 	font-size: 16px;
 }
 
-#to, #age{
-	background: #eee;
-	cursor: not-allowed;
+#age{
+	padding: 2px;
+	border-radius: 2px;
 }
 
 
@@ -427,7 +427,6 @@ input.error{
 	} 
 
 	.signup-form{
-		font-size: 1.3em;
 		overflow: hidden;
 		height: auto;
 	}
