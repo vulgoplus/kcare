@@ -18,13 +18,17 @@
 	font-family: MyriadPro;
 }
 
-body{
+html, body{
+	overflow-x: hidden;
+}
+
+.wrapper{
+	width: 100%;
 	overflow-x: hidden;
 }
 
 .header{
 	position: relative;
-	box-shadow: 0px 5px 5px #888888;
 }
 
 .logo{
@@ -363,7 +367,7 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 20;
-	display: block;
+	display: none;
 }
 
 .signup-form{
@@ -376,12 +380,15 @@ body{
 	padding-bottom: 15px;
 }
 
-.close{
+.closex{
 	position: absolute;
-	cursor: pointer;
-	z-index: 99;
-	right: 0;
-	top: 0;
+	border-radius: 50%;
+	right: 5px;
+	top: 2px
+}
+
+.closex .fa{
+	font-size: 30px;
 }
 
 input.error{
@@ -394,16 +401,84 @@ input.error{
 	color: red;
 	font-style: italic;
 	font-family: tahoma;
-	font-size: 16px;
 }
 
-#to, #age{
-	background: #eee;
-	cursor: not-allowed;
+
+.order-info{
+	line-height: 30px;
+	color: #fff;
 }
 
+.order-heading{
+	background: #bb8d09;
+	padding: 15px;
+}
+
+.order-body{
+	background: linear-gradient(to bottom, #3185da, #1964af);
+	padding: 15px;
+	font-size: 15px;
+}
+
+#price{
+	display: none;
+}
+
+#price-list{
+	table-layout:fixed;
+    width:100%;
+}
+
+#col-1, #col-2, #col-3, #col-4, #col-5, #col-6{
+	display: block;
+	width: 100%;
+}
+
+#price-list th{
+	display: none;
+}
+
+#price-list td span:before{
+	content: attr(data);
+	font-weight: bold;
+}
+
+#cost{
+	display: none;
+}
+
+.save-success{
+	color: green;
+	cursor: pointer;
+}
 
 /****************************************/
+@media (min-width: 1200px){
+	#col-1, #col-2, #col-3, #col-4, #col-5, #col-6{
+		display: table-cell;
+		width: auto;
+	}
+
+	#price-list td span:before{
+		content: "";
+		display: none;
+	}
+
+	#price-list th{
+		display: table-cell;
+	}
+
+	#price-list th{
+		background: #ddd;
+	}
+
+	#price-list th, #price-list td{
+		padding: 10px;
+		border: 1px solid #ccc;
+		text-align: center;
+	}
+}
+
 
 @media (min-width: 992px){
 	.logo{
@@ -427,9 +502,40 @@ input.error{
 	} 
 
 	.signup-form{
-		font-size: 1.3em;
 		overflow: hidden;
 		height: auto;
+		border: 4px solid #fff;
+		background: #eee;
+		border-radius: 5px;
+		background: url(../images/popup.jpg);
+		background-size: cover;
+		width: 94%;
+		margin-top: 20px;
+		margin-left: 3%;
+		z-index: 50;
+		overflow: visible;
+	}
+
+	.closex{
+		right: -10px;
+		top: -10px;
+		background: #000;
+		color: #fff;
+		display: inline-block;
+		height: 25px;
+		line-height: 25px;
+		width: 25px;
+		text-align: center;
+		border: 1px solid #fff;
+		z-index: 99;
+	}
+
+	.closex:hover{
+		cursor: pointer;
+	}
+
+	.closex .fa{
+		font-size: 20px;
 	}
 
 	.cost{
@@ -466,15 +572,4 @@ input.error{
 	.cost-head{
 		height: 150px;
 	}
-
-	#price-list th{
-		background: #ddd;
-	}
-
-	#price-list th, #price-list td{
-		padding: 10px;
-		border: 1px solid #ccc;
-		text-align: center;
-	}
-
 }
