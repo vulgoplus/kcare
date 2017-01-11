@@ -219,5 +219,9 @@ $(document).ready(function(){
 		$(this).hide();
 	});
 
-	$
+	$('.slide').css({'height': $(this).width()* (700/1920)});
+	
+	$(window).resize(function(){
+		$('.slide').css({'height': $(this).width()* (700/1920)});
+	});
 });

@@ -54,7 +54,7 @@ $(document).ready(function(){
 	/**
 	 * Delete a row
 	 */
-	$('#delete').click(function(e){
+	$('.delete').click(function(e){
 		e.preventDefault();
 		var x= $(this);
 		if(confirm("Bạn có chắc muốn xóa mục này?")){

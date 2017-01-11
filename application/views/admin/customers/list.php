@@ -23,8 +23,8 @@ Danh sách khách hàng
 				</label>
 			</td>
 			<td align="center" class="action">
-				<a id="view" href="<?php echo base_url('admin/customers/view/'.$customer['id']) ?>"><i class="fa fa-th"></i></a>&nbsp;
-				<a id="delete" href="<?php echo base_url('admin/customers/delete/'.$customer['id']) ?>"><i class="fa fa-remove"></i></a>
+				<a class="view" href="<?php echo base_url('admin/customers/view/'.$customer['id']) ?>"><i class="fa fa-th"></i></a>&nbsp;
+				<a class="delete" href="<?php echo base_url('admin/customers/delete/'.$customer['id']) ?>"><i class="fa fa-remove"></i></a>
 			</td>
 		</tr>
 	<?php endforeach ?>
