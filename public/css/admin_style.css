@@ -506,6 +506,7 @@ table td{
 	background: #eee;
 	border: 1px solid white;
 	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 .customer-pagination a:hover{

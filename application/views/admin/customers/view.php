@@ -1,4 +1,4 @@
-<h1><i class="fa fa-user"></i> Khách hàng</h1>
+<h1>Khách hàng</h1>
 Chi tiết khách hàng
 <hr>
 <div class="panel panel-default">
