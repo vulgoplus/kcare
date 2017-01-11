@@ -292,7 +292,7 @@
 						<option value="3">Chương trình III</option>
 					</select>
 					<label class="error" id="program-error"></label>
-				</div><br clear="all">
+				</div>
 				<br>
 				<div id="price">
 					Bảng tóm tắt quyền lợi bảo hiểm theo chương trình bạn đã chọn (loại tiền VND)

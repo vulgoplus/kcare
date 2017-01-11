@@ -132,32 +132,32 @@ $(document).ready(function(){
 		switch($('#program').val()){
 			case '1':
 				$('#price').show();
-				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm:">62,500,000</span>');
-				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ:">250,000,000</span>');
-				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm:">500,000/ ngày, tối đa 30 ngày/cả đời</span>');
-				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ:">500,000/ ngày, tối đa 60 ngày/cả đời</span>');
-				$('#col-5').html('<span data="Tử vong do bện ung thư:">12,500,000</span>');
-				$('#col-6').html('<span data="Tử vong do tai nạn:">12,500,000</span>');
+				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm: ">62,500,000</span>');
+				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ: ">250,000,000</span>');
+				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm: ">500,000/ ngày, tối đa 30 ngày/cả đời</span>');
+				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ: ">500,000/ ngày, tối đa 60 ngày/cả đời</span>');
+				$('#col-5').html('<span data="Tử vong do bện ung thư: ">12,500,000</span>');
+				$('#col-6').html('<span data="Tử vong do tai nạn: ">12,500,000</span>');
 				$('#total-amount').html('<b>Chương trình 1 - Số tiền bảo hiểm: 292,500,000</b>');
 				break;
 			case '2':
 				$('#price').show();
-				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm:">125,000,000</span>');
-				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ:">500,000,000</span>');
-				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm:">51,000,000/ ngày, tối đa 30 ngày/cả đời</span>');
-				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ:">1,000,000/ ngày, tối đa 60 ngày/cả đời</span>');
-				$('#col-5').html('<span data="Tử vong do bện ung thư:">25,000,000</span>');
-				$('#col-6').html('<span data="Tử vong do tai nạn:">25,000,000</span>');
+				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm: ">125,000,000</span>');
+				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ: ">500,000,000</span>');
+				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm: ">51,000,000/ ngày, tối đa 30 ngày/cả đời</span>');
+				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ: ">1,000,000/ ngày, tối đa 60 ngày/cả đời</span>');
+				$('#col-5').html('<span data="Tử vong do bện ung thư: ">25,000,000</span>');
+				$('#col-6').html('<span data="Tử vong do tai nạn: ">25,000,000</span>');
 				$('#total-amount').html('<b>Chương trình 1 - Số tiền bảo hiểm: 292,500,000</b>');
 				break;
 			case '3':
 				$('#price').show();
-				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm:">250,000,000</span>');
-				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ:">1,000,000,000</span>');
-				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm:">52,000,000/ ngày, tối đa 30 ngày/cả đời</span>');
-				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ:">2,000,000/ ngày, tối đa 60 ngày/cả đời</span>');
-				$('#col-5').html('<span data="Tử vong do bện ung thư:">50,000,000</span>');
-				$('#col-6').html('<span data="Tử vong do tai nạn:">50,000,000</span>');
+				$("#col-1").html('<span data="BH bệnh ung thư giai đoạn sớm: ">250,000,000</span>');
+				$("#col-2").html('<span data="BH bệnh ung thư giai đoạn trễ: ">1,000,000,000</span>');
+				$('#col-3').html('<span data="Trợ cấp nằm viện GĐ sớm: ">52,000,000/ ngày, tối đa 30 ngày/cả đời</span>');
+				$('#col-4').html('<span data="Trợ cấp nằm viện GĐ trễ: ">2,000,000/ ngày, tối đa 60 ngày/cả đời</span>');
+				$('#col-5').html('<span data="Tử vong do bện ung thư: ">50,000,000</span>');
+				$('#col-6').html('<span data="Tử vong do tai nạn: ">50,000,000</span>');
 				$('#total-amount').html('<b>Chương trình 3 - Số tiền bảo hiểm: 1,170,000,000</b>');
 				break;
 			default:
