@@ -352,6 +352,23 @@
 				<input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
 			</form>
 		</div>
+		<div class="col-md-4" style="padding: 20px">
+			<div class="order-info">
+				<div class="order-heading">
+					<h1>THÔNG TIN ĐƠN HÀNG</h1>
+					Sản phẩm: Bảo hiệm bệnh ưng thư
+				</div>
+				<div class="order-body">
+					<i class="fa fa-calendar"></i> Thời hạn bảo hiểm: <b id="deadline"></b><br>
+					<i class="fa fa-user"></i> Người được bảo hiểm: <b id="customer-name"></b><br>
+					<i class="fa fa-cog"></i> Tuổi: <b id="b-age"></b><br>
+					<i class="fa fa-calendar"></i> Số năm tham gia: <b>10 năm</b><br>
+					<i class="fa fa-dollar"></i> Cách thức thanh toán: <b>Từng năm một</b> <br>
+					<hr style="color: #ccc">
+					<i class="fa fa-money"></i> <b>Phí bảo hiểm: <span class="total"></span></b><br>
+				</div>
+			</div>
+		</div>
 		<div class="col-md-4" style="padding-left: 30px; padding-right: 30px">
 			<h1>ĐĂNG KÝ</h1>
 			<hr>
@@ -380,23 +397,6 @@
 					
 				</div>
 			</form>
-		</div>
-		<div class="col-md-4" style="padding: 20px">
-			<div class="order-info">
-				<div class="order-heading">
-					<h1>THÔNG TIN ĐƠN HÀNG</h1>
-					Sản phẩm: Bảo hiệm bệnh ưng thư
-				</div>
-				<div class="order-body">
-					<i class="fa fa-calendar"></i> Thời hạn bảo hiểm: <b id="deadline"></b><br>
-					<i class="fa fa-user"></i> Người được bảo hiểm: <b id="customer-name"></b><br>
-					<i class="fa fa-cog"></i> Tuổi: <b id="b-age"></b><br>
-					<i class="fa fa-calendar"></i> Số năm tham gia: <b>10 năm</b><br>
-					<i class="fa fa-dollar"></i> Cách thức thanh toán: <b>Từng năm một</b> <br>
-					<hr style="color: #ccc">
-					<i class="fa fa-money"></i> <b>Phí bảo hiểm: <span class="total"></span></b><br>
-				</div>
-			</div>
 		</div>
 	</div>
 </div>

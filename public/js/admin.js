@@ -54,7 +54,7 @@ $(document).ready(function(){
 	/**
 	 * Delete a row
 	 */
-	$('.delete').click(function(e){
+	$('#delete').click(function(e){
 		e.preventDefault();
 		var x= $(this);
 		if(confirm("Bạn có chắc muốn xóa mục này?")){
@@ -68,7 +68,7 @@ $(document).ready(function(){
 				},
 				error: function(){
 					$("#screen").hide();
-					$("#connect-error").show();
+					alert('Lỗi mạng!');
 				}
 			})
 		}
@@ -93,28 +93,40 @@ $(document).ready(function(){
 				$('#screen').hide();
 			},
 			error: function(){
+				$("#screen").hide();
 				alert("Lỗi mạng!");
 			}
 		});
 	});
 
 	/**
-	 * Check all sizes
-	 */
-	$('input[name="all-size"]').change(function(){
-		$('input[name="size[]"]').prop('checked',$(this).prop('checked'));
+	* Delete checked box
+	*/
+	$('#delete-all').click(function(e){
+		var id = [];
+		var x = $(this);
+		if(confirm('Bạn có chắc muốn xóa những mục này!')){
+			$("#screen").show();
+			$('input[name="id[]"]:checked').each(function(){
+				id.push($(this).val());
+			});
+			$.ajax({
+				url: x.attr('data-url'),
+				method: 'POST',
+				data: {
+					id : id
+				},
+				success:function($data){
+					$('#screen').hide();
+					$('input[name="id[]"]:checked').each(function(){
+						$(this).parent().parent().remove();
+					});
+				},
+				error: function(){
+					$("#screen").hide();
+					alert("Lỗi mạng!");
+				}
+			});
+		}
 	});
-
-	/**
-	 * Click and clear thumbnail image
-	 */
-	$("#add-image").click(function(){
-		$("#old-list").remove();
-	});
-
-	$('.popup-close').click(function(){
-		$('.popup').hide();
-		$('#screen').hide();
-	});
-
 });

@@ -41,8 +41,9 @@
 		* Get all customers
 		* @return customers list
 		*/
-		public function get_all(){
+		public function get($per_page, $offset = 1){
 			$this->db->order_by('id','DESC');
+			$this->db->limit($per_page, ($offset - 1) * $per_page);
 			return $this->db->get('customers')->result_array();
 		}
 
@@ -50,6 +51,25 @@
 			$this->db->where('id',$id);
 			$this->db->set('status',$status);
 			$this->db->update('customers');
+		}
+
+		public function delete($id){
+			$this->db->where('id',$id);
+			$this->db->delete('customers');
+		}
+
+		public function multi_delete($id){
+			$this->db->where_in('id', $id);
+			$this->db->delete('customers');
+		}
+
+		public function get_customer_by_id($id){
+			$this->db->where('id', $id);
+			return $this->db->get('customers')->result_array()[0];
+		}
+
+		public function total_rows(){
+			return $this->db->count_all_results('customers');
 		}
 	}
 ?>

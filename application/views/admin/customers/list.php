@@ -12,7 +12,7 @@ Danh sách khách hàng
 	</tr>
 	<?php foreach ($customers as $customer): ?>
 		<tr>
-			<td><input type="checkbox" name="id[]"></td>
+			<td><input type="checkbox" name="id[]" value="<?php echo $customer['id'] ?>"></td>
 			<td valign="middle"><?php echo $customer['name'] ?></td>
 			<td><?php echo $customer['email'] ?></td>
 			<td><?php echo $customer['phone'] ?></td>
@@ -23,10 +23,14 @@ Danh sách khách hàng
 				</label>
 			</td>
 			<td align="center" class="action">
-				<a href=""><i class="fa fa-th"></i></a>&nbsp;
-				<a href=""><i class="fa fa-remove"></i></a>
+				<a id="view" href="<?php echo base_url('admin/customers/view/'.$customer['id']) ?>"><i class="fa fa-th"></i></a>&nbsp;
+				<a id="delete" href="<?php echo base_url('admin/customers/delete/'.$customer['id']) ?>"><i class="fa fa-remove"></i></a>
 			</td>
 		</tr>
 	<?php endforeach ?>
 </table>
-<button type="button" class="btn btn-danger">Xóa mục đã chọn</button>
+<div class="customer-pagination">
+	<?php echo $this->pagination->create_links() ?>
+</div>
+<button id="delete-all" data-url="<?php echo base_url('admin/customers/multi_delete') ?>" type="button" class="btn btn-danger">Xóa mục đã chọn</button>
+<hr>
