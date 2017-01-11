@@ -32,7 +32,7 @@
 
 	<!--The navigation-->
 	<div class="left-bar">
-		<a href="#"><i class="fa fa-dashboard"></i> Yêu cầu</a>
+		<a href="#" class="left-bar-active"><i class="fa fa-dashboard"></i> Yêu cầu</a>
 		<a href="#"><i class="fa fa-product-hunt"></i> Tin tức</a>
 		<a href="#"><i class="fa fa-product-hunt"></i> Đăng ký</a>
 	</div><!--End navigation-->
@@ -40,6 +40,11 @@
 	<div class="main">
 		<!--Load content here-->
 		<?php $this->load->view('admin/'.$view) ?>
+	</div>
+</div>
+<div id="screen">
+	<div class="lazy-loading">
+		<i class="fa fa-spinner fa-pulse fa-4x"></i>
 	</div>
 </div>
 </body>

@@ -26,8 +26,8 @@ $(document).ready(function(){
 	/**
 	 * Check all checkbox
 	 */
-	$('#checkAll').change(function(){
-		$('.select').prop('checked',$(this).prop('checked'));
+	$('#check-all').change(function(){
+		$('input[name="id[]"]').prop('checked',$(this).prop('checked'));
 	});
 
 	/**
@@ -50,43 +50,11 @@ $(document).ready(function(){
 		}
 	});
 
-	/**
-	 * Admin input file
-	 */
-	$("#add-image").click(function(){
-		$("#image-list").append(
-			'<div>'+
-			'<div class="input-60">'+
-				'<span class="hoder">Chưa chọn ảnh nào!</span>'+
-				'<input type="file" name="list[]" class="image">'+
-				'<div class="browser">'+
-					'<i class="fa fa-plus"></i>'+
-				'</div>'+
-				'<a href="javascript:void" class="close"><i class="fa fa-close"></i></a>'+
-			'</div>'+
-			'<span class="red"></span>'+
-			'</div>'
-		);
-	});
-
-	/**
-	 * Close input file
-	 */
-	$(document).on('click','.close',function(){
-		$(this).parent().parent().remove();
-	});		
-
-	/**
-	 * Hide alert
-	 */
-	$(document).on('click','.alert',function(){
-		$(this).fadeOut();
-	});
 
 	/**
 	 * Delete a row
 	 */
-	$('.delete').click(function(e){
+	$('#delete').click(function(e){
 		e.preventDefault();
 		var x= $(this);
 		if(confirm("Bạn có chắc muốn xóa mục này?")){
@@ -100,21 +68,17 @@ $(document).ready(function(){
 				},
 				error: function(){
 					$("#screen").hide();
-					$("#connect-error").show();
+					alert('Lỗi mạng!');
 				}
 			})
 		}
 	});
 
-	$('input[name="sale"]').keyup(function(e){
-		$(this).val($(this).val().replace(/[^0-9]/,''));
-	});
 
-	
 	/**
-	 * Change categories status
+	 * Change status
 	 */
-	$('.input-status').click(function(e){
+	$('.change-status').click(function(e){
 		e.preventDefault();
 		var x = $(this);
 		$("#screen").show();
@@ -129,102 +93,40 @@ $(document).ready(function(){
 				$('#screen').hide();
 			},
 			error: function(){
-				$('#screen').hide();
-				$("#connect-error").show();
+				$("#screen").hide();
+				alert("Lỗi mạng!");
 			}
 		});
 	});
 
 	/**
-	 * Check all sizes
-	 */
-	$('input[name="all-size"]').change(function(){
-		$('input[name="size[]"]').prop('checked',$(this).prop('checked'));
-	});
-
-	/**
-	 * Click and clear thumbnail image
-	 */
-	$("#add-image").click(function(){
-		$("#old-list").remove();
-	});
-
-	$('.popup-close').click(function(){
-		$('.popup').hide();
-		$('#screen').hide();
-	});
-
-
-	$('.order').click(function(e){
-		e.preventDefault();
-		$('#screen').show();
+	* Delete checked box
+	*/
+	$('#delete-all').click(function(e){
+		var id = [];
 		var x = $(this);
-		$('#id').text(x.siblings('input[name="id"]').val());
-		$('#cus_name').text(x.siblings('input[name="name"]').val());
-		$('#cus_phone').text(x.siblings('input[name="phone"]').val());
-		$('#cus_mail').text(x.siblings('input[name="email"]').val());
-		$('#note').text(x.siblings('input[name="note"]').val());
-		$('.order_id').val(x.siblings('input[name="id"]').val());
-		$("#payment_type").val(x.siblings('input[name="payment"]').val());
-		switch(x.siblings('input[name="payment"]').val()){
-			case 'baokim':
-				$('#payment').text('Bảo kim');
-				break;
-			case 'nganluong':
-				$('#payment').text('Ngân lượng');
-				break;
-			default:
-				$('#payment').text('Thanh thoán khi nhận hàng');
-				break;
+		if(confirm('Bạn có chắc muốn xóa những mục này!')){
+			$("#screen").show();
+			$('input[name="id[]"]:checked').each(function(){
+				id.push($(this).val());
+			});
+			$.ajax({
+				url: x.attr('data-url'),
+				method: 'POST',
+				data: {
+					id : id
+				},
+				success:function($data){
+					$('#screen').hide();
+					$('input[name="id[]"]:checked').each(function(){
+						$(this).parent().parent().remove();
+					});
+				},
+				error: function(){
+					$("#screen").hide();
+					alert("Lỗi mạng!");
+				}
+			});
 		}
-
-		$('#created').text(x.siblings('input[name="created"]').val());
-
-		$.ajax({
-			url: x.attr('href'),
-			dataType: 'json',
-			type: 'POST',
-			success: function(data){
-				$('#product-list').empty();
-				$.each(data, function(i, val){
-					$('#product-list').append('<tr><td>'+val.product_id+'</td><td>'+val.name +' x '+val.qty+'</td><td>'+val.size.toUpperCase()+'</td><td>'+val.money+'</td></tr>');
-				});
-				$('#total-amount').text(x.siblings('input[name="money"]').val()+' VNĐ');
-				$('.popup').slideDown();
-			},
-			error: function(){
-				$('#screen').hide();
-				$("#connect-error").show();
-			}
-		});
-
-		switch(x.siblings('input[name="payment_status"]').val()){
-			case '1':
-				$('#payment_status').html('<span style="color: #0f0">Đã thanh toán</span>');
-			 	break;
-			case '2':
-				$('#payment_status').html('<span style="color: #f00">Thanh toán thất bại</span>');
-				break;
-			default:
-				$('#payment_status').html('<span style="color: orange">Đang chờ</span>');
-				break;
-		}
-
-		switch(x.siblings('input[name="status"]').val()){
-			case '1':
-				$('#status').html('<span style="color: #0f0">Đã giao hàng</span>');
-				$('#action').hide()
-			 	break;
-			case '2':
-				$('#status').html('<span style="color: #f00">Đã hủy</span>');
-				$('#action').hide()
-				break;
-			default:
-				$('#status').html('<span style="color: orange">Đang chờ</span>');
-				$('#action').show();
-				break;
-		}
-
-		$('#screen').show();
 	});
 });

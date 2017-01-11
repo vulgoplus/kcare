@@ -87,17 +87,6 @@ header a:hover, header a:visited{
 	float: left;
 }
 
-.see a{
-	padding: 0 10px;
-	display: block;
-	background: #044d92;
-}
-
-.see a:hover, .see a:active{
-	text-decoration: none;
-	background: #03305a;
-}
-
 
 
  /***************************************************************
@@ -200,138 +189,6 @@ header a:hover, header a:visited{
 	width: 20px;
 }
 
-/* Column action width */
-.table-action{
-	width: 100px;
-	display: none;
-	text-align: center;
-	vertical-align: middle !important;
-}
-
-/* Column action, status sm */
-.table-action-show,
-.table-status-show{
-	width: 100px;
-	text-align: center;
-	vertical-align: middle !important;
-}
-
-/* Column status width */
-.table-status{
-	width: 100px;
-	display: none;
-	text-align: center;
-	vertical-align: middle !important;
-}
-
-.table-group{
-	width: 150px
-}
-
-
-/* Column color width */
-.table-color{
-	width: 100px;
-	display: none;
-	text-align: center;
-	vertical-align: middle !important;
-}
-
-/* Column price width */
-.table-price{
-	width: 150px;
-	display: none;
-	text-align: right;
-	vertical-align: middle !important;
-}
-
-/* Vertical align checkbox */
-.check-box{
-	vertical-align: middle !important;
-}
-
-/* Item image */
-.td-image{
-	float: left;
-	height: 50px;
-	width: 50px;
-}
-
-/* Item name */
-.td-product-name{
-	float: left;
-	padding: 0 0 0 5px;
-}
-
-/* Item details */
-.td-details{
-	font-size: 0.8em;
-	font-style: italic;
-}
-
-/* Old price style */
-.td-old-price{
-	text-decoration: line-through;
-	color: #999;
-}
-
-/* Price cells */
-.td-price{
-	text-align: right;
-}
-
-/* Color column span */
-.table-color span{
-	padding: 3px;
-	border-radius: 3px;
-}
-
-.table-product{
-	position: relative;
-}
-
-.delete-all{
-	padding-top: 10px;
-	border-top: 1px solid #d9edf7;
-}
-
-.expand{
-	position: absolute;
-	top: 15px;
-	right: 15px;
-	display: block;
-	width: 40px;
-	line-height: 40px;
-	text-align: center;
-	color: #999;
-}
-
-.expand:hover{
-	color: #000;
-}
-
-.expanded{
-	line-height: 25px;
-	display: none;
-}
-
-table tr:hover{
-	background-color: #d9edf7 !important
-}
-
-.delete-all button{
-	background-image: -webkit-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
-	background-image:      -o-linear-gradient(top, #d9534f 0%, #c12e2a 100%);
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c12e2a));
-	background-image:         linear-gradient(to bottom, #d9534f 0%, #c12e2a 100%);
-	color: white;
-}
-
-.delete-all button:hover, .delete-all button:focus{
-	background: #c12e2a;
-	color: white;
-}
-/****** End product table**************/
 
 
 /******************************************
@@ -424,7 +281,7 @@ table tr:hover{
 .lazy-loading{
 	text-align: center;
 	color: #fff;
-	margin-top: 20%;
+	margin-top: 15%;
 }
 
 #connect-error{
@@ -535,48 +392,8 @@ input:checked + .slider:before {
 	color: green;
 }
 
-.middle{
+table td{
 	vertical-align: middle !important;
-}
-
-.td-email{
-	width: 200px;
-	display: none;
-}
-
-/*************************************************************
- * Banner list
- ************************************************************/
-
-.banner-list{
-	width: 100%;
-}
-
-.banner-item{
-	width: 100%;
-	text-align: center;
-	margin-bottom: 20px;
-	overflow-x: hidden;
-}
-
-.banner{
-	position: relative;
-	text-align: center;
-	width: 100%;
-}
-
-.banner-content{
-	position: absolute;
-	text-align: center;
-	top: 1em;
-	width: 100%;
-	color: white;
-	font-size: 1.3em;
-	font-weight: bold;
-}
-
-.banner-content div{
-	margin-bottom: 0.5em;
 }
 
 
@@ -665,6 +482,43 @@ input:checked + .slider:before {
 	margin: 5px 0;
 }
 
+.th-center{
+	text-align: center;
+}
+
+.info div{
+	line-height: 30px;
+	border-bottom: 1px solid #ccc;
+	padding: 15px;
+}
+
+.info div:nth-child(odd){
+	background: #eee;
+}
+
+.customer-pagination{
+	text-align: center;
+	padding: 20px;
+}
+
+.customer-pagination a{
+	display: inline-block;
+	background: #eee;
+	border: 1px solid white;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+
+.customer-pagination a:hover{
+	background: #ddd;
+	text-decoration: none;
+}
+
+.customer-pagination strong{
+	display: inline-block;
+	border: 1px solid white;
+	padding: 5px 10px;
+}
 
 
 /*********************************************************************************************
@@ -732,6 +586,10 @@ input:checked + .slider:before {
 	display: block;
 }
 
+
+.action .fa{
+	font-size: 20px;
+}
 /*********************************************************************************************
  * Apply for screen width greater than 1200px
  ********************************************************************************************/
