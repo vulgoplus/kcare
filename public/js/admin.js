@@ -36,13 +36,11 @@ $(document).ready(function(){
 	$(document).on('change','.image',function(){
 		if($(this).val()===''){
 			$(this).prev().text('Chưa chọn ảnh nào!');
-			alert(1);
 		}else{
 			var x = $(this).val().split('\\');
 			$(this).prev().text(x[x.length -1]);
 			if(!$(this).val().match(/(?:gif|jpg|png|bmp|jpeg)$/)){
 				$(this).parent().next().text('Vui lòng chọn ảnh: jpg, jpeg, png, gif');
-
 			}else{
 				$(this).parent().next().text('');
 			}

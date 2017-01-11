@@ -13,7 +13,15 @@ Thêm tin tức
 			</div>
 			<div class="form-group">
 				<label>Ảnh hiển thị: </label>
-				<input type="text" name="image" class="form-control">
+				
+				<div class="input-60">
+					<span class="hoder">Chưa chọn ảnh nào!</span>
+					<input name="image" class="image" type="file">
+					<div class="browser">
+						<i class="fa fa-plus"></i>
+					</div>
+				</div>
+				<label id="image-error" class="error" for="image"></label>
 			</div>
 			<div class="form-group">
 				<label>Nội dung: </label>
