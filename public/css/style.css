@@ -595,4 +595,8 @@ input.error{
 		height: auto;
 		width: auto;
 	}
+
+	.slide-content{
+		left: 8.4%;
+	}
 }
