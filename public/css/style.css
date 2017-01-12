@@ -70,9 +70,6 @@ html, body{
 	height: auto;
 }
 
-.slick-dotted.slick-slider{
-	margin-bottom: 0;
-}
 
 
 .slide1{
@@ -113,7 +110,7 @@ html, body{
 ****************************************/
 
 .introduction{
-	margin-top: 0px;
+	margin-top: -80px;
 }
 
 
@@ -121,9 +118,23 @@ html, body{
 	background: #1F90CF url("../images/background.png");
 	color: white;
 	font-size: 1.4em;
-	padding: 10px;
+	padding: 30px;
+
 }
 
+.intro-content p{
+	text-align: justify;
+	text-shadow: 2px 2px #000;
+}
+
+.slide-content b{
+	font-size: 50px;
+}
+
+.intro-content h1{
+	font-size: 50px;
+	font-weight: bold;
+}
 
 .intro-img{
 	background: url("../images/intro.jpg");
@@ -467,6 +478,10 @@ input.error{
 	cursor: pointer;
 }
 
+
+.slick-dots li.slick-active button:before{
+	color: #bb8d09;
+}
 /****************************************/
 @media (min-width: 1200px){
 	#col-1, #col-2, #col-3, #col-4, #col-5, #col-6{
@@ -588,9 +603,6 @@ input.error{
 		height: 150px;
 	}
 
-	.slick-dotted.slick-slider{
-		margin-bottom: 20px;
-	}
 
 	.logo{
 		height: auto;
@@ -599,5 +611,15 @@ input.error{
 
 	.slide-content{
 		left: 8.4%;
+	}
+
+	.slick-dots li button:before{
+		font-size: 25px;
+		color: #3f9cff;
+		opacity: 0.75
+	}
+
+	.slick-dots{
+		margin-bottom: 70px;
 	}
 }

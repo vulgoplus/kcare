@@ -60,7 +60,7 @@
 	</div>
 	<div class="introduction">
 		<div class="col-md-5 col-md-offset-1 intro-content">
-			<h1>Giới thiệu về bảo hiểm K-Care</h1>
+			<h1>Bảo hiểm K-care</h1>
 			<p>
 				Bảo hiểm Ung thư Bảo Việt Care là sản phẩm bảo hiểm chuyên biệt cho bệnh Ung thư lần đầu tiên có mặt tại Việt Nam. Biểu phí được thiết kế cho độ tuổi từ 16 -55 tuổi, chi tiết phí theo từng giới tính, từng chương trình, từng độ tuổi tham gia. Một ưu điểm rất hấp dẫn của sản phẩm là mức phí được duy trì áp dụng không thay đổi suốt 10 năm.
 			</p>

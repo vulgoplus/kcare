@@ -18,7 +18,8 @@
 			}
 
 			$news = array(
-				'title'   => $this->input->post('title')
+				'title'   => $this->input->post('title'),
+				
 			);
 		}
 
