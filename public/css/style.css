@@ -60,6 +60,7 @@ html, body{
 	font-family: Thinpaw;
 	text-align: left;
 	position: relative;
+	background-position: right;
 }
 
 .slide-content{
