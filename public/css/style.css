@@ -21,6 +21,7 @@
 html, body{
 	overflow-x: hidden;
 	height: 100%;
+	-webkit-overflow-scrolling: touch;
 }
 
 .wrapper{
@@ -69,7 +70,6 @@ html, body{
 	padding: 15px;
 	height: auto;
 }
-
 
 
 .slide1{
@@ -128,7 +128,7 @@ html, body{
 }
 
 .slide-content b{
-	font-size: 50px;
+	font-size: 2em;
 }
 
 .intro-content h1{
@@ -150,6 +150,10 @@ html, body{
 .quanlity div{
 	padding-top: 50px;
 	padding-bottom: 30px;
+}
+
+.quanlity span{
+	font-size: 1.4em;
 }
 
 .signup{
@@ -182,7 +186,7 @@ html, body{
 
 .tile{
 	color: white;
-	font-size: 1.1em;
+	font-size: 1.4em;
 	margin-top: 60px;
 }
 
@@ -290,6 +294,7 @@ html, body{
 
 .cost table tr td{
 	display: block;
+	font-size: 1.4em;
 }
 
 .cost table td:before { 
@@ -333,6 +338,10 @@ html, body{
 .statistical{
 	color: #1964af;
 	text-align: center;
+}
+
+.statistical span{
+	font-size: 1.4em
 }
 
 .statistical div{
@@ -520,7 +529,7 @@ input.error{
 	}
 
 	.tile-2, .tile-3, .tile-6{
-		height: 500px;
+		height: 600px;
 	}
 
 	.cost table th{
@@ -580,10 +589,10 @@ input.error{
 		display: table-cell;
 	}
 
+
 	.cost table tr td:first-child {
 		background: transparent; 
 		font-weight:normal;
-		font-size:1em;
 	}
 
 	.cost table tr td{
@@ -601,6 +610,10 @@ input.error{
 
 	.cost-head{
 		height: 150px;
+	}
+
+	.code-head table{
+		font-size: 1.4em;
 	}
 
 

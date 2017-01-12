@@ -6,7 +6,7 @@ Thêm tin tức
 		Thêm tin tức
 	</div>
 	<div class="panel-body">
-		<form action="#" method="post">
+		<form action="<?php base_url('admin/news/add') ?>" method="post" id="news">
 			<div class="form-group">
 				<label>Tiêu đề: </label>
 				<input type="text" name="title" class="form-control">
@@ -16,7 +16,7 @@ Thêm tin tức
 				
 				<div class="input-60">
 					<span class="hoder">Chưa chọn ảnh nào!</span>
-					<input name="image" class="image" type="file">
+					<input name="image" class="image" type="file" accept="image/*">
 					<div class="browser">
 						<i class="fa fa-plus"></i>
 					</div>
@@ -33,11 +33,12 @@ Thêm tin tức
 					<option>---Chọn thư mục---</option>
 				</select>
 			</div>
-			<input type="submit" name="posted" class="btn btn-primary">
+			<input type="submit" name="posted" class="btn btn-primary" value="Đăng">
 		</form>
 	</div>
 </div>
 <script type="text/javascript" src="<?php echo base_url('public/js/tinymce/tinymce.min.js') ?>"></script>
+<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
 <script type="text/javascript">
 	tinymce.init({
 	  selector: 'textarea',
@@ -61,4 +62,22 @@ Thêm tin tức
 	    '//www.tinymce.com/css/codepen.min.css'
 	  ]
 	 });
+
+	$.validator.addMethod('isSelected', function(value, element){
+		return this.optional(element) || parseInt(value);
+	}, 'Vui lòng chọn danh mục lưu!');
+
+	$('#news').validate({
+		rules: {
+			title       : 'required',
+			content     : 'required',
+			category_id : 'isSelected',
+			image       : 'required'
+		},
+		messages: {
+			title   : 'Vui lòng nhập tiêu đề cho bài viết!',
+			content : 'Nội dung không được để trống',
+			image   : 'Hình ảnh không được để trống!'
+		}
+	});
 </script>

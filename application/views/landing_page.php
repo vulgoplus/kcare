@@ -77,27 +77,27 @@
 	<div class="col-md-10 col-md-offset-1 quanlity">
 		<div class="col-md-2">
 			<i class="fa fa-check-square-o fa-4x"></i><br>
-			Sản phẩm của công ty Bảo Việt đơn vị bảo hiểm uy tín nhất Việt Nam
+			<span>Sản phẩm của công ty Bảo Việt đơn vị bảo hiểm uy tín nhất Việt Nam</span>
 		</div>
 		<div class="col-md-2">
 			<i class="fa fa-bookmark-o fa-4x"></i><br>
-			Sản phẩm đầu tiên và duy nhất có mặt tại Việt Nam
+			<span>Sản phẩm đầu tiên và duy nhất có mặt tại Việt Nam</span>
 		</div>
 		<div class="col-md-2">
 			<i class="fa fa-stethoscope fa-4x"></i><br>
-			Bảo hiểm chuyên biệt dành riêng cho bệnh nhân mắc bênh ung thư
+			<span>Bảo hiểm chuyên biệt dành riêng cho bệnh nhân mắc bênh ung thư</span>
 		</div>
 		<div class="col-md-2">
 			<i class="fa fa-line-chart fa-4x"></i><br>
-			Có 3 mức tham gia bảo hiểm tương ứng với 3 mức quyền lợi tăng dần
+			<span>Có 3 mức tham gia bảo hiểm tương ứng với 3 mức quyền lợi tăng dần</span>
 		</div>
 		<div class="col-md-2">
 			<i class="fa fa-calendar fa-4x"></i><br>
-			Mức phí tham gia bảo hiểm được đóng định kỳ hàng năm
+			<span>Mức phí tham gia bảo hiểm được đóng định kỳ hàng năm</span>
 		</div>
 		<div class="col-md-2">
 			<i class="fa fa-database fa-4x"></i><br>
-			Duy trì mức phí suốt 10 năm của một chu kỳ bảo hiểm
+			<span>Duy trì mức phí suốt 10 năm của một chu kỳ bảo hiểm</span>
 		</div>
 		<br clear="all">
 	</div>
@@ -230,22 +230,22 @@
 		<div class="col-md-3 col-xs-6">
 			<b class="fa fa-calendar-check-o fa-3x"></b>
 			<h1>249</h1>
-			Ngày hoạt động
+			<span>Ngày hoạt động</span>
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<b class="fa fa-building fa-3x"></b>
 			<h1>120</h1>
-			Đại lý đã đăng ký
+			<span>Đại lý đã đăng ký</span>
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<b class="fa fa-file-text fa-3x"></b>
 			<h1>32.677</h1>
-			Hợp đồng đã được bán
+			<span>Hợp đồng đã được bán</span>
 		</div>
 		<div class="col-md-3 col-xs-6">
 			<b class="fa fa-user-md fa-3x"></b>
 			<h1>250</h1>
-			Khách hàng đang chờ kích hoạt
+			<span>Khách hàng đang chờ kích hoạt</span>
 		</div>
 	</div>	<br clear="all">
 	<div class="footer">

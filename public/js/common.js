@@ -219,9 +219,31 @@ $(document).ready(function(){
 		$(this).hide();
 	});
 
-	$('.slide').css({'height': $(this).width()* (700/1920)});
+	if($(window).width() < 992){
+		$('.slide').css({'height': $(this).width()* (1000/1920)});
+	}else
+		$('.slide').css({'height': $(this).width()* (700/1920)});
 	
 	$(window).resize(function(){
-		$('.slide').css({'height': $(this).width()* (700/1920)});
+		if($(window).width() < 992){
+			$('.slide').css({'height': $(this).width()* (1000/1920)});
+		}else
+			$('.slide').css({'height': $(this).width()* (700/1920)});
+	});
+
+
+	$(function() {
+	  $('a[href*="#"]:not([href="#"])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html, body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
 	});
 });
