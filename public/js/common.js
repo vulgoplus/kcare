@@ -2,7 +2,21 @@ $(document).ready(function(){
 	$(".banner").slick({
 		dots: true,
 		autoplay: true,
-  		autoplaySpeed: 4000
+  		autoplaySpeed: 4000,
+  		arrows: false
+	});
+
+	$('.slick-active > .slide-content').removeClass('hidden');
+	$('.slick-active > .slide-content').addClass('animated fadeInDown');
+
+	$('.banner').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+		$('.slide-content').removeClass('animated fadeInDown');
+		$('.slide-content').addClass('hidden');
+	});
+
+	$('.banner').on('afterChange', function(event, slick, currentSlide, nextSlide){
+		$('.slick-active > .slide-content').removeClass('hidden');
+		$('.slick-active > .slide-content').addClass('animated fadeInDown');
 	});
 
 	$('.screen').click(function(){

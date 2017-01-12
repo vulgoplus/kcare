@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick-theme.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/style.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/animate.min.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
@@ -20,7 +21,7 @@
 		<img src="<?php echo base_url('public/images/logo.png') ?>" class="logo">
 		<div class="banner">
 			<div class="slide5 slide">
-				<div class="slide-content">
+				<div class="slide-content hidden">
 					<b>Ung thư ngày càng trẻ hóa</b><br>
 					15 triệu người trên toàn cầu mắc bệnh ung <br> thư mỗi năm và ngày càng trẻ hóa
 				</div>

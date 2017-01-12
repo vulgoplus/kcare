@@ -65,11 +65,12 @@ html, body{
 
 .slide-content{
 	position: absolute;
-	top: 20%;
+	top: 10%;
 	left: 0;
 	right: 10%;
 	padding: 15px;
 	height: auto;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -96,6 +97,7 @@ html, body{
 .slide6{
 	background: url("../images/slide6.jpg");
 }
+
 
 /* Override slick-bottom property of slick plugin */
 .slick-dots{
@@ -125,7 +127,6 @@ html, body{
 
 .intro-content p{
 	text-align: justify;
-	text-shadow: 2px 2px #000;
 }
 
 .slide-content b{
@@ -488,6 +489,10 @@ input.error{
 	cursor: pointer;
 }
 
+.hidden{
+	display: none;
+}
+
 
 .slick-dots li.slick-active button:before{
 	color: #bb8d09;
@@ -518,6 +523,7 @@ input.error{
 		text-align: center;
 	}
 }
+
 
 
 @media (min-width: 992px){
@@ -635,5 +641,9 @@ input.error{
 
 	.slick-dots{
 		margin-bottom: 70px;
+	}
+
+	.slide-content{
+		top: 20%;
 	}
 }
