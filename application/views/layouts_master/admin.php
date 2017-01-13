@@ -32,9 +32,9 @@
 
 	<!--The navigation-->
 	<div class="left-bar">
-		<a href="#" class="left-bar-active"><i class="fa fa-dashboard"></i> Yêu cầu</a>
+		<a href="#" class="left-bar-active"><i class="fa fa-dashboard"></i> Khách hàng đăng ký</a>
 		<a href="#"><i class="fa fa-product-hunt"></i> Tin tức</a>
-		<a href="#"><i class="fa fa-product-hunt"></i> Đăng ký</a>
+		<a href="#"><i class="fa fa-product-hunt"></i> Đăng ký đại lý</a>
 	</div><!--End navigation-->
 
 	<div class="main">

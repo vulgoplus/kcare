@@ -265,6 +265,7 @@ header a:hover, header a:visited{
 .error{
 	color: red;
 	font-weight: lighter;
+	cursor: pointer;
 }
 
 #screen{
@@ -390,6 +391,7 @@ input:checked + .slider:before {
 
 .success{
 	color: green;
+	cursor: pointer;
 }
 
 table td{

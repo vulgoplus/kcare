@@ -75,7 +75,7 @@ html, body{
 
 
 .slide1{
-	background: url("../images/slide1.jpg");
+	background: url("../images/slide5.jpg");
 }
 
 .slide2{
@@ -91,7 +91,7 @@ html, body{
 }
 
 .slide5{
-	background: url("../images/slide5.jpg");
+	background: url("../images/slide1.jpg");
 }
 
 .slide6{
@@ -224,17 +224,17 @@ html, body{
 }
 
 .tile-1{
-	background: url("../images/tile1.jpg");
+	background: url("../images/condition.jpg");
 	background-size: cover;
 }
 
 .tile-4{
-	background: url("../images/tile2.jpg");
+	background: url("../images/benifit.jpg");
 	background-size: cover;
 }
 
 .tile-5{
-	background: url("../images/tile3.jpg");
+	background: url("../images/adventage.jpg");
 	background-size: cover;
 }
 
@@ -560,7 +560,7 @@ input.error{
 	}
 
 	.tile-2, .tile-3, .tile-6{
-		height: 600px;
+		height: 500px;
 	}
 
 	.cost table th{
@@ -671,8 +671,8 @@ input.error{
 		top: 20%;
 	}
 
-	#price-list tbody tr td:nth-child(odd){
-		background: #fff;
+	#price-list tbody tr td{
+		background-color: #fff !important;
 	}
 
 	#price-list td{

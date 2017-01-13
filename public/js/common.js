@@ -3,7 +3,8 @@ $(document).ready(function(){
 		dots: true,
 		autoplay: true,
   		autoplaySpeed: 4000,
-  		arrows: false
+  		arrows: false,
+  		pauseOnHover: false
 	});
 
 	$('.slick-active > .slide-content').removeClass('hidden');
@@ -234,20 +235,21 @@ $(document).ready(function(){
 	$('.save-success').click(function(){
 		$(this).hide();
 	});
-
+	
 	if($(window).width() < 992){
-		$('.slide').css({'height': $(this).width()* (1000/1920)});
+		$('.slide').css({'height': $(this).width()* (1300/1920)});
 	}else
 		$('.slide').css({'height': $(this).width()* (700/1920)});
-	
+
 	$(window).resize(function(){
 		if($(window).width() < 992){
-			$('.slide').css({'height': $(this).width()* (1000/1920)});
+			$('.slide').css({'height': $(this).width()* (1300/1920)});
 		}else
 			$('.slide').css({'height': $(this).width()* (700/1920)});
 	});
 
 
+	//Fix scroll smoth on iOS
 	$(function() {
 	  $('a[href*="#"]:not([href="#"])').click(function() {
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {

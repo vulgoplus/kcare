@@ -6,7 +6,8 @@ Thêm tin tức
 		Thêm tin tức
 	</div>
 	<div class="panel-body">
-		<form action="<?php base_url('admin/news/add') ?>" method="post" id="news">
+		<label class="error"><?php echo isset($message)?$message:'' ?></label>
+		<form action="<?php base_url('admin/news/add') ?>" method="post" id="news" enctype="multipart/form-data">
 			<div class="form-group">
 				<label>Tiêu đề: </label>
 				<input type="text" name="title" class="form-control">
@@ -30,7 +31,10 @@ Thêm tin tức
 			<div class="form-group">
 				<label>Danh mục: </label>
 				<select name="category_id" class="form-control">
-					<option>---Chọn thư mục---</option>
+					<option value="0">---Chọn thư mục---</option>
+					<?php foreach ($categories as $category): ?>
+						<option value="<?php echo $category['id'] ?>"><?php echo $category['category_name']; ?></option>
+					<?php endforeach ?>
 				</select>
 			</div>
 			<input type="submit" name="posted" class="btn btn-primary" value="Đăng">

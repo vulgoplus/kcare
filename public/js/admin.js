@@ -63,6 +63,8 @@ $(document).ready(function(){
 				success: function(data){
 					$("#screen").hide();
 					x.parent().parent().remove();
+					$('.success').text(data);
+					$('.success').removeClass('hidden');
 				},
 				error: function(){
 					$("#screen").hide();
@@ -114,11 +116,13 @@ $(document).ready(function(){
 				data: {
 					id : id
 				},
-				success:function($data){
+				success:function(data){
 					$('#screen').hide();
 					$('input[name="id[]"]:checked').each(function(){
 						$(this).parent().parent().remove();
 					});
+					$('.success').text(data);
+					$('.success').removeClass('hidden');
 				},
 				error: function(){
 					$("#screen").hide();
@@ -126,5 +130,14 @@ $(document).ready(function(){
 				}
 			});
 		}
+	});
+
+	//Hide message when clicked
+	$('.error').click(function(){
+		$(this).addClass('hidden');
+	});
+
+	$('.success').click(function(){
+		$(this).addClass('hidden');
 	});
 });

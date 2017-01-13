@@ -78,11 +78,11 @@
 	<div class="col-md-10 col-md-offset-1 quanlity">
 		<div class="medium-2">
 			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf1.png'); ?>" class="img img-responsive" align="middle">
-			<span>Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam</span>
+			<span>Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất VN</span>
 		</div>
 		<div class="medium-2">
 			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf2.png'); ?>" class="img img-responsive" align="middle">
-			<span>Sản phẩm đầu tiên và quy nhất trên thị trường</span>
+			<span>Sản phẩm đầu tiên và duy nhất trên thị trường</span>
 		</div>
 		<div class="medium-2">
 			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf3.png'); ?>" class="img img-responsive" align="middle">
@@ -107,8 +107,7 @@
 
 			</div>
 			<div class="tile-2">
-				<h1 align="center">Điều kiện</h1>
-				<h1 align="center">-</h1>
+				<br>
 				<ul>
 					<li><b>Đối tượng tham gia:</b> là bên mua bảo hiểm phù hợp với quy định của Bảo hiểm Bảo Việt </li>
 					<li><b>Tuổi: </b> có thể từ 16 tuổi đến 55 tuổi (tái tục đến 65 tuổi).</li>
@@ -119,9 +118,11 @@
 			</div>
 		</div>
 		<div class="col-md-4" style="padding:0">
+			<div class="tile-4">
+				
+			</div>
 			<div class="tile-3">
-				<h1 align="center">Quyền lợi</h1>
-				<h1 align="center">-</h1>
+				<br>
 				<ul>
 					<li>Quyền lợi bảo hiểm bệnh ung thư: tối đa lên tới 1 tỷ đồng.</li>
 					<li>Quyền lợi trợ cấp nằm viện: tối đa 2 triệu đồng/ngày.</li>
@@ -130,17 +131,13 @@
 					<li>Các quyền lợi bảo hiểm độc lập nhau với các lựa chọn số tiền bảo hiểm tham gia hấp dẫn.</li>
 				</ul>
 			</div>
-			<div class="tile-4">
-				
-			</div>
 		</div>
 		<div class="col-md-4" style="padding:0">
 			<div class="tile-5">
 				
 			</div>
 			<div class="tile-6">
-				<h1 align="center">Ưu điểm nổi bật</h1>
-				<h1 align="center">-</h1>
+				<br>
 				<ul>
 					<li>Thanh toán trọn gói, giúp khách hàng chủ động về tài chính</li>
 					<li>Chi trả ngay sau lần chuẩn đoán đầu tiên khi khách hàng cần đến nhất.</li>
