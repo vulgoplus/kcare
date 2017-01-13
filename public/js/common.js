@@ -236,6 +236,7 @@ $(document).ready(function(){
 		$(this).hide();
 	});
 	
+	//Responsive the slider
 	if($(window).width() < 992){
 		$('.slide').css({'height': $(this).width()* (1300/1920)});
 	}else

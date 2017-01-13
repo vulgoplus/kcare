@@ -1,9 +1,4 @@
 @font-face {
-    font-family: Thinpaw;
-    src: url(../fonts/Thinpaw.ttf);
-}
-
-@font-face {
     font-family: MyriadPro;
     src: url(../fonts/MYRIADPRO-LIGHTSEMICN.OTF);
 }
@@ -57,7 +52,7 @@ html, body{
 	z-index: 0;
 	color: white;
 	font-size: 1.2em;
-	font-family: Thinpaw;
+	font-family: MyriadPro;
 	text-align: left;
 	position: relative;
 	background-position: right;

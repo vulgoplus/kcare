@@ -518,8 +518,9 @@ table td{
 
 .customer-pagination strong{
 	display: inline-block;
-	border: 1px solid white;
+	border: 1px solid #eee;
 	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 

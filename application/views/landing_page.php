@@ -255,11 +255,12 @@
 			</div>
 			<div class="col-md-4">
 				<h1></h1>
-				Trụ sở chính: 35 Hai Bà Trưng, Q.Hoàn Kiếm, Hà Nội <br>
-				Tel: (84.4) 3826 2614 <br>
-				Fax: (84.4) 3825 7188 <br>
-				Email: bvvn@baoviet.com.vn <br>
-				© 2016 Baoviet Insurance, All Rights Reserved
+				<h3>CÔNG TY CỔ PHẦN VÉ VIỆT NAM</h3>
+				VP: Tầng 17, tòa nhà DMC, số 535 Kim Mã, Ba Đình, Hà Nội <br>
+				Tổng đài: 1800 6696 - Tel: (04) 73006696 <br>
+				Email: venetjsc@gmail.com <br>
+				Mã số DN: 0106998451 Sở KH&amp;ĐT TP.HN <br>
+				© 2017 VENET JOINT STOCK COMPANY
 			</div>
 			<div class="col-md-4">
 				<h2>LIÊN HỆ VỚI CHÚNG TÔI</h2>
