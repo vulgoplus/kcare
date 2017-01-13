@@ -71,8 +71,10 @@ $(document).ready(function(){
 			$('#age-error').text('');
 		}
 
-		if(!flag)
+		if(!flag){
+			$('#program').focus();
 			return false;
+		}
 		$('.save-success').show();
 		$('.save-success').html('<i class="fa fa-spinner fa-pulse"></i>');
 

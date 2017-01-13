@@ -76,34 +76,30 @@
 	</div>
 
 	<div class="col-md-10 col-md-offset-1 quanlity">
-		<div class="col-md-2">
-			<i class="fa fa-check-square-o fa-4x"></i><br>
-			<span>Sản phẩm của công ty Bảo Việt đơn vị bảo hiểm uy tín nhất Việt Nam</span>
+		<div class="medium-2">
+			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf1.png'); ?>" class="img img-responsive" align="middle">
+			<span>Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam</span>
 		</div>
-		<div class="col-md-2">
-			<i class="fa fa-bookmark-o fa-4x"></i><br>
-			<span>Sản phẩm đầu tiên và duy nhất có mặt tại Việt Nam</span>
+		<div class="medium-2">
+			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf2.png'); ?>" class="img img-responsive" align="middle">
+			<span>Sản phẩm đầu tiên và quy nhất trên thị trường</span>
 		</div>
-		<div class="col-md-2">
-			<i class="fa fa-stethoscope fa-4x"></i><br>
-			<span>Bảo hiểm chuyên biệt dành riêng cho bệnh nhân mắc bênh ung thư</span>
+		<div class="medium-2">
+			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf3.png'); ?>" class="img img-responsive" align="middle">
+			<span>Bảo hiểm dành riêng cho bệnh ung thư</span>
 		</div>
-		<div class="col-md-2">
-			<i class="fa fa-line-chart fa-4x"></i><br>
-			<span>Có 3 mức tham gia bảo hiểm tương ứng với 3 mức quyền lợi tăng dần</span>
+		<div class="medium-2">
+			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf4.png'); ?>" class="img img-responsive" align="middle">
+			<span>Quyền lợi bảo hiểm lên đến 1,2 tỷ đồng</span>
 		</div>
-		<div class="col-md-2">
-			<i class="fa fa-calendar fa-4x"></i><br>
-			<span>Mức phí tham gia bảo hiểm được đóng định kỳ hàng năm</span>
-		</div>
-		<div class="col-md-2">
-			<i class="fa fa-database fa-4x"></i><br>
-			<span>Duy trì mức phí suốt 10 năm của một chu kỳ bảo hiểm</span>
+		<div class="medium-2">
+			<img title="Sản phẩm của tập đoàn Bảo Hiểm uy tín nhất Việt Nam" src="<?php echo base_url('public/images/bnf5.png'); ?>" class="img img-responsive" align="middle">
+			<span>Mức phí cực kỳ tiết kiệm đóng định kỳ hàng năm</span>
 		</div>
 		<br clear="all">
 	</div>
 	<div class="col-md-12 signup">
-		<a href="#"><button class="btn btn-danger btn-lg">Đăng ký ngay!</button></a>
+		<a href="#"><img src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
 	</div>
 	<div class="col-md-10 col-md-offset-1 tile" style="padding:0">
 		<div class="col-md-4" style="padding:0">
@@ -223,7 +219,7 @@
 		</div>
 	</div>
 	<div class="col-md-12 signup">
-		<a href="#"><button class="btn btn-danger btn-lg">Đăng ký ngay!</button></a>
+		<a href="#"><img src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
 	</div>
 	<div class="col-md-10 col-md-offset-1 statistical" style="padding:0">
 		<h1 align="center">THỐNG KÊ</h1>
@@ -285,8 +281,7 @@
 				<h1>TÍNH PHÍ</h1>
 				<hr>
 				<form class="form-group form-horizontal" id="pseudo">
-					<label class="control-label col-sm-4" style="text-align: left; padding: 0">Chương trình: </label>
-					<div class="col-sm-8">
+					<div>
 						<select id="program" class="form-control">
 							<option value="0">------Chọn chương trình bảo hiểm-------</option>
 							<option value="1">Chương trình I</option>
@@ -329,11 +324,8 @@
 						</table>
 						<br clear="all">
 					</div>
-					<div class="col-md-4" style="padding: 0">
-						<b>Tuổi:</b>
-					</div>
-					<div class="col-md-8">
-						<select name="age" id="age" class="form-control" style="width: 100px">
+					<div class="col-xs-5" style="padding-left: 0">
+						<select name="age" id="age" class="form-control">
 							<option value="0">--Tuổi--</option>
 							<?php for($i = 16; $i <= 65; $i++): ?>
 								<option value="<?php echo $i ?>"><?php echo $i ?></option>
@@ -341,11 +333,7 @@
 						</select>
 						<label class="error" id="age-error"></label>
 					</div>
-					<br clear="all"><br>
-					<div class="col-md-4" style="padding: 0">
-						<b>Giới tính:</b>
-					</div>
-					<div class="col-md-8">
+					<div class="col-xs-7" style="line-height: 34px">
 						<input type="radio" name="sex" value="male" checked="checked" id="sex"> Nam  &nbsp;&nbsp;&nbsp;
 						<input type="radio" name="sex" value="female"> Nữ	
 					</div><br clear="all">

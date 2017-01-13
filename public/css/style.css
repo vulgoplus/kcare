@@ -161,7 +161,7 @@ html, body{
 .signup{
 	height: 200px;
 	text-align: center;
-	padding: 75px;
+	padding: 20px;
 	position: relative;
 	background-image:-moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.1) 50%,rgba(255,255,255,1) 100%);
 	background-image:linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0.1) 50%,rgba(255,255,255,1) 100%);
@@ -480,6 +480,14 @@ input.error{
 	font-weight: bold;
 }
 
+#price-list tbody tr td:nth-child(odd){
+	background: #eee;
+}
+
+#price-list td{
+	line-height: 35px
+}
+
 #cost{
 	display: none;
 }
@@ -496,6 +504,16 @@ input.error{
 
 .slick-dots li.slick-active button:before{
 	color: #bb8d09;
+}
+
+.medium-2{
+	width: 100%;
+	padding: 15px;
+}
+
+.medium-2 img{
+	display: block;
+	margin: 0 auto
 }
 /****************************************/
 @media (min-width: 1200px){
@@ -527,6 +545,12 @@ input.error{
 
 
 @media (min-width: 992px){
+
+	.medium-2{
+		width: 20%;
+		float: left;
+	}
+
 	.logo{
 		left: 40%;
 	}
@@ -645,5 +669,13 @@ input.error{
 
 	.slide-content{
 		top: 20%;
+	}
+
+	#price-list tbody tr td:nth-child(odd){
+		background: #fff;
+	}
+
+	#price-list td{
+		line-height: normal;
 	}
 }
