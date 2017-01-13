@@ -35,7 +35,7 @@
 			<div class="slide3 slide">
 				<div class="slide-content">
 					<b>Không một ai dám chắc mình là ngoại lệ</b><br>
-					Nếu rủi ro điều đó sảy ra đừng để nó trở thành <br> gánh nặng tài chính cho gia đình và những người thân yêu
+					Nếu rủi ro điều đó sảy ra đừng để nó trở thành gánh nặng tài chính cho gia đình và những người thân yêu
 				</div>
 			</div>
 			<div class="slide4 slide">
@@ -99,7 +99,7 @@
 		<br clear="all">
 	</div>
 	<div class="col-md-12 signup">
-		<a href="#"><img src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
+		<a href="#"><img class="img img-responsive" src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
 	</div>
 	<div class="col-md-10 col-md-offset-1 tile" style="padding:0">
 		<div class="col-md-4" style="padding:0">
@@ -216,7 +216,7 @@
 		</div>
 	</div>
 	<div class="col-md-12 signup">
-		<a href="#"><img src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
+		<a href="#"><img class="img img-responsive" src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
 	</div>
 	<div class="col-md-10 col-md-offset-1 statistical" style="padding:0">
 		<h1 align="center">THỐNG KÊ</h1>

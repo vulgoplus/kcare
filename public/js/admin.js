@@ -44,7 +44,7 @@ $(document).ready(function(){
 			}else{
 				$(this).parent().next().text('');
 			}
-			$("#old-image").hide();
+			$('.img-preview').addClass('hidden');
 		}
 	});
 

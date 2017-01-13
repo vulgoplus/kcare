@@ -226,16 +226,19 @@ html, body{
 .tile-1{
 	background: url("../images/condition.jpg");
 	background-size: cover;
+	background-position: center
 }
 
 .tile-4{
 	background: url("../images/benifit.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .tile-5{
 	background: url("../images/adventage.jpg");
 	background-size: cover;
+	background-position: center;
 }
 
 .tile-2{
@@ -515,6 +518,17 @@ input.error{
 	display: block;
 	margin: 0 auto
 }
+
+
+.img-responsive{
+	margin: 0 auto;
+	display: inline	
+}
+
+.slide-content b{
+	line-height: 25px;
+	font-size: 20px
+}
 /****************************************/
 @media (min-width: 1200px){
 	#col-1, #col-2, #col-3, #col-4, #col-5, #col-6{
@@ -677,5 +691,14 @@ input.error{
 
 	#price-list td{
 		line-height: normal;
+	}
+
+	.slide-content b{
+		line-height: normal;
+		font-size: 70px
+	}
+
+	.intro-img{
+		height: 500px;
 	}
 }

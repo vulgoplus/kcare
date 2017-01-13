@@ -264,4 +264,20 @@ $(document).ready(function(){
 	    }
 	  });
 	});
+
+
+	//Sizing intro image
+	if($(window).width()<992){
+		$('.intro-img').height($('.intro-img').width());
+	}else{
+		$('.intro-img').height(500);
+	}
+
+	$(window).resize(function(){
+		if($(window).width()<992){
+			$('.intro-img').height($('.intro-img').width());
+		}else{
+			$('.intro-img').height(500);
+		}
+	});
 });

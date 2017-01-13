@@ -53,3 +53,4 @@ $route['default_controller'] = 'home';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 $route['admin/customers/(:num)'] = 'admin/customers/page/$1';
+$route['admin/news/(:num)'] = 'admin/news/page/$1';

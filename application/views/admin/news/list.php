@@ -33,6 +33,8 @@
 		</tr>
 	<?php endforeach ?>
 </table>
-
+<div class="customer-pagination">
+	<?php echo $this->pagination->create_links() ?>
+</div>
 <button id="delete-all" data-url="<?php echo base_url('admin/news/multi_delete') ?>" type="button" class="btn btn-danger">Xóa mục đã chọn</button>
 <hr>
