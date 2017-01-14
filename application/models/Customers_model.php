@@ -47,27 +47,53 @@
 			return $this->db->get('customers')->result_array();
 		}
 
+		/**
+		* Change customer status
+		* @param $id int: Customer ID
+		* @param $status: Status
+		* @return none
+		*/
 		public function status($id,$status){
 			$this->db->where('id',$id);
 			$this->db->set('status',$status);
 			$this->db->update('customers');
 		}
 
+		/**
+		* Delete customer
+		* Call with AJAX
+		* @param $id int: Customer ID
+		* @return none
+		*/
 		public function delete($id){
 			$this->db->where('id',$id);
 			$this->db->delete('customers');
 		}
 
+		/**
+		* Multiple delete
+		* @param $id array: Array of customer ID
+		* @return none
+		*/
 		public function multi_delete($id){
 			$this->db->where_in('id', $id);
 			$this->db->delete('customers');
 		}
 
+		/**
+		* Get customer
+		* @param $id int: Customer ID
+		* @return array: Customer infomation
+		*/
 		public function get_customer_by_id($id){
 			$this->db->where('id', $id);
 			return $this->db->get('customers')->result_array()[0];
 		}
 
+		/**
+		* Count total rows
+		* @return Number of rows in SQL table
+		*/
 		public function total_rows(){
 			return $this->db->count_all_results('customers');
 		}

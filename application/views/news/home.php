@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Cyber Tech</title>
+<title>Trang thông tin - Bảo việt K-Care</title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="assets/css/animate.css">
-<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
-<link rel="stylesheet" type="text/css" href="assets/css/theme.css">
-<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/bootstrap.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/animate.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/slick.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/theme.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/style.css') ?>">
 <!--[if lt IE 9]>
-<script src="assets/js/html5shiv.min.js"></script>
-<script src="assets/js/respond.min.js"></script>
+<script src="<?php echo base_url('public/js/news/html5shiv.min.js') ?>"></script>
+<script src="<?php echo base_url('public/js/news/respond.min.js') ?>"></script>
 <![endif]-->
 </head>
 <body>
@@ -26,29 +26,20 @@
     <div class="container">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-        <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt=""></a></div>
+        <a class="navbar-brand" href="index.html"><img src="<?php echo base_url('public/images/news/logo.png') ?>" alt=""></a></div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav custom_nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#">Technology</a></li>
-          <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile</a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Android</a></li>
-              <li><a href="#">Samsung</a></li>
-              <li><a href="#">Nokia</a></li>
-              <li><a href="#">Walton Mobile</a></li>
-              <li><a href="#">Sympony</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Laptops</a></li>
-          <li><a href="#">Tablets</a></li>
-          <li><a href="pages/contact.html">Contact Us</a></li>
-          <li><a href="pages/404.html">404 Page</a></li>
+          <li class="active"><a href="index.html">Trang chủ</a></li>
+          <li><a href="#">Liên hệ</a></li>
+          <li><a href="#">Giới thiệu</a></li>
+          <li><a href="#">Tin nhanh</a></li>
+          <li><a href="pages/contact.html">Giải trí</a></li>
+          <li><a href="pages/404.html">Thể thao</a></li>
         </ul>
       </div>
       <div class="search"><a class="search_icon" href="#"><i class="fa fa-search"></i></a>
         <form action="#">
-          <input class="search_bar" type="text" placeholder="Search here">
+          <input class="search_bar" type="text" placeholder="Từ khóa">
         </form>
       </div>
     </div>
@@ -57,38 +48,19 @@
 <section id="content">
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
-      <div class="topadd_bar"><a href="#"><img src="images/addbanner_728x90_V1.jpg" alt=""></a></div>
+      <div class="topadd_bar"><a href="#"><img src="<?php echo base_url('public/images/news/banner.jpg') ?>" alt=""></a></div>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-12 col-md-12 col-sm-12">
       <div class="featured_slider">
-        <h2 class="featured_title">On Featured</h2>
+        <h2 class="featured_title">Nổi bật</h2>
         <div class="slick_slider">
-          <div class="single_iteam"><img src="images/300x250.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x2.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x3.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x4.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x5.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x6.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x3.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
-          <div class="single_iteam"><img src="images/300x250x5.jpg" alt="">
-            <h2><a class="slider_tittle" href="#">Fusce eu nulla semper porttitor felis sit amet</a></h2>
-          </div>
+          <?php foreach ($featured as $item): ?>
+            <div class="single_iteam"><img src="<?php echo base_url('uploads/'.$item['image']) ?>" alt="">
+              <h2><a class="slider_tittle" href="#"><?php echo $item['title'] ?></a></h2>
+            </div>
+          <?php endforeach ?>
         </div>
       </div>
     </div>
@@ -98,141 +70,45 @@
       <div class="col-lg-3 col-md-3 col-sm-4">
         <div class="left_sidebar">
           <div class="single_widget">
-            <h2>Post of the month</h2>
+            <h2>Bài viết của tháng</h2>
             <ul class="post_nav">
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
-              <li>
-                <figure class="effect-lily"><a href="pages/single_page.html"><img src="images/270x150x4.jpg" alt=""></a>
-                  <figcaption><a href="pages/single_page.html">It’s Now An Android World- Feel The Power</a></figcaption>
-                </figure>
-              </li>
+              <?php foreach ($month_posts as $item): ?>
+                <li>
+                  <figure class="effect-lily"><a href="pages/single_page.html"><img src="<?php echo base_url('uploads/270x196/'.$item['image']) ?>" alt=""></a>
+                    <figcaption><a href="pages/single_page.html"><?php echo $item['title'] ?></a></figcaption>
+                  </figure>
+                </li>
+              <?php endforeach ?>
             </ul>
           </div>
           <div class="single_widget">
-            <h2>Popular Post</h2>
+            <h2>Phổ biến</h2>
             <ul class="ppost_nav wow fadeInDown">
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="pages/single_page.html">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
+              <?php foreach ($populars as $item): ?>
+                <li>
+                  <div class="media"><a class="media-left" href="pages/single_page.html"><img src="<?php echo base_url('uploads/70x70/'.$item['image']) ?>" alt=""></a>
+                    <div class="media-body"><a class="catg_title" href="pages/single_page.html"><?php echo $item['title'] ?></a></div>
+                  </div>
+                </li>
+              <?php endforeach ?>
             </ul>
           </div>
         </div>
       </div>
       <div class="col-lg-6 col-md-6 col-sm-8">
         <div class="middle_content">
-          <h2>What’s Hot</h2>
+          <h2>Có gì mới?</h2>
           <ul class="featured_nav">
-            <li class="wow fadeInDown">
-              <figure class="featured_img"><a href="#"><img src="images/550x400.jpg" alt=""></a></figure>
-              <article class="featured_article">
-                <div class="article_category"><a href="#">Technology <i class="fa fa-angle-right"></i></a><a href="#">Mobile <i class="fa fa-angle-right"></i></a><a href="#">Samsung</a></div>
-                <h2 class="article_titile"><a href="pages/single_page.html">Apple iPad Production Reaches 4 Million</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat...</p>
-              </article>
-            </li>
-            <li class="wow fadeInDown">
-              <figure class="featured_img"><a href="#"><img src="images/550x400.jpg" alt=""></a></figure>
-              <article class="featured_article">
-                <div class="article_category"><a href="#">Technology <i class="fa fa-angle-right"></i></a><a href="#">Mobile <i class="fa fa-angle-right"></i></a><a href="#">Samsung</a></div>
-                <h2 class="article_titile"><a href="pages/single_page.html">Apple iPad Production Reaches 4 Million</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat...</p>
-              </article>
-            </li>
-            <li class="wow fadeInDown">
-              <figure class="featured_img"><a href="#"><img src="images/550x400.jpg" alt=""></a></figure>
-              <article class="featured_article">
-                <div class="article_category"><a href="#">Technology <i class="fa fa-angle-right"></i></a><a href="#">Mobile <i class="fa fa-angle-right"></i></a><a href="#">Samsung</a></div>
-                <h2 class="article_titile"><a href="pages/single_page.html">Apple iPad Production Reaches 4 Million</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat...</p>
-              </article>
-            </li>
-            <li class="wow fadeInDown">
-              <figure class="featured_img"><a href="#"><img src="images/550x400.jpg" alt=""></a></figure>
-              <article class="featured_article">
-                <div class="article_category"><a href="#">Technology <i class="fa fa-angle-right"></i></a><a href="#">Mobile <i class="fa fa-angle-right"></i></a><a href="#">Samsung</a></div>
-                <h2 class="article_titile"><a href="pages/single_page.html">Apple iPad Production Reaches 4 Million</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat...</p>
-              </article>
-            </li>
-            <li class="wow fadeInDown">
-              <figure class="featured_img"><a href="#"><img src="images/550x400.jpg" alt=""></a></figure>
-              <article class="featured_article">
-                <div class="article_category"><a href="#">Technology <i class="fa fa-angle-right"></i></a><a href="#">Mobile <i class="fa fa-angle-right"></i></a><a href="#">Samsung</a></div>
-                <h2 class="article_titile"><a href="pages/single_page.html">Apple iPad Production Reaches 4 Million</a></h2>
-                <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat...</p>
-              </article>
-            </li>
+            <?php foreach ($hots as $item): ?>
+              <li class="wow fadeInDown">
+                <figure class="featured_img"><a href="#"><img src="<?php echo base_url('uploads/550x400/'.$item['image']) ?>" alt=""></a></figure>
+                <article class="featured_article">
+                  <div class="article_category">[<a href="#"><?php echo $item['category_name'] ?></a>]</div>
+                  <h2 class="article_titile"><a href="pages/single_page.html"><?php echo $item['title'] ?></a></h2>
+                  <?php echo $item['sumary'] ?>
+                </article>
+              </li>
+            <?php endforeach ?>
           </ul>
           <nav>
             <ul class="pagination">
@@ -250,178 +126,21 @@
       <div class="col-lg-3 col-md-3 col-sm-12">
         <div class="right_sidebar">
           <div class="single_widget">
-            <h2>Popular Post</h2>
+            <h2>Phổ biến</h2>
             <ul class="ppost_nav wow fadeInDown">
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="pages/single_page.html">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                  <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
+              <?php foreach ($populars as $item): ?>
+                <li>
+                  <div class="media"><a class="media-left" href="pages/single_page.html"><img src="<?php echo base_url('uploads/70x70/'.$item['image']) ?>" alt=""></a>
+                    <div class="media-body"><a class="catg_title" href="pages/single_page.html">
+                      <?php echo $item['title'] ?></a>
+                    </div>
+                  </div>
+                </li>
+              <?php endforeach ?>
             </ul>
           </div>
           <div class="single_widget">
-            <ul class="nav nav-tabs custom-tabs" role="tablist">
-              <li role="presentation" class="active"><a href="#" aria-controls="home" role="tab" data-toggle="tab" aria-expanded="true">Recent Post</a></li>
-              <li role="presentation" class=""><a href="#recentComent" aria-controls="messages" role="tab" data-toggle="tab" aria-expanded="false">Recent Comment</a></li>
-            </ul>
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade active in" id="mostPopular">
-                <ul class="ppost_nav wow fadeInDown">
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="pages/single_page.html">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-              <div role="tabpanel" class="tab-pane fade" id="recentComent">
-                <ul class="ppost_nav wow fadeInDown">
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="pages/single_page.html">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="pages/single_page.html"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                  <li>
-                    <div class="media"><a class="media-left" href="#"><img src="images/70x70.jpg" alt=""></a>
-                      <div class="media-body"><a class="catg_title" href="#">Aliquam malesuada diam eget turpis varius</a></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="single_widget">
-            <h2>Categories</h2>
+            <h2>Danh mục</h2>
             <ul>
               <li class="cat-item"><a href="#">Technology</a></li>
               <li class="cat-item"><a href="#">Games</a></li>
@@ -433,22 +152,12 @@
             </ul>
           </div>
           <div class="single_widget">
-            <h2>Category Archive</h2>
-            <select class="catgArchive">
-              <option>Select Category</option>
-              <option>Life styles</option>
-              <option>Sports</option>
-              <option>Technology</option>
-              <option>Treads</option>
-            </select>
-          </div>
-          <div class="single_widget">
-            <h2>Links</h2>
+            <h2>Liên kết</h2>
             <ul>
-              <li><a href="#">Log in</a></li>
-              <li><a href="#">Entries RSS</a></li>
-              <li><a href="#">Comment RSS</a></li>
-              <li><a href="#">Wordpress.org</a></li>
+              <li><a href="#">VENET</a></li>
+              <li><a href="#">K-Care</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Google+</a></li>
             </ul>
           </div>
         </div>
@@ -462,56 +171,55 @@
       <div class="row">
         <div class="col-lg-3 col-md-3 col-sm3">
           <div class="footer_widget wow fadeInLeftBig">
-            <h2>Labels</h2>
+            <h2>Mở rộng</h2>
             <ul class="labels_nav">
-              <li><a href="#">Games</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Technology</a></li>
-              <li><a href="#">Business</a></li>
+              <li><a href="#">Trò chơi</a></li>
+              <li><a href="#">Bộ sưu tập</a></li>
+              <li><a href="#">Công nghệ</a></li>
+              <li><a href="#">Kinh doanh</a></li>
               <li><a href="#">Slider</a></li>
-              <li><a href="#">Life &amp; Style</a></li>
-              <li><a href="#">Ver</a></li>
-              <li><a href="#">Sports</a></li>
+              <li><a href="#">Đời sống</a></li>
+              <li><a href="#">Thể thao</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm3">
           <div class="footer_widget">
-            <h2>Popular Post</h2>
+            <h2>Bài viết phổ biến</h2>
             <ul class="ppost_nav wow fadeInLeftBig">
-              <li>
-                <div class="media"><a href="pages/single_page.html" class="media-left"><img alt="" src="images/70x70.jpg"></a>
-                  <div class="media-body"><a href="pages/single_page.html" class="catg_title">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a href="pages/single_page.html" class="media-left"><img alt="" src="images/70x70.jpg"></a>
-                  <div class="media-body"><a href="#" class="catg_title">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
-              <li>
-                <div class="media"><a href="pages/single_page.html" class="media-left"><img alt="" src="images/70x70.jpg"></a>
-                  <div class="media-body"><a href="#" class="catg_title">Aliquam malesuada diam eget turpis varius</a></div>
-                </div>
-              </li>
+              <?php $i=0; ?>
+              <?php foreach ($populars as $item): ?>
+                <li>
+                  <div class="media"><a href="pages/single_page.html" class="media-left"><img alt="" src="<?php echo base_url('uploads/70x70/'.$item['image']) ?>"></a>
+                    <div class="media-body"><a href="pages/single_page.html" class="catg_title"><?php echo $item['title'] ?></a></div>
+                  </div>
+                </li>
+                <?php $i++; if($i>2) break; ?>
+              <?php endforeach ?>
             </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm3">
           <div class="footer_widget wow fadeInRightBig">
-            <h2>Flickr Images</h2>
+            <h2>CÔNG TY CP VÉ VIỆT NAM</h2>
+            <ul class="labels_nav">
+              <li>Tầng 17, tòa nhà DMC, số 535 Kim Mã, Ba Đình, Hà Nội</li>
+              <li>Tổng đài: 1800 6696 - Tel: (04) 73006696 </li>
+              <li>Email: venetjsc@gmail.com</li>
+              <li>Mã số DN: 0106998451 Sở KH&amp;ĐT TP.HN </li>
+            </ul>
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm3">
           <div class="footer_widget wow fadeInRightBig">
-            <h2>Jetpack Subscription Widget</h2>
+            <h2>Đăng ký nhận thư</h2>
             <form action="#" class="subscribe_form">
-              <p id="subscribe-text">We promise, we will only send you awesome stuff which will make your day!</p>
+              <p id="subscribe-text">Hãy điền email của bạn vào đây để được cập nhật thông tin hằng ngày!</p>
               <p id="subscribe-email">
-                <input type="text" placeholder="Email Address" name="email">
+                <input type="text" placeholder="Địa chỉ email" name="email">
               </p>
               <p id="subscribe-submit">
-                <input type="submit" value="Submit">
+                <input type="submit" value="Gửi">
               </p>
             </form>
           </div>
@@ -521,15 +229,14 @@
   </div>
   <div class="footer_bottom">
     <div class="container">
-      <p class="copyright">Copyright &copy; 2045 <a href="index.html">Cyber Tech</a></p>
-      <p class="developer">Developed By Wpfreeware</p>
+      <p class="copyright">Copyright &copy; 2017 <a href="index.html">VENET JSC</a></p>
     </div>
   </div>
 </footer>
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/wow.min.js"></script> 
-<script src="assets/js/bootstrap.min.js"></script> 
-<script src="assets/js/slick.min.js"></script> 
-<script src="assets/js/custom.js"></script>
+<script src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script> 
+<script src="<?php echo base_url('public/js/news/wow.min.js') ?>"></script> 
+<script src="<?php echo base_url('public/js/bootstrap.min.js') ?>"></script> 
+<script src="<?php echo base_url('public/js/slick.min.js') ?>"></script> 
+<script src="<?php echo base_url('public/js/news/custom.js') ?>"></script>
 </body>
 </html>

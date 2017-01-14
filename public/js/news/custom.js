@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
     });
     /* slick slider call */
     $('.slick_slider').slick({
-        dots: true,
+        arrows: true,
         infinite: true,
         speed: 300,
         slidesToShow: 4,

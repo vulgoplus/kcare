@@ -25,7 +25,7 @@
 		* @return news list
 		*/
 		public function get_news($per_page, $offset=1){
-			$this->db->select('news.id, title, category_name, date');
+			$this->db->select('news.id, title, category_name, date, sumary, image');
 			$this->db->from('news');
 			$this->db->order_by('id','DESC');
 			$this->db->limit($per_page, ($offset-1)*$per_page);
@@ -69,13 +69,50 @@
 		}
 
 
+		/**
+		* Update News
+		* @param $id int: News ID
+		* @param $data array: News
+		* @return none
+		*/
 		public function update($id, $data){
 			$this->db->where('id',$id);
 			$this->db->update('news',$data);
 		}
 
+		/**
+		* Count all record in SQL table
+		* @return int: number of record in News Table
+		*/
 		public function total_rows(){
 			return $this->db->count_all_results('news');
+		}
+
+		/**
+		* Select featured News
+		*/
+		public function featured(){
+			$this->db->select('title,image,alias');
+			$this->db->limit(8,1);
+			return $this->db->get('news')->result_array();
+		}
+
+		/**
+		* Get posts of the month
+		*/
+		public function month_posts(){
+			$this->db->select('title,image,alias');
+			$this->db->limit(5,1);
+			return $this->db->get('news')->result_array();
+		}
+
+		/**
+		* Get popular post
+		*/
+		public function popular_posts(){
+			$this->db->select('title,image,alias');
+			$this->db->limit(10,1);
+			return $this->db->get('news')->result_array();
 		}
 	}
 ?>

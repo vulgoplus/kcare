@@ -9,9 +9,9 @@ License: GPL
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
 
-@font-face{font-family:"Arvo"; font-style:normal; font-weight:400; src:local("Arvo"), url("../fonts/arvo-400.woff") format("woff");}
+/*@font-face{font-family:"Arvo"; font-style:normal; font-weight:400; src:local("Arvo"), url("../fonts/arvo-400.woff") format("woff");}
 @font-face{font-family:"Allerta"; font-style:normal; font-weight:400; src:local("Allerta Regular"), local("Allerta-Regular"), url("../fonts/allerta-400.woff") format("woff");}
-
+*/
 body{background-color:#fff; color:#333; overflow-x:hidden !important}
 ul{padding:0; margin:0; list-style:none}
 a{text-decoration:none; color:#2f2f2f; font-family:'Allerta',Helvetica,Arial,sans-serif}
@@ -48,8 +48,8 @@ img:hover{opacity:0.75}
 .transition{-webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
 #preloader{position:fixed; top:0; left:0; right:0; bottom:0; background-color:#fff; z-index:99}
 #status{width:200px; height:200px; position:absolute; left:50%; top:50%; background-image:url("images/status.gif"); background-repeat:no-repeat; background-position:center; margin:-100px 0 0 -100px}
-.scrollToTop{bottom:105px; display:none; font-size:32px; font-weight:bold; height:50px; position:fixed; right:75px; text-align:center; text-decoration:none; width:50px; z-index:9; border:1px solid; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
-.scrollToTop:hover, .scrollToTop:focus{text-decoration:none; outline:none}
+.scrollToTop{bottom:105px; display:none; opacity: 0.7; font-size:32px; font-weight:bold; height:50px; position:fixed; right:25px; text-align:center; text-decoration:none; width:50px; z-index:9; border:1px solid; -webkit-transition:all 0.5s; -moz-transition:all 0.5s; -ms-transition:all 0.5s; -o-transition:all 0.5s; transition:all 0.5s}
+.scrollToTop:hover, .scrollToTop:focus{text-decoration:none; outline:none: opacity: 1;}
 #header{box-shadow:0 0 8px 5px rgba(0,0,0,0.2); display:inline; float:left; left:0; position:fixed; right:0; top:0; width:100%; z-index:100}
 .navbar{margin-bottom:0}
 .custom_nav li a{}
@@ -209,7 +209,7 @@ figure.effect-lily a:hover img{-webkit-transform:translate3d(0,0,0); transform:t
 .erropr_recentpost > h2:before{content:"-"; display:inline-block; padding-right:5px}
 .erropr_recentpost .ppost_nav li{width:32%; text-align:left; margin-right:22px}
 .erropr_recentpost .ppost_nav li:last-child{margin-right:0px}
-
+.labels_nav li{color: #ccc}
 @media(max-width:1199px ){
 .navbar-collapse{width:82%}
 .single_widget > h2{width:111%}

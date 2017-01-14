@@ -11,7 +11,10 @@ class Customers extends CI_controller
 	}
 
 
-
+ 
+	/**
+	* Customer homepage
+	*/
 	public function index(){
 		$pagination = $this->initialize_pagination();
 		$this->load->model('Customers_model');
@@ -20,6 +23,9 @@ class Customers extends CI_controller
 		$this->load->view('layouts_master/admin',$data);
 	}
 
+	/**
+	* Pagination
+	*/
 	public function page($page = 1){
 		$pagination = $this->initialize_pagination();
 		$this->load->model('Customers_model');
@@ -60,17 +66,30 @@ class Customers extends CI_controller
 		$this->Customers_model->status($id, $this->input->post('status'));
 	}
 
+	/**
+	* Delete function
+	* Please call with ajax
+	* @param $id int: Customer ID
+	*/
 	public function delete($id){
 		$this->load->model('Customers_model');
 		$this->Customers_model->delete($id);
 	}
 
+	/**
+	* Multiple delete
+	* Call with AJAX
+	*/
 	public function multi_delete(){
 		$id = $this->input->post('id');
 		$this->load->model('Customers_model');
 		$this->Customers_model->multi_delete($id);
 	}
 
+	/**
+	* Customer detail
+	* @param $id int: Customer ID
+	*/
 	public function view($id){
 		$this->load->model('Customers_model');
 		$data['customer'] = $this->Customers_model->get_customer_by_id($id);
@@ -78,6 +97,10 @@ class Customers extends CI_controller
 		$this->load->view('layouts_master/admin',$data);
 	}
 
+
+	/**
+	* Initilize pagination
+	*/
 	protected function initialize_pagination(){
 		$this->load->model('Customers_model');
 		$this->load->library('pagination');

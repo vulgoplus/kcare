@@ -22,6 +22,9 @@
 		}
 
 
+		/**
+		* Pageination function
+		*/
 		public function page($page = 1){
 			$pagination = $this->initialize_pagination();
 			$this->load->model('News_model');
@@ -102,7 +105,8 @@
 				'sumary'      => create_news_sumary($this->input->post('content')),
 				'content'     => $this->input->post('content'),
 				'category_id' => $this->input->post('category_id'),
-				'alias'       => create_alias($this->input->post('title')).$id
+				'alias'       => create_alias($this->input->post('title')).$id,
+				'date'        => 'CURRENT_TIMESTAMP'
 			);
 
 
