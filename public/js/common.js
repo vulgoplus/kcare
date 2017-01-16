@@ -68,28 +68,54 @@ $(document).ready(function(){
 		}
 	});
 
-
-	//Signup request
-	/*$('#signup-form').submit(function(e){
-		e.preventDefault();
-		var flag = true;
-		if($('#program').val()==0){
-			$('#program-error').text('Chọn chương trình bạn muốn đăng ký!');
-			flag = false;
-		}else{
-			$('#program-error').text('');
+	$('#program').change(function(){
+		switch($(this).val()){
+			case '1':
+				$('#tcnv').text('500.000/ngày');
+				$('#qltv').text('12.500.000');
+				$('#signup-form input[name="program"]').val(1);
+				$('#benifit').text('292.500.000 VNĐ');
+				break;
+			case '2':
+				$('#tcnv').text('1.000.000/ngày');
+				$('#qltv').text('25.000.000');
+				$('#signup-form input[name="program"]').val(2);
+				$('#benifit').text('585.000.000 VNĐ');
+				break;
+			default:
+				$('#tcnv').text('2.000.000/ngày');
+				$('#qltv').text('50.000.000');
+				$('#signup-form input[name="program"]').val(3);
+				$('#benifit').text('1.170.000.000 VNĐ');
+				break;
 		}
 
+		if($('#age').val()!=0){
+			$.ajax({
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#program').val(),
+					'age' : $('#age').val(),
+					'sex' : $('.sex:checked').val()
+				},
+				type: 'POST',
+				success: function(data){
+					$('.total').text(data);
+				},
+				error: function(){
+					alert("Đã có lỗi xảy ra!");
+				}
+			});
+		}
+	});
+	//Signup request
+	$('#signup-form').submit(function(e){
+		e.preventDefault();
 		if($('#age').val()==0){
 			$('#age-error').text('Chọn tuổi của bạn!');
-			flag = false;
+			return false;
 		}else{
 			$('#age-error').text('');
-		}
-
-		if(!flag){
-			$('#program').focus();
-			return false;
 		}
 		$('.save-success').show();
 		$('.save-success').html('<i class="fa fa-spinner fa-pulse"></i>');
@@ -105,27 +131,160 @@ $(document).ready(function(){
 				alert('Có lỗi xảy ra!');
 			}
 		});
-	});*/
+	});
 
-	/*$('#footer-signup').submit(function(e){
-		e.preventDefault();
-		if($('#age-select').val()==0){
-			$('#footer-error').text("Chọn tuổi của bạn!");
-			return false;
-		}else{
+	$('#age').change(function(){
+		if($(this).val()!=0){
+			$('#signup-form input[name="age"]').val($(this).val());
 			$.ajax({
-				url: $('#footer-signup').attr('action'),
-				data: $('#footer-signup').serialize(),
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#program').val(),
+					'age' : $('#age').val(),
+					'sex' : $('.sex:checked').val()
+				},
 				type: 'POST',
 				success: function(data){
-					$('#footer-success').text('Bạn đã đăng ký thành công!');
+					$('.total').text(data);
 				},
 				error: function(){
-					alert('Có lỗi xảy ra!');
+					alert("Đã có lỗi xảy ra!");
 				}
 			});
 		}
-	});*/
+	});
+
+
+	$('.sex').change(function(){
+		$('#signup-form input[name="sex"]').val($('.sex:checked').val());
+		if($('#age').val()!=0){
+			$.ajax({
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#program').val(),
+					'age' : $('#age').val(),
+					'sex' : $('.sex:checked').val()
+				},
+				type: 'POST',
+				success: function(data){
+					$('.total').text(data);
+				},
+				error: function(){
+					alert("Đã có lỗi xảy ra!");
+				}
+			});
+		}
+	});
+
+	$('#signup-form input[name="name"]').focusout(function(){
+		$('#customer-name').text($(this).val());
+	});
+
+
+	/**
+	* Footer form
+	*/
+	$('#footer-program').change(function(){
+		$('#footer-signup input[name="program"]').val($(this).val());
+		switch($(this).val()){
+			case '1':
+				$('#footer-tcnv').text('500.000/ngày');
+				$('#footer-tv').text('12.500.000');
+				$('#footer-benifit').text('292.500.000 VNĐ');
+				break;
+			case '2':
+				$('#footer-tcnv').text('1.000.000/ngày');
+				$('#footer-tv').text('25.000.000');
+				$('#footer-benifit').text('585.000.000 VNĐ');
+				break;
+			default:
+				$('#footer-tcnv').text('2.000.000/ngày');
+				$('#footer-tv').text('50.000.000');
+				$('#footer-benifit').text('1.170.000.000 VNĐ');
+				break;
+		}
+
+		if($('#footer-age').val()!=0){
+			$.ajax({
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#footer-program').val(),
+					'age' : $('#footer-age').val(),
+					'sex' : $('.footer-sex:checked').val()
+				},
+				type: 'POST',
+				success: function(data){
+					$('#total').text(data);
+				},
+				error: function(){
+					alert("Đã có lỗi xảy ra!");
+				}
+			});
+		}
+	});
+
+	$('#footer-age').change(function(){
+		$('#footer-signup input[name="age"]').val($(this).val());
+		if($('#footer-age').val()!=0){
+			$.ajax({
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#footer-program').val(),
+					'age' : $('#footer-age').val(),
+					'sex' : $('.footer-sex:checked').val()
+				},
+				type: 'POST',
+				success: function(data){
+					$('#total').text(data);
+				},
+				error: function(){
+					alert("Đã có lỗi xảy ra!");
+				}
+			});
+		}
+	});
+
+	$('.footer-sex').change(function(){
+		$('#footer-signup input[name="sex"]').val($('.footer-sex:checked').val());
+		if($('#footer-age').val()!=0){
+			$.ajax({
+				url: $('#base-url').val()+'admin/customers/get_price',
+				data: {
+					'program' : $('#footer-program').val(),
+					'age' : $('#footer-age').val(),
+					'sex' : $('.footer-sex:checked').val()
+				},
+				type: 'POST',
+				success: function(data){
+					$('#total').text(data);
+				},
+				error: function(){
+					alert("Đã có lỗi xảy ra!");
+				}
+			});
+		}
+	});
+	$('#footer-signup').submit(function(e){
+		e.preventDefault();
+		if($('#footer-age').val()==0){
+			$('#footer-error').text("Chọn tuổi của bạn!");
+			return false;
+		}else{
+			$('#footer-error').text('');
+		}
+
+		$.ajax({
+			url: $('#footer-signup').attr('action'),
+			data: $('#footer-signup').serialize(),
+			type: 'POST',
+			success: function(data){
+				$('#footer-success').text('Bạn đã đăng ký thành công!');
+			},
+			error: function(){
+				alert('Có lỗi xảy ra!');
+			}
+		});
+	});
 
 
 	//Change order deadline

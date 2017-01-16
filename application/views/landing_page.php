@@ -300,45 +300,75 @@
 	</div>	<br clear="all">
 	<div class="footer">
 		<div class="col-md-10 col-md-offset-1" style="padding-left: 0; padding-right: 0">
-			<div class="col-md-4 clock">
-				<h3>Quyền lợi bảo hiểm</h3>
-				<div>
-					<div>
-						<input type="radio" name="footer-program" value="1" checked> Chương trình 1: <b>292.500.000 VNĐ</b>
-					</div>
-					<div>
-						<input type="radio" name="footer-program" value="2"> Chương trình 2: <b>585.000.000 VNĐ</b>
-					</div>
-					<div>
-						<input type="radio" name="footer-program" value="3"> Chương trình 3: <b>1.170.000.000 VNĐ</b>
-					</div>
-				</div>
-				<select name="footer-age" id="age-select" style="color: #000">
-					<option value="0">--Chọn tuổi--</option>
-					<?php for($i = 16; $i <= 65; $i++): ?>
-						<option value="<?php echo $i ?>"><?php echo $i ?></option>
-					<?php endfor; ?>
-				</select> &nbsp;
-				<input type="radio" name="footer-sex" checked value="1"> Nam&nbsp;
-				<input type="radio" name="footer-sex" value="0"> Nữ
-				<label class="error" id="#footer-error"></label>
-				<h2>Khuyến mại đặc biệt đến ngày 03/03/2017</h2>
-				Chỉ còn lại: <br>
-				<span id="clock"></span>
-			</div>
-			<div class="col-md-4">
-			<h1></h1>
+			<div class="col-md-6">
 				<div class="white-border">
-				<h1>Thông tin đơn hàng</h1>
-					<span>Thời hạn bảo hiểm: <b id="footer-deadline"></b></span><br>
-					<span>Người được bảo hiểm: <b id="footer-cname"></b></span><br>
-					<span>Tuổi: <b id="footer-age"></b></span><br>
-					<span>Số năm tham gia: <b>10 năm</b></span><br>
-					<span>Cách thức thanh toán: <b>Từng năm một</b></span>
-					<h2>Phí bảo hiểm: <span id="result"></span></h2>
+					<h1>Tính phí</h1>
+					<table width="100%" id="footer-table">
+						<thead>
+							<tr>
+								<td colspan="2"><b>Quyền lợi bảo hiểm:</b></td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<select id="footer-program" class="form-control" style="max-width: 200px">
+										<option value="1">Chương trình 1</option>
+										<option value="2">Chương trình 2</option>
+										<option value="3">Chương trình 3</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td>Quyền lợi tối đa:</td>
+								<td><b id="footer-benifit">292.500.000 VNĐ</b></td>
+							</tr>
+							<tr>
+								<td>Tuổi:</td>
+								<td>
+									<select id="footer-age" class="form-control" style="max-width: 150px">
+										<option value="0">--Chọn tuổi--</option>
+										<?php for($i = 16; $i <= 65; $i++): ?>
+											<option value="<?php echo $i ?>"><?php echo $i ?></option>
+										<?php endfor; ?>
+									</select>
+									<label class="error" id="footer-error" style="font-size: 14px"></label>
+								</td>
+							</tr>
+							<tr>
+								<td>Giới tính:</td>
+								<td>
+									<input type="radio" name="footer-sex" value="1" class="footer-sex" checked> Nam &nbsp;&nbsp;&nbsp;
+									<input type="radio" name="footer-sex" value="0" class="footer-sex"> Nữ
+								</td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Người được bảo hiểm:</td>
+								<td><b id="footer-cname"></b></td>
+							</tr>
+							<tr>
+								<td>Thời hạn 10 năm:</td>
+								<td><b id="footer-deadline"></b></td>
+							</tr>
+							<tr>
+								<td>Trợ cấp nằm viện:</td>
+								<td><b id="footer-tcnv">500.000/ngày</b></td>
+							</tr>
+							<tr>
+								<td>Quyền lợi tử vong:</td>
+								<td><b id="footer-tv">12.500.000</b></td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td><h2>Phí bảo hiểm:</h2></td>
+								<td><h2 id="total"></h2></td>
+							</tr>
+						</tfoot>
+					</table>
 				</div>
 			</div>
-			<div class="col-md-4 footer-signup">
+			<div class="col-md-6 footer-signup">
 				<h1 align="justify">Hãy điền thông tin vào đây để được tư vấn miễn phí</h1>
 				<form id="footer-signup" method="post" action="<?php echo base_url('admin/customers/add') ?>">
 					<input type="text" name="name" class="footer-input" placeholder="Họ và Tên">
@@ -351,10 +381,12 @@
 					<button class="footer-button" type="submit">Đăng ký tư vấn</button>
 					<label id="footer-success"></label>
 				</form>
+				<h2>Khuyến mại còn lại: </h2>
+				<span id="clock"></span>
 			</div>
 		</div>
 		<br clear="all">
-		<hr>
+		<hr style="border-top: 1px solid #555">
 		<div class="col-md-10 col-md-offset-1 footer-c" style="padding:0">
 			<div class="col-md-4 menu">
 				<a href="#">GIỚI THIỆU SẢN PHẨM K-CARE</a><br>
@@ -399,25 +431,26 @@
 								</tr>
 								<tr>
 									<td>
-										<select name="program" class="form-control" style="width: 80%">
+										<select id="program" name="program" class="form-control" style="width: 80%">
 											<option value="1">Chương trình 1</option>
 											<option value="2">Chương trình 2</option>
 											<option value="3">Chương trình 3</option>
 										</select>
 									</td>
 									<td valign="middle">
-										<h2 style="color: #50ed4e">292.500.000 VNĐ</h2>
+										<h2 style="color: #50ed4e" id="benifit">292.500.000 VNĐ</h2>
 									</td>
 								</tr>
 								<tr>
 									<td>Tuổi: </td>
 									<td>
-										<select class="form-control" style="max-width: 150px">
+										<select class="form-control" style="max-width: 150px" id="age">
 											<option value="0">--Chọn tuổi--</option>
 											<?php for($i=16;$i<=65;$i++): ?>
 												<option value="<?php echo $i ?>"><?php echo $i; ?></option>
 											<?php endfor; ?>
 										</select>
+										<label class="error" id="age-error" style="font-size: 14px; font-weight: lighter"></label>
 									</td>
 								</tr>
 								<tr>
@@ -425,8 +458,8 @@
 										Giới tính:
 									</td>
 									<td>
-										<input type="radio" name="sex" value="male" checked="checked" id="sex"> Nam  &nbsp;&nbsp;&nbsp;
-										<input type="radio" name="sex" value="female"> Nữ
+										<input type="radio" name="sex" value="1" checked="checked" class="sex"> Nam  &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="sex" value="0bá" class="sex"> Nữ
 									</td>
 								</tr>
 							</thead>
@@ -470,7 +503,7 @@
 										<h1>Phí bảo hiểm:</h1>
 									</td>
 									<td>
-										<span class="total"></span></b>
+										<h1 class="total" style="color: #f00"></h1></b>
 									</td>
 								</tr>
 							</tfoot>
@@ -500,6 +533,8 @@
 					</div>
 					<input type="hidden" name="age">
 					<input type="hidden" name="sex" value="1">
+					<input type="hidden" name="program" value="1">
+					<input type="hidden" name="base-url" id="base-url" value="<?php echo base_url(); ?>">
 					<button type="submit" class="btn btn-danger">Đăng ký</button>
 					<div class="save-success">
 						
