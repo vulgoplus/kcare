@@ -17,6 +17,7 @@
 			$data['hots']        = $this->News_model->get_news(5);
 			$data['month_posts'] = $this->News_model->month_posts();
 			$data['populars']    = $this->News_model->popular_posts();
+			$data 				 = array_merge($data,$this->load_data_master());
 			$this->load->view('news/home',$data);
 		}
 	}

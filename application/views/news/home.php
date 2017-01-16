@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/bootstrap.min.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
-<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/animate.min.css') ?>">
+<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/animate.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/slick.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/theme.css') ?>">
 <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/style.css') ?>">
@@ -142,13 +142,9 @@
           <div class="single_widget">
             <h2>Danh mục</h2>
             <ul>
-              <li class="cat-item"><a href="#">Technology</a></li>
-              <li class="cat-item"><a href="#">Games</a></li>
-              <li class="cat-item"><a href="#">Business</a></li>
-              <li class="cat-item"><a href="#">Gallery</a></li>
-              <li class="cat-item"><a href="#">Slider</a></li>
-              <li class="cat-item"><a href="#">Life &amp; Style</a></li>
-              <li class="cat-item"><a href="#">Sports</a></li>
+              <?php foreach ($categories as $category): ?>
+                <li class="cat-item"><a href="#"><?php echo $category['category_name'] ?></a></li>
+              <?php endforeach ?>
             </ul>
           </div>
           <div class="single_widget">
