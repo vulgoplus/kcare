@@ -55,7 +55,6 @@ class Customers extends CI_controller
 		$program = $this->input->post('program');
 		$sex     = $this->input->post('sex');
 		$age     = $this->input->post('age');
-
 		$this->load->model('Customers_model');
 		echo number_format($this->Customers_model->get_price($program, $age, $sex));
 	}

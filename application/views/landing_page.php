@@ -12,6 +12,7 @@
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.validate.min.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('public/js/jquery.countdown.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/common.js') ?>"></script>
 	<link rel="shortcut icon" type="image/png" href="<?php echo base_url('public/images/icon.png') ?>">
 </head>
@@ -23,13 +24,13 @@
 			<div class="slide5 slide">
 				<div class="slide-content hidden">
 					<b>Ung thư ngày càng trẻ hóa</b><br>
-					15 triệu người trên toàn cầu mắc bệnh ung <br> thư mỗi năm và ngày càng trẻ hóa
+					15 triệu người trên toàn cầu mắc bệnh ung thư mỗi năm và ngày càng trẻ hóa
 				</div>
 			</div>
 			<div class="slide2 slide">
 				<div class="slide-content">
 					<b>Việt Nam đứng top 2 trên Thế giới về Ung thư</b><br>
-					Trung bình mỗi ngày tại Việt Nam <br>có 205 người chết vì Ung thư
+					Trung bình mỗi ngày tại Việt Nam có 205 người chết vì Ung thư
 				</div>
 			</div>
 			<div class="slide3 slide">
@@ -41,20 +42,19 @@
 			<div class="slide4 slide">
 				<div class="slide-content">
 					<b>80% bệnh nhân ung thư vẫn có thể được cứu sống</b><br>
-					Nếu phát hiện kịp thời ngay từ <br> giai đoạn đầu và có chế độ điều trị hợp lý
+					Nếu phát hiện kịp thời ngay từ giai đoạn đầu và có chế độ điều trị hợp lý
 				</div>
 			</div>
 			<div class="slide1 slide">
 				<div class="slide-content">
-					<b>Hãy tham gia bảo hiểm K-care ngay hôm nay</b><br>
-					Là cách tốt nhất để bảo vệ bạn <br> và chính gia đình bạn trong tương lai
+					<b>Tham gia bảo hiểm K-care ngay hôm nay</b><br>
+					Là cách tốt nhất để bảo vệ bạn và chính gia đình bạn trong tương lai
 				</div>
 			</div>
 			<div class="slide6 slide">
 				<div class="slide-content">
 					<b>Bảo hiểm K-Care</b><br>
-					Bảo hiểm Ung Thư duy nhất tại Việt Nam <br>
-					An tâm gánh nặng sẻ chia
+					Bảo hiểm Ung Thư duy nhất tại Việt Nam, An tâm gánh nặng sẻ chia
 				</div>
 			</div>
 		</div>
@@ -151,37 +151,35 @@
 	</div>
 	<div class="col-md-10 col-md-offset-1 cost" style="padding:0">
 		<div class="cost-head">
-			Biểu phí - 3 chương trình <br>
-			Đơn vị tính: VND/người/năm
+			<h1>Quyền lợi khi tham gia theo 3 chương trình</h1>
 		</div>
 		<div>
-			<table>
+			<table class="mobile-hidden">
 				<th>
 					<tr>
-					<th style="width:25%"></th>
+					<th style="width:25%" align="center">
+						<h2 align="center">Số tiền bảo hiểm</h2>
+					</th>
 					<th>
-						<div class="ct1">
+						<div class="ct1 ct">
 							<span class="bv-circle">1</span>
+							<h2>292.500.000</h2>
 						</div>
 					</th>
 					<th>
-						<div class="ct2">
+						<div class="ct2 ct">
 							<span class="bv-circle">2</span>
+							<h2>585.000.000</h2>
 						</div>
 					</th>
 					<th>
-						<div class="ct3">
+						<div class="ct3 ct">
 							<span class="bv-circle">3</span>
+							<h2>1.170.000.000</h2>
 						</div>
 					</th>
 				</tr>
 				</th>
-				<tr>
-					<td>Số tiền bảo hiểm</td>
-					<td data-th="Chương trình I:"><b>292.500.000</b></td>
-					<td data-th="Chương trình II:"><b>585.000.000</b></td>
-					<td data-th="Chương trình III:"><b>1.170.000.000</b></td>
-				</tr>
 				<tr>
 					<td>Quyền lợi bảo hiểm bệnh ung thư giai đoạn sớm</td>
 					<td data-th="Chương trình I:"><b>62.500.000</b></td>
@@ -213,6 +211,64 @@
 					<td data-th="Chương trình III:"><b>50.000.000</b></td>
 				</tr>
 			</table>
+			<div class="pc-hidden">
+				<div class="prg prg-1">
+					<div class="prg-header">
+						Quyền lợi bảo hiểm của <b>Chương trình 1: 292.500.000</b>
+						<span><i class="fa fa-caret-right"></i></span>
+					</div>
+					<div class="prg-info">
+						<hr>
+						Ung thư giai đoạn sớm: 62.500.000
+						<hr>
+						Ung thư giai đoạn trễ: 250.000.000
+						<hr>
+						Ung thư giai đoạn sớm (Nằm viện): 500.000/ngày, tối đa 30 ngày/cả đời
+						<hr>
+						Ung thư giai đoạn trễ (Nằm viện): 500.000/ngày, tối đa 60 ngày/cả đời
+						<hr>
+						Tử vong do ung thư: 12.500.000
+					</div>
+				</div>
+				<div class="prg prg-2">
+					<div class="prg-header">
+						Quyền lợi bảo hiểm của <b>Chương trình 2: 585.000.000</b>
+						<span><i class="fa fa-caret-right"></i></span>
+					</div>
+					<div class="prg-info">
+						<div class="prg-info">
+						<hr>
+						Ung thư giai đoạn sớm: 125.000.000
+						<hr>
+						Ung thư giai đoạn trễ: 500.000.000
+						<hr>
+						Ung thư giai đoạn sớm (Nằm viện): 1.000.000/ngày, tối đa 30 ngày/cả đời
+						<hr>
+						Ung thư giai đoạn trễ (Nằm viện): 1.000.000/ngày, tối đa 60 ngày/cả đời
+						<hr>
+						Tử vong do ung thư: 25.000.000
+					</div>
+					</div>
+				</div>
+				<div class="prg prg-3">
+					<div class="prg-header">
+						Quyền lợi bảo hiểm của <b>Chương trình 3: 1.170.000.000</b>
+						<span><i class="fa fa-caret-right"></i></span>
+					</div>
+					<div class="prg-info">
+						<hr>
+						Ung thư giai đoạn sớm: 250.000.000
+						<hr>
+						Ung thư giai đoạn trễ: 1.000.000.000
+						<hr>
+						Ung thư giai đoạn sớm (Nằm viện): 2.000.000/ngày, tối đa 30 ngày/cả đời
+						<hr>
+						Ung thư giai đoạn trễ (Nằm viện): 2.000.000/ngày, tối đa 30 ngày/cả đời
+						<hr>
+						Tử vong do ung thư: 50.000.000
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div class="col-md-12 signup">
@@ -243,9 +299,64 @@
 		</div>
 	</div>	<br clear="all">
 	<div class="footer">
+		<div class="col-md-10 col-md-offset-1" style="padding-left: 0; padding-right: 0">
+			<div class="col-md-4 clock">
+				<h3>Quyền lợi bảo hiểm</h3>
+				<div>
+					<div>
+						<input type="radio" name="footer-program" value="1" checked> Chương trình 1: <b>292.500.000 VNĐ</b>
+					</div>
+					<div>
+						<input type="radio" name="footer-program" value="2"> Chương trình 2: <b>585.000.000 VNĐ</b>
+					</div>
+					<div>
+						<input type="radio" name="footer-program" value="3"> Chương trình 3: <b>1.170.000.000 VNĐ</b>
+					</div>
+				</div>
+				<select name="footer-age" id="age-select" style="color: #000">
+					<option value="0">--Chọn tuổi--</option>
+					<?php for($i = 16; $i <= 65; $i++): ?>
+						<option value="<?php echo $i ?>"><?php echo $i ?></option>
+					<?php endfor; ?>
+				</select> &nbsp;
+				<input type="radio" name="footer-sex" checked value="1"> Nam&nbsp;
+				<input type="radio" name="footer-sex" value="0"> Nữ
+				<label class="error" id="#footer-error"></label>
+				<h2>Khuyến mại đặc biệt đến ngày 03/03/2017</h2>
+				Chỉ còn lại: <br>
+				<span id="clock"></span>
+			</div>
+			<div class="col-md-4">
+			<h1></h1>
+				<div class="white-border">
+				<h1>Thông tin đơn hàng</h1>
+					<span>Thời hạn bảo hiểm: <b id="footer-deadline"></b></span><br>
+					<span>Người được bảo hiểm: <b id="footer-cname"></b></span><br>
+					<span>Tuổi: <b id="footer-age"></b></span><br>
+					<span>Số năm tham gia: <b>10 năm</b></span><br>
+					<span>Cách thức thanh toán: <b>Từng năm một</b></span>
+					<h2>Phí bảo hiểm: <span id="result"></span></h2>
+				</div>
+			</div>
+			<div class="col-md-4 footer-signup">
+				<h1 align="justify">Hãy điền thông tin vào đây để được tư vấn miễn phí</h1>
+				<form id="footer-signup" method="post" action="<?php echo base_url('admin/customers/add') ?>">
+					<input type="text" name="name" class="footer-input" placeholder="Họ và Tên">
+					<input type="email" name="email" class="footer-input" placeholder="Email">
+					<input type="text" name="phone" class="footer-input" placeholder="Số điện thoại">
+					<input type="text" name="address" class="footer-input" placeholder="Địa chỉ liên hệ">
+					<input type="hidden" name="age">
+					<input type="hidden" name="program" value="1">
+					<input type="hidden" name="sex" value="1">
+					<button class="footer-button" type="submit">Đăng ký tư vấn</button>
+					<label id="footer-success"></label>
+				</form>
+			</div>
+		</div>
+		<br clear="all">
+		<hr>
 		<div class="col-md-10 col-md-offset-1 footer-c" style="padding:0">
 			<div class="col-md-4 menu">
-				<h2>MENU</h2>
 				<a href="#">GIỚI THIỆU SẢN PHẨM K-CARE</a><br>
 				<a href="#">KHUYẾN MẠI ĐẶC BIỆT</a> <br>
 				<a href="#">BẢN TIN</a> <br>
@@ -273,91 +384,101 @@
 		<br clear="all">
 	</div>
 	<div class="screen">
-		<div class="col-md-12 signup-form">
+		<div class="col-md-12 signup-form" style="padding: 0">
 			<span class="closex"><i class="fa fa-times"></i></span>
-			<div class="col-md-4">
-				<h1>TÍNH PHÍ</h1>
-				<hr>
-				<form class="form-group form-horizontal" id="pseudo">
-					<div>
-						<select id="program" class="form-control">
-							<option value="0">------Chọn chương trình bảo hiểm-------</option>
-							<option value="1">Chương trình I</option>
-							<option value="2">Chương trình II</option>
-							<option value="3">Chương trình III</option>
-						</select>
-						<label class="error" id="program-error"></label>
-					</div>
-					<br>
-					<div id="price">
-						Bảng tóm tắt quyền lợi bảo hiểm theo chương trình bạn đã chọn (loại tiền VND)
-						<div id="total-amount">
-							&nbsp;
-						</div>
-						<table id="price-list">
-							<thead>
+			<div class="col-md-6" style="padding: 0">
+				<div class="order-info">
+					<div class="order-body">
+						<table width="100%" class="order-table">
+							<thead style="background-color: #BB8D09">
 								<tr>
-									<th colspan="2">BH bệnh ung thư</th>
-									<th colspan="2">Trợ cấp nằm viện</th>
-									<th rowspan="2">Tử vong do bệnh ung thư</th>
-									<th rowspan="2">Tử vong do tai nạn</th>
+									<td colspan="2"><h1>TÍNH PHÍ BẢO HIỂM</h1></td>
 								</tr>
 								<tr>
-									<th>Giai đoạn sớm</th>
-									<th>Giai đoạn trễ</th>
-									<th>Giai đoạn sớm</th>
-									<th>Giai đoạn trễ</th>
+									<td colspan="2"><b>Quyền lợi bảo hiểm</b></td>
+								</tr>
+								<tr>
+									<td>
+										<select name="program" class="form-control" style="width: 80%">
+											<option value="1">Chương trình 1</option>
+											<option value="2">Chương trình 2</option>
+											<option value="3">Chương trình 3</option>
+										</select>
+									</td>
+									<td valign="middle">
+										<h2 style="color: #50ed4e">292.500.000 VNĐ</h2>
+									</td>
+								</tr>
+								<tr>
+									<td>Tuổi: </td>
+									<td>
+										<select class="form-control" style="max-width: 150px">
+											<option value="0">--Chọn tuổi--</option>
+											<?php for($i=16;$i<=65;$i++): ?>
+												<option value="<?php echo $i ?>"><?php echo $i; ?></option>
+											<?php endfor; ?>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Giới tính:
+									</td>
+									<td>
+										<input type="radio" name="sex" value="male" checked="checked" id="sex"> Nam  &nbsp;&nbsp;&nbsp;
+										<input type="radio" name="sex" value="female"> Nữ
+									</td>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td id="col-1"></td>
-									<td id="col-2""></td>
-									<td id="col-3"></td>
-									<td id="col-4"></td>
-									<td id="col-5"></td>
-									<td id="col-6"></td>
+									<td>
+										<i class="fa fa-user"></i> Người được bảo hiểm:
+									</td>
+									<td>
+										<b id="customer-name"></b>			
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="fa fa-calendar"> Thời hạn 10 năm:</i>
+									</td>
+									<td>
+										<b id="deadline"></b>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="fa fa-dollar"></i> Trợ cấp nằm viện:
+									</td>
+									<td>
+										<b id="tcnv">500.000/ngày</b>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<i class="fa fa-dollar"></i> Quyền lợi tử vong:
+									</td>
+									<td>
+										<b id="qltv">12.500.000</b>
+									</td>
 								</tr>
 							</tbody>
+							<tfoot>
+								<tr>
+									<td>
+										<h1>Phí bảo hiểm:</h1>
+									</td>
+									<td>
+										<span class="total"></span></b>
+									</td>
+								</tr>
+							</tfoot>
 						</table>
-						<br clear="all">
-					</div>
-					<div class="col-xs-5" style="padding-left: 0">
-						<select name="age" id="age" class="form-control">
-							<option value="0">--Tuổi--</option>
-							<?php for($i = 16; $i <= 65; $i++): ?>
-								<option value="<?php echo $i ?>"><?php echo $i ?></option>
-							<?php endfor;  ?>
-						</select>
-						<label class="error" id="age-error"></label>
-					</div>
-					<div class="col-xs-7" style="line-height: 34px">
-						<input type="radio" name="sex" value="male" checked="checked" id="sex"> Nam  &nbsp;&nbsp;&nbsp;
-						<input type="radio" name="sex" value="female"> Nữ	
-					</div><br clear="all">
-					<hr>
-					<h3 id="cost">Phí bảo hiểm/năm: <span class="total"></span> VNĐ</h3>
-					<input type="hidden" id="base_url" value="<?php echo base_url(); ?>">
-				</form>
-			</div>
-			<div class="col-md-4" style="padding: 20px">
-				<div class="order-info">
-					<div class="order-heading">
-						<h1>THÔNG TIN ĐƠN HÀNG</h1>
-						Sản phẩm: Bảo hiệm bệnh ưng thư
-					</div>
-					<div class="order-body">
-						<i class="fa fa-calendar"></i> Thời hạn bảo hiểm: <b id="deadline"></b><br>
-						<i class="fa fa-user"></i> Người được bảo hiểm: <b id="customer-name"></b><br>
-						<i class="fa fa-cog"></i> Tuổi: <b id="b-age"></b><br>
-						<i class="fa fa-calendar"></i> Số năm tham gia: <b>10 năm</b><br>
-						<i class="fa fa-dollar"></i> Cách thức thanh toán: <b>Từng năm một</b> <br>
-						<hr style="color: #ccc">
-						<i class="fa fa-money"></i> <b>Phí bảo hiểm: <span class="total"></span></b><br>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4" style="padding-left: 30px; padding-right: 30px">
+			<div class="col-md-6">
 				<h1>ĐĂNG KÝ</h1>
 				<hr>
 				<form id="signup-form" action="<?php echo base_url('admin/customers/add') ?>" method="post">
@@ -377,7 +498,6 @@
 						<label>Số điện thoại: </label>
 						<input type="text" name="phone" class="form-control">
 					</div>
-					<input type="hidden" name="program">
 					<input type="hidden" name="age">
 					<input type="hidden" name="sex" value="1">
 					<button type="submit" class="btn btn-danger">Đăng ký</button>
