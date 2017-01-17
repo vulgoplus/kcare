@@ -2,7 +2,7 @@
 /**
 * 
 */
-class Customers extends CI_controller
+class Customers extends CI_Controller
 {
 	
 	function __construct()
@@ -10,8 +10,6 @@ class Customers extends CI_controller
 		parent::__construct();
 	}
 
-
- 
 	/**
 	* Customer homepage
 	*/
@@ -36,18 +34,22 @@ class Customers extends CI_controller
 
 	//Ajax function
 	public function add(){
-		$data = array(
-			'name' => $this->input->post('name'),
-			'address' => $this->input->post('address'),
-			'email'   => $this->input->post('email'),
-			'phone'   => $this->input->post('phone'),
-			'sex'     => $this->input->post('sex'),
-			'program' => $this->input->post('program'),
-			'age'     => $this->input->post('age')
-		);
+		if($this->input->post('name')){
+			$data = array(
+				'name' => $this->input->post('name'),
+				'address' => $this->input->post('address'),
+				'email'   => $this->input->post('email'),
+				'phone'   => $this->input->post('phone'),
+				'sex'     => $this->input->post('sex'),
+				'program' => $this->input->post('program'),
+				'age'     => $this->input->post('age')
+			);
 
-		$this->load->model('Customers_model');
-		$this->Customers_model->add($data);
+			$this->load->model('Customers_model');
+			$this->Customers_model->add($data);
+		}else{
+			die('Access is denined!');
+		}
 	}
 
 	//Ajax: get price and format

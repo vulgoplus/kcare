@@ -56,8 +56,8 @@
 	padding: 15px;
 }
 
-.carousel-item{
-	border: 5px solid #fff;
+.slick-slide img{
+	border: 1px solid #fff;
 }
 
 .carousel-item a{
