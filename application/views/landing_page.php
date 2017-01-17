@@ -438,7 +438,7 @@
 										</select>
 									</td>
 									<td valign="middle">
-										<h2 style="color: #50ed4e" id="benifit">292.500.000 VNĐ</h2>
+										<h3 style="color: #50ed4e" id="benifit">292.500.000 VNĐ</h3>
 									</td>
 								</tr>
 								<tr>

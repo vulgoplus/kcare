@@ -1,13 +1,12 @@
-jQuery(document).ready(function() {
-    // for hover dropdown menu
-    $('ul.nav li.dropdown').hover(function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(200);
-    }, function() {
-        $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(200);
+$(document).ready(function(){
+    $.scrollSpeed(100, 2000);
+
+    $(window).bind('scroll',function(){
+        parallax();
     });
-    /* slick slider call */
-    $('.slick_slider').slick({
-        arrows: true,
+
+    $('#feature-carousel').slick({
+        dots: false,
         infinite: true,
         speed: 300,
         slidesToShow: 4,
@@ -34,40 +33,12 @@ jQuery(document).ready(function() {
             }
         }]
     });
-    //Check to see if the window is top if not then display button
-    jQuery(window).scroll(function() {
-        if ($(this).scrollTop() > 300) {
-            $('.scrollToTop').fadeIn();
-        } else {
-            $('.scrollToTop').fadeOut();
-        }
-    });
-    //Click event to scroll to top
-    $('.scrollToTop').click(function() {
-        $('html, body').animate({
-            scrollTop: 0
-        }, 800);
-        return false;
-    });
-    $(".search_icon").click(function() {
-        $('.search_bar').fadeOut();
-        $("i", this).toggleClass("fa-search fa-close");
-    });
-    $(document).on('click', '.fa-close', function() {
-        $('.search_bar').fadeIn();
-    });
 });
 
-wow = new WOW({
-    animateClass: 'animated',
-    offset: 100
-});
-wow.init();
+function parallax(){
+    var pos = $(window).scrollTop();
 
-jQuery(window).load(function() { // makes sure the whole site is loaded
-    $('#status').fadeOut(); // will first fade out the loading animation
-    $('#preloader').delay(100).fadeOut('slow'); // will fade out the white DIV that covers the website.
-    $('body').delay(100).css({
-        'overflow': 'visible'
-    });
-})
+    $('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.2) + "px" );
+    //$('.footer').css('backgroundPosition',"50% " + Math.round(($('.footer').offset().top - pos) * 0.3) + "px" );
+    //$('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.2) + "px" );
+}

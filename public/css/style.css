@@ -1,12 +1,56 @@
+/*
 @font-face {
     font-family: MyriadPro;
-    src: url(../fonts/MYRIADPRO-LIGHTSEMICN.OTF);
+    src: url('../fonts/MYRIADPRO-REGULAR_3.OTF') format('opentype'),
+    url('../font/SOURCESANSPRO-REGULAR.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: MyriadPro;
-    src: url(../fonts/MYRIADPRO-BOLDSEMICN.OTF);
+    src: url('../fonts/MYRIADPRO-BOLD_3.OTF') format('opentype'),
+    url('../font/SOURCESANSPRO-SEMIBOLD.TTF') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('../fonts/MYRIADPRO-LIGHTSEMICN.OTF') format('opentype'),
+    url('../font/SOURCESANSPRO-LIGHT.TTF') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('../fonts/MYRIADPRO-BOLDSEMICN.OTF') format('opentype'),
+    url('../font/SOURCESANSPRO-SEMIBOLD.TTF') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+*/
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('../fonts/myriad-set-pro_text.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('../fonts/myriad-set-pro_extrathin.woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('../fonts/myriad-set-pro_bold.woff');
     font-weight: bold;
+    font-style: normal;
 }
 
 *{
@@ -427,8 +471,11 @@ input.error{
 .order-info{
 	line-height: 30px;
 	color: #fff;
-	font-size: 20px;
+	font-size: 14px;
+}
 
+.order-info h3{
+	font-size: 16px
 }
 
 .order-heading{
@@ -688,6 +735,10 @@ input.error{
 
 	.slide-content{
 		width: 54%;
+	}
+
+	.order-info{
+		font-size: 20px;
 	}
 }
 
