@@ -11,6 +11,7 @@ $(document).ready(function(){
         speed: 300,
         slidesToShow: 4,
         slidesToScroll: 4,
+        adaptiveHeight: true,
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -39,7 +40,7 @@ $(document).ready(function(){
 function parallax(){
     var pos = $(window).scrollTop();
 
-    $('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.2) + "px" );
+    $('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.4) + "px" );
     //$('.footer').css('backgroundPosition',"50% " + Math.round(($('.footer').offset().top - pos) * 0.3) + "px" );
     //$('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.2) + "px" );
 }

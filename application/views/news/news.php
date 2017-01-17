@@ -54,6 +54,53 @@
 			</div>
 		</div><!--End inside-->
 	</div><!--End header-->
+	<div class="new-post">
+		<h1>Có gì mới?</h1>
+	</div>
+	<div class="posts-list">
+		<a class="post-item item-1" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<a class="post-item item-2" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<a class="post-item item-3" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<a class="post-item item-4" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<a class="post-item item-5" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<a class="post-item item-6" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+			<div class="post-title">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+			</div>
+		</a>
+		<br clear="all">
+		<div class="pagination">
+			<a href="#" class="page">1</a>
+			<a href="#" class="page">2</a>
+			<a href="#" class="page">3</a>
+		</div>
+	</div>
 </div><!--End wrapper-->
 </body>
 </html>

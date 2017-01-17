@@ -19,6 +19,9 @@
     font-weight: bold;
 }
 
+html,body, .wrapper{
+	overflow-x: hidden;
+}
 
 
 *{
@@ -26,10 +29,10 @@
 }
 
 .header{
-	height: 1000px;
 	width: 100%;
 	background: url('images/bg-top.jpg') no-repeat 50% 0 fixed;
 	padding: 1px;
+	padding-bottom: 50px;
 }
 
 .inside{
@@ -64,9 +67,104 @@
 	display: block;
 }
 
+.carousel-item img{
+    width: 100%;
+    height: auto;
+}
+
+.new-post{
+	text-align: center;
+}
+
+.posts-list{
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 15px;
+}
+
+.post-item{
+	display: block;
+	position:relative;
+	width: 32%;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	float: left;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+	color: #000;
+}
+
+.post-item:hover{
+	box-shadow: 3px 4px 18px 0 rgba(119,119,119,0.7);
+	color: #000;
+}
+
+.post-item:hover .post-title{
+	font-size: 1.2em;
+}
+
+.post-item:hover img{
+	opacity: 0.8
+}
+
+.post-item img{
+	width: 100%;
+	height: auto;
+}
+
+.post-title{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(255,255,255,0.5);
+	padding: 10px;
+	font-weight: bold;
+	transition: all 1s ease;
+}
+
+.pagination{
+	text-align: center;
+	width: 100%;
+}
+
+.pagination a{
+	display: inline-block;
+	background-color: #f2f2f2;
+    background-image: -moz-linear-gradient(top,#ffffff,#dedede);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#dedede));
+    background-image: -webkit-linear-gradient(top,#ffffff,#dedede);
+    background-image: -o-linear-gradient(top,#ffffff,#dedede);
+    background-image: linear-gradient(to bottom,#ffffff,#dedede);
+    background-repeat: repeat-x;
+    padding: 5px 15px;
+    color: #000;
+    font-weight: bold;
+}
+
+.pagination a:hover{
+	background: #dedede;
+}
 
 
 @media (min-width: 992px){
+
+	.item-1, .item-4{
+		margin-right: 2%
+	}
+
+	.item-3, .item-6{
+		margin-left: 2%;
+	}
+
+	.new-post h1{
+		font-size: 50px;
+	}
+
+	.posts-list{
+		width: 80%;
+		margin: auto;
+	}
 
 	.logo{
 		margin-bottom: 25px;
