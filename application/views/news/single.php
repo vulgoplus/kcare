@@ -1,37 +1,143 @@
-<ol class="breadcrumb">
-  <li><a href="../index.html">Home</a></li>
-  <li><a href="#">Technology</a></li>
-  <li class="active">Mobile</li>
-</ol>
-<div class="single_page_area">
-  <h1>Get $50 Off Any Tablet Priced $150 Or More</h1>
-  <div class="post_commentbox"><a href="#"><i class="fa fa-user"></i> Wpfreeware</a> <span><i class="fa fa-calendar"></i> 6:49 AM</span> <a href="#"><i class="fa fa-tags"></i> Technology</a></div>
-  <div class="single_content">
-    <p>Nunc tincidunt, elit non cursus euismod, lacus augue ornare metus, egestas imperdiet nulla nisl quis mauris. Suspendisse a pharetra urna. Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat vehicula, lacus justo semper libero, quis porttitor turpis odio sit amet ligula. Duis dapibus fermentum orci, nec malesuada libero vehicula ut. Integer sodales, urna eget interdum eleifend, nulla nibh laoreet nisl, quis dignissim mauris dolor eget mi. Donec at mauris enim. Duis nisi tellus, adipiscing a convallis quis, tristique vitae risus. Nullam molestie gravida lobortis. Proin ut nibh quis felis auctor ornare. Cras ultricies, nibh at mollis faucibus, justo eros porttitor mi, quis auctor lectus arcu sit amet nunc. Vivamus gravida vehicula arcu, vitae vulputate augue lacinia faucibus.</p>
-    <blockquote>Donec volutpat nibh sit amet libero ornare non laoreet arcu luctus. Donec id arcu quis mauris euismod placerat sit amet ut metus. Sed imperdiet fringilla sem eget euismod. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque adipiscing, neque ut pulvinar tincidunt, est sem euismod odio, eu ullamcorper turpis nisl sit amet velit. Nullam vitae nibh odio, non scelerisque nibh. Vestibulum ut est augue, in varius purus.</blockquote>
-    <p> Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat vehicula, lacus justo semper libero, quis porttitor turpis odio sit amet ligula. Duis dapibus fermentum orci, nec malesuada libero vehicula ut. Integer sodales, urna eget interdum eleifend, nulla nibh laoreet nisl, quis dignissim mauris dolor eget mi. Donec at mauris enim. Duis nisi tellus, adipiscing a convallis quis, tristique vitae risus. Nullam molestie gravida lobortis. Proin ut nibh quis felis auctor ornare. Cras ultricies, nibh at mollis faucibus, justo eros porttitor mi, quis auctor lectus arcu sit amet nunc. Vivamus gravida vehicula arcu, vitae vulputate augue lacinia faucibus.</p>
-    <ul>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-      <li>Nullam vitae nibh odio, non scelerisque nibh</li>
-    </ul>
-    <p> Morbi dui lectus, pharetra nec elementum eget, vulputate ut nisi. Aliquam accumsan, nulla sed feugiat vehicula, lacus justo semper libero, quis porttitor turpis odio sit amet ligula. Duis dapibus fermentum orci, nec malesuada libero vehicula ut. Integer sodales, urna eget interdum eleifend, nulla nibh laoreet nisl, quis dignissim mauris dolor eget mi. Donec at mauris enim. Duis nisi tellus, adipiscing a convallis quis, tristique vitae risus. Nullam molestie gravida lobortis. Proin ut nibh quis felis auctor ornare. Cras ultricies, nibh at mollis faucibus, justo eros porttitor mi, quis auctor lectus arcu sit amet nunc. Vivamus gravida vehicula arcu, vitae vulputate augue lacinia faucibus.</p>
-    <h1>This is h1 content </h1>
-    <h2>This is h2 content </h2>
-    <h3>This is h3 content </h3>
-    <h4>This is h4 content </h4>
-    <h5>This is h5 content </h5>
-    <h6>This is h6 content </h6>
-    <button class="btn default-btn">Default</button>
-    <button class="btn btn-red">Red Button</button>
-    <button class="btn btn-yellow">Yellow Button</button>
-    <button class="btn btn-green">Green Button</button>
-    <button class="btn btn-black">Black Button</button>
-    <button class="btn btn-orange">Orange Button</button>
-    <button class="btn btn-blue">Blue Button</button>
-    <button class="btn btn-lime">Lime Button</button>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tiêu đề bài viết</title>
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/bootstrap.min.css') ?>">
+  <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/single.css') ?>">
+</head>
+<body>
+<div class="post-head">
+  <div class="logo">
+    <img src="<?php echo base_url('public/images/logo.png') ?>">
   </div>
 </div>
+<div class="post-wrapper">
+  <div class="post-img">
+    <img src="<?php echo base_url('uploads/news/900x600/title.jpg') ?>">
+    <div class="single-title">
+      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua.</h1>
+      <div class="date">
+        Đăng ngày: 18/01/2017
+      </div><!--End date-->
+    </div><!--End single title-->
+  </div><!--End post-img-->
+  
+  <div class="single-content">
+    <h2>Title 1</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h2>Title 2</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h2>Title 3</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+    <h2>Title 4</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+  </div>
+</div><!--End post-wrapper-->
+
+<div class="footer">
+  <div class="footer-container">
+    <div class="col-xs-12 clear-padding">
+      <h2>Hãy tham gia K-Care ngay hôm nay để bảo vệ bạn và gia đình</h2>
+    </div>
+    <div class="col-md-6 clear-padding">
+      <h3>PHÍ VÀ QUYỀN LỢI</h3>
+      <table class="single-table">
+        <thead>
+          <tr>
+            <td colspan="2">
+              <select id="footer-program" class="form-control" style="max-width: 400px">
+                <option value="1" class="select-item">Chương trình 1</option>
+                <option value="2" class="select-item">Chương trình 2</option>
+                <option value="3" class="select-item">Chương trình 3</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <select id="footer-age" class="form-control" style="max-width: 150px">
+                <option value="0" class="select-item">--Chọn tuổi--</option>
+                <?php for($i = 16; $i <= 65; $i++): ?>
+                  <option value="<?php echo $i ?>" class="select-item"><?php echo $i ?></option>
+                <?php endfor; ?>
+              </select>
+            </td>
+            <td>
+              <input type="radio" name="footer-sex" value="1" class="footer-sex" checked> Nam &nbsp;&nbsp;&nbsp;
+              <input type="radio" name="footer-sex" value="0" class="footer-sex"> Nữ
+            </td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Người được bảo hiểm:</td>
+            <td><b id="footer-cname"></b></td>
+          </tr>
+          <tr>
+            <td>Thời hạn 10 năm:</td>
+            <td><b id="footer-deadline"></b></td>
+          </tr>
+          <tr>
+            <td>Trợ cấp nằm viện:</td>
+            <td><b id="footer-tcnv">500.000/ngày</b></td>
+          </tr>
+          <tr>
+            <td>Quyền lợi tử vong:</td>
+            <td><b id="footer-tv">12.500.000</b></td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td><h2>Phí bảo hiểm:</h2></td>
+            <td><h2 id="total"></h2></td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+    <div class="col-md-6 fsignup clear-padding">
+      <h1 align="justify">Thông tin</h1>
+      <form id="footer-signup" method="post" action="<?php echo base_url('admin/customers/add') ?>">
+        <input type="text" name="name" class="footer-input" placeholder="Họ và Tên">
+        <input type="email" name="email" class="footer-input" placeholder="Email">
+        <input type="text" name="phone" class="footer-input" placeholder="Số điện thoại">
+        <input type="text" name="address" class="footer-input" placeholder="Địa chỉ liên hệ">
+        <input type="hidden" name="age">
+        <input type="hidden" name="program" value="1">
+        <input type="hidden" name="sex" value="1">
+        <button class="footer-button" type="submit">Đăng ký tư vấn</button>
+        <label id="footer-success"></label>
+      </form>
+    </div>
+    <br clear="all">
+  </div>
+</div>
+</body>
+</html>

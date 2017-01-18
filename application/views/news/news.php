@@ -6,21 +6,25 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick-theme.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/animate.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/jQuery.scrollSpeed.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/slick.min.js') ?>"></script>
+	<script type="text/javascript" src="<?php echo base_url('public/js/news/wow.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/news/custom.js') ?>"></script>
 </head>
 <body>
 <div class="wrapper">
 	<div class="header">
 		<div class="inside">
-			<div class="logo">
-				<img src="<?php echo base_url('public/images/logo.png') ?>">
-			</div>
 			<div class="banner">
-				<img class="img img-responsive img-rounded" src="<?php echo base_url('public/css/news/images/banner.jpg') ?>">
+				<div class="logo">
+					<img src="<?php echo base_url('public/images/logo.png') ?>">
+				</div>
+				<div class="sologan">
+					An tâm gánh nặng chia sẻ
+				</div>
 			</div>
 			<div class="feature-news">
 				<h2>Nổi bật</h2>
@@ -58,37 +62,37 @@
 		<h1>Có gì mới?</h1>
 	</div>
 	<div class="posts-list">
-		<a class="post-item item-1" href="#">
+		<a class="post-item item-1 wow fadeInDown" href="#">
 			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</div>
 		</a>
-		<a class="post-item item-2" href="#">
+		<a class="post-item item-2 wow fadeInDown" href="#">
 			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</div>
 		</a>
-		<a class="post-item item-3" href="#">
+		<a class="post-item item-3 wow fadeInDown" href="#">
 			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</div>
 		</a>
-		<a class="post-item item-4" href="#">
+		<a class="post-item item-4 wow fadeInDown" href="#">
 			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</div>
 		</a>
-		<a class="post-item item-5" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
+		<a class="post-item item-5 wow fadeInDown" href="#">
+			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>" >
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
 			</div>
 		</a>
-		<a class="post-item item-6" href="#">
+		<a class="post-item item-6 wow fadeInDown" href="#">
 			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
 			<div class="post-title">
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -100,6 +104,9 @@
 			<a href="#" class="page">2</a>
 			<a href="#" class="page">3</a>
 		</div>
+	</div>
+	<div class="footer">
+		
 	</div>
 </div><!--End wrapper-->
 </body>

@@ -484,7 +484,7 @@ input.error{
 }
 
 .order-table td{
-	padding: 5px 15px;
+	padding: 10px 15px;
 }
 
 .order-table tfoot{
@@ -796,6 +796,10 @@ input.error{
 		margin-left: 15%;
 		z-index: 50;
 		overflow: visible;
+	}
+
+	.signup-form table{
+		height: 100%;
 	}
 
 	.closex{

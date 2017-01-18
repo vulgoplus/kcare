@@ -54,6 +54,29 @@ html,body, .wrapper{
     font-weight: 300;
 }
 
+.banner{
+	background-image: url('images/banner.jpg');
+	height: 400px;
+	position: relative;
+}
+
+.sologan{
+	padding: 15px;
+	background: -moz-linear-gradient(left,  rgba(255,255,255,1) 6%, rgba(255,255,255,0.19) 82%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 6%,rgba(255,255,255,0.19) 82%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(255,255,255,1) 6%,rgba(255,255,255,0.19) 82%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	font-size: 30px;
+}
+
+.logo{
+	position: absolute;
+}
+
 #feature-carousel{
 	background-color: #2A3037;
 	padding: 15px;
@@ -85,13 +108,12 @@ html,body, .wrapper{
 .post-item{
 	display: block;
 	position:relative;
-	width: 32%;
 	border: 1px solid #ccc;
 	border-radius: 3px;
-	float: left;
 	margin-bottom: 20px;
 	transition: all 0.3s ease;
 	color: #000;
+	width: 100%;
 }
 
 .post-item:hover{
@@ -101,10 +123,6 @@ html,body, .wrapper{
 
 .post-item:hover .post-title{
 	font-size: 1.2em;
-}
-
-.post-item:hover img{
-	opacity: 0.8
 }
 
 .post-item img{
@@ -140,21 +158,37 @@ html,body, .wrapper{
     padding: 5px 15px;
     color: #000;
     font-weight: bold;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
+
 
 .pagination a:hover{
 	background: #dedede;
+	text-decoration: none;
+}
+
+.footer{
+	height: 500px;
+	background-color: #000;
+	margin-top: 50px;
+}
+
+.logo{
+	left: 50%;
+	transform: translateX(-50%);
+	top: 20px;
 }
 
 
-@media (min-width: 992px){
 
-	.item-1, .item-4{
-		margin-right: 2%
+@media (min-width: 992px){
+	.item-1, .item-3, .item-5{
+		margin-right: 4%;
 	}
 
-	.item-3, .item-6{
-		margin-left: 2%;
+	.banner{
+		border-radius: 4px;
 	}
 
 	.new-post h1{
@@ -179,5 +213,22 @@ html,body, .wrapper{
 @media (min-width: 1200px){
 	.inside{
 		width: 80%;
+	}
+
+	.post-item{
+		width: 32%;
+		float: left;
+	}
+
+	.item-3, .item-6{
+		margin-left: 2%;
+	}
+
+	.item-3, .item-5{
+		margin-right: 0
+	}
+
+	.item-1, .item-4{
+		margin-right: 2%;
 	}
 }

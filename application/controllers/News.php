@@ -20,5 +20,9 @@
 			//$data 				 = array_merge($data,$this->load_data_master());
 			$this->load->view('news/news');
 		}
+
+		public function single(){
+			$this->load->view('news/single');
+		}
 	}
  ?>

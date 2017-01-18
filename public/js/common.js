@@ -74,7 +74,6 @@ $(document).ready(function(){
 				$('#tcnv').text('500.000/ngày');
 				$('#qltv').text('12.500.000');
 				$('#signup-form input[name="program"]').val(1);
-				$('#benifit').text('292.500.000 VNĐ');
 				break;
 			case '2':
 				$('#tcnv').text('1.000.000/ngày');

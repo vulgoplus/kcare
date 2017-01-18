@@ -35,12 +35,12 @@ $(document).ready(function(){
             }
         }]
     });
+
+    wow = new WOW().init();
 });
 
 function parallax(){
     var pos = $(window).scrollTop();
 
     $('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.4) + "px" );
-    //$('.footer').css('backgroundPosition',"50% " + Math.round(($('.footer').offset().top - pos) * 0.3) + "px" );
-    //$('.header').css('backgroundPosition',"50% " + Math.round(($('.header').offset().top - pos) * 0.2) + "px" );
 }

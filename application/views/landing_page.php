@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Bảo hiểm K-Care</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/slick.css') ?>">
@@ -383,7 +383,7 @@
 				</form>
 				<h2>Khuyến mại còn lại: </h2>
 				<span id="clock"></span>
-			</div>
+			</div><!--End footer signup-->
 		</div>
 		<br clear="all">
 		<hr style="border-top: 1px solid #555">
@@ -410,7 +410,7 @@
 				<a href="#" class="facebook"><i class="fa fa-facebook fa-2x"></i></a>
 				<a href="#" class="google"><i class="fa fa-google-plus fa-2x"></i></a>
 				<a href="#" class="twitter"><i class="fa fa-twitter fa-2x"></i></a>
-			</div>
+			</div><!--End footer-->
 			
 		</div>
 		<br clear="all">
@@ -424,25 +424,18 @@
 						<table width="100%" class="order-table">
 							<thead style="background-color: #BB8D09">
 								<tr>
-									<td colspan="2"><h1>TÍNH PHÍ BẢO HIỂM</h1></td>
+									<td colspan="2"><h1>PHÍ VÀ QUYỀN LỢI</h1></td>
 								</tr>
 								<tr>
-									<td colspan="2"><b>Quyền lợi bảo hiểm</b></td>
-								</tr>
-								<tr>
-									<td>
-										<select id="program" name="program" class="form-control" style="width: 80%">
-											<option value="1">Chương trình 1</option>
-											<option value="2">Chương trình 2</option>
-											<option value="3">Chương trình 3</option>
+									<td colspan="2">
+										<select id="program" name="program" class="form-control">
+											<option value="1">Chương trình 1: 292.500.000 VNĐ</option>
+											<option value="2">Chương trình 2: 585.000.000 VNĐ</option>
+											<option value="3">Chương trình 3: 1.170.000.000 VNĐ</option>
 										</select>
 									</td>
-									<td valign="middle">
-										<h3 style="color: #50ed4e" id="benifit">292.500.000 VNĐ</h3>
-									</td>
 								</tr>
 								<tr>
-									<td>Tuổi: </td>
 									<td>
 										<select class="form-control" style="max-width: 150px" id="age">
 											<option value="0">--Chọn tuổi--</option>
@@ -450,13 +443,7 @@
 												<option value="<?php echo $i ?>"><?php echo $i; ?></option>
 											<?php endfor; ?>
 										</select>
-										<label class="error" id="age-error" style="font-size: 14px; font-weight: lighter"></label>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										Giới tính:
-									</td>
+										<label class="error" id="age-error" style="font-size: 14px; font-weight: lighter; display: none;"></label></td>
 									<td>
 										<input type="radio" name="sex" value="1" checked="checked" class="sex"> Nam  &nbsp;&nbsp;&nbsp;
 										<input type="radio" name="sex" value="0bá" class="sex"> Nữ
@@ -535,7 +522,7 @@
 					<input type="hidden" name="sex" value="1">
 					<input type="hidden" name="program" value="1">
 					<input type="hidden" name="base-url" id="base-url" value="<?php echo base_url(); ?>">
-					<button type="submit" class="btn btn-danger">Đăng ký</button>
+					<button type="submit" class="btn btn-primary">Đăng ký</button>
 					<div class="save-success">
 						
 					</div>

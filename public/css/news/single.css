@@ -1,0 +1,162 @@
+@font-face {
+    font-family: MyriadPro;
+    src: url('fonts/myriad-set-pro_text.woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('fonts/myriad-set-pro_extrathin.woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: MyriadPro;
+    src: url('fonts/myriad-set-pro_bold.woff');
+    font-style: normal;
+    font-weight: bold;
+}
+
+html,body, .wrapper{
+	overflow-x: hidden;
+}
+
+
+*{
+	font-family: MyriadPro;
+}
+
+body{
+    background: #EEEFF0;
+}
+
+.post-head{
+    display: none;
+    position: relative;
+}
+
+.logo{
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20px;
+    position: absolute;
+}
+
+.post-img img{
+    width: 100%;
+    height: auto;
+}
+
+.single-title{
+    padding: 15px;
+}
+
+.date{
+    color: #999;
+    font-size: 0.9em;
+}
+
+.single-content{
+    padding: 15px;      
+}
+
+.footer{
+    background: url('images/footer.jpg');
+    color: #aaa;
+}
+
+.footer a{
+    color: #fff;
+}
+
+.single-table{
+    width: 100%
+}
+
+.fsignup input{
+    width: 100%;
+    padding: 5px 12px;
+    border: 2px solid white;
+    background: transparent;
+    margin: 10px 0;
+    color: #fff;
+}
+
+.single-table select{
+    width: 100%;
+    padding: 5px 12px;
+    border: 2px solid white;
+    background: transparent;
+    margin: 10px 0;
+    color: #fff
+}
+
+.fsignup button{
+    width: 100%;
+    padding: 5px 0;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.5s ease;
+}
+
+.fsignup button:hover{
+    background-color: transparent;
+    color: #fff;
+}
+
+.select-item{
+    color: #000;
+}
+
+@media (min-width: 992px){
+    .post-item{
+        width: 48%;
+        float: left;
+    }
+
+    .post-img{
+        position: relative;
+    }
+
+    .single-title{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: -moz-linear-gradient(left,  rgba(255,255,255,1) 30%, rgba(255,255,255,1) 42%, rgba(255,255,255,0.42) 84%, rgba(255,255,255,0.2) 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(left,  rgba(255,255,255,1) 30%,rgba(255,255,255,1) 42%,rgba(255,255,255,0.42) 84%,rgba(255,255,255,0.2) 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to right,  rgba(255,255,255,1) 30%,rgba(255,255,255,1) 42%,rgba(255,255,255,0.42) 84%,rgba(255,255,255,0.2) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#33ffffff',GradientType=1 ); /* IE6-9 */
+    }
+
+    .post-wrapper{
+        width: 60%;
+        margin: auto;
+        margin-top: -200px;
+        background-color: #fff;
+        margin-bottom: 30px;
+    }
+
+    .post-head{
+        background-image: url('images/banner.jpg');
+        height: 400px;
+        background-size: cover;
+        display: block;
+    }
+
+    .clear-padding{
+        padding: 0
+    }
+}
+
+@media (min-width: 1200px){
+    .footer-container{
+        width: 60%;
+        margin: auto;
+    }
+}
