@@ -29,31 +29,13 @@
 			<div class="feature-news">
 				<h2>Nổi bật</h2>
 				<div id="feature-carousel">
-					<div class="carousel-item">
-						<a href="#">
-							<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-						</a>
-					</div>
-					<div class="carousel-item">
-						<a href="#">
-							<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-						</a>
-					</div>
-					<div class="carousel-item">
-						<a href="#">
-							<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-						</a>
-					</div>
-					<div class="carousel-item">
-						<a href="#">
-							<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-						</a>
-					</div>
-					<div class="carousel-item">
-						<a href="#">
-							<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-						</a>
-					</div>
+					<?php foreach ($featured as $item): ?>
+						<div class="carousel-item">
+							<a href="#">
+								<img src="<?php echo base_url('uploads/news/300x200/'.$item['image']) ?>">
+							</a>
+						</div>
+					<?php endforeach ?>
 				</div>
 			</div>
 		</div><!--End inside-->
@@ -62,42 +44,15 @@
 		<h1>Có gì mới?</h1>
 	</div>
 	<div class="posts-list">
-		<a class="post-item item-1 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
-		<a class="post-item item-2 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
-		<a class="post-item item-3 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
-		<a class="post-item item-4 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
-		<a class="post-item item-5 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>" >
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
-		<a class="post-item item-6 wow fadeInDown" href="#">
-			<img src="<?php echo base_url('uploads/news/300x200/title.jpg') ?>">
-			<div class="post-title">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit
-			</div>
-		</a>
+		<?php $i = 1; ?>
+		<?php foreach ($new_posts as $item): ?>
+			<a class="post-item item-<?php echo $i ?> wow fadeInDown" href="<?php echo base_url('news/single/'.$item['alias']) ?>">
+				<img src="<?php echo base_url('uploads/news/300x200/'.$item['image']) ?>">
+				<div class="post-title">
+					<?php echo $item['title'] ?>
+				</div>
+			</a>
+		<?php $i++; endforeach ?>
 		<br clear="all">
 		<div class="pagination">
 			<a href="#" class="page">1</a>

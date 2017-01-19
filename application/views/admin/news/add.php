@@ -1,5 +1,13 @@
-<h1>Tin Tức</h1>
-Thêm tin tức
+<div class="title">
+	<h1>Bài viết</h1>
+	Danh sách bài viết
+	<a href="<?php echo base_url('admin/news') ?>" class="grad-btn">
+		<div class="icon">
+			<i class="fa fa-plus"></i>
+		</div>
+		<div>Danh sách bài viết</div>
+	</a>
+</div>
 <hr>
 <div class="panel panel-default">
 	<div class="panel-heading">

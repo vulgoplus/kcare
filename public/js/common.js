@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+	$('.signup-form').scroll(function(){
+		if($('.signup-form').scrollTop() > 60){
+			$('.popup-header').css('opacity','0.8');
+		}else{
+			$('.popup-header').css('opacity','1');
+		}
+	});
+
 	$(".banner").slick({
 		dots: true,
 		autoplay: true,
@@ -32,6 +41,10 @@ $(document).ready(function(){
 
 	$('.signup-form').click(function(e){
 		e.stopPropagation();
+	});
+
+	$('#close').click(function(){
+		$('.screen').hide();
 	});
 
 	$('.closex').click(function(){
@@ -328,6 +341,11 @@ $(document).ready(function(){
 	  });
 	});
 
+	$('#btn-signup').click(function(){
+		$('#signup-form input[name="phone"]').focus();
+		$('#signup-form input[name="name"]').focus();
+	});
+
 
 	//Sizing intro image
 	if($(window).width()<992){
@@ -358,4 +376,6 @@ $(document).ready(function(){
 			)
 		);
 	});
+
+
 });

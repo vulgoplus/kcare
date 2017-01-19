@@ -268,21 +268,59 @@ header a:hover, header a:visited{
 	cursor: pointer;
 }
 
-#screen{
+.screen{
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
 	background: rgba(0, 0, 0, 0.7);
 	z-index: 100;
-	display: none;
 	overflow-y: auto;
+	left: 0;
+	display: none;
+}
+
+.customer-popup{
+	width: 100%;
+	background-color: #fff;
+}
+
+.customer-popup-title{
+	padding: 15px;
+	background-color: #eee;
+	position: relative;
+}
+
+.customer-popup-body{
+	padding: 15px;
+}
+
+.customer-popup-body div{
+	line-height: 40px;
+	border-bottom: 1px solid #eee;
 }
 
 .lazy-loading{
 	text-align: center;
 	color: #fff;
 	margin-top: 15%;
+}
+
+.p-close{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	line-height: 20px;
+	background-color: #000;
+	color: #fff;
+	cursor: pointer;
+}
+
+.hidden{
+	display: none;
 }
 
 #connect-error{
@@ -399,16 +437,6 @@ table td{
 }
 
 
-/*********************************************************************************************
- * Order popup
- ********************************************************************************************/
-.popup{
-	width: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
-	line-height: 30px 
-}
 
 .order-item{
 	width: 99%;
@@ -420,18 +448,6 @@ table td{
 	padding-bottom: 15px;
 }
 
-.popup-close{
-	position: absolute;
-	top: 0;
-	right: 0;
-	cursor: pointer;
-	color: #ccc;
-	z-index: 1;
-}
-
-.popup-close:hover{
-	color: #000;
-}
 
 /******************
 | Dashboard style |
@@ -579,6 +595,12 @@ table td{
 		width: 90%;
 		margin: 5% auto;
 	}
+
+	.customer-popup{
+		width: 50%;
+		margin: 100px auto;
+	}
+
 }
 
 .checkbox label{

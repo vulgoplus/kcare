@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/bootstrap.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/font-awesome.min.css') ?>">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/animate.min.css') ?>">
 	<link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/admin_style.css') ?>">
 	<script type="text/javascript" src="<?php echo base_url('public/js/jquery-2.0.0.min.js') ?>"></script>
 	<script type="text/javascript" src="<?php echo base_url('public/js/admin.js') ?>"></script>
@@ -32,8 +33,8 @@
 
 	<!--The navigation-->
 	<div class="left-bar">
-		<a href="#" class="left-bar-active"><i class="fa fa-dashboard"></i> Khách hàng đăng ký</a>
-		<a href="#"><i class="fa fa-product-hunt"></i> Tin tức</a>
+		<a href="<?php echo base_url('admin/customers') ?>" class="left-bar-active"><i class="fa fa-dashboard"></i> Khách hàng đăng ký</a>
+		<a href="<?php echo base_url('admin/news') ?>"><i class="fa fa-product-hunt"></i> Tin tức</a>
 		<a href="#"><i class="fa fa-product-hunt"></i> Đăng ký đại lý</a>
 	</div><!--End navigation-->
 

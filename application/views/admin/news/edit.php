@@ -1,5 +1,13 @@
-<h1>Bài viết</h1>
-Cập nhật bài viết
+<div class="title">
+	<h1>Bài viết</h1>
+	Danh sách bài viết
+	<a href="<?php echo base_url('admin/news/') ?>" class="grad-btn">
+		<div class="icon">
+			<i class="fa fa-plus"></i>
+		</div>
+		<div>Danh sách bài viết</div>
+	</a>
+</div>
 <hr>
 <label class="success"><?php echo $this->session->flashdata('message') ?></label>
 <div class="panel panel-default">
@@ -23,7 +31,7 @@ Cập nhật bài viết
 					</div>
 				</div>
 				<div class="img-preview">
-					<img src="<?php echo base_url('uploads/'.$news['image']) ?>" width="300" height="300">
+					<img src="<?php echo base_url('uploads/news/300x200/'.$news['image']) ?>">
 				</div>
 				<label id="image-error" class="error" for="image"></label>
 			</div>

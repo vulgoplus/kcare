@@ -74,6 +74,8 @@
 
 		/**
 		* Delete news
+		*
+		* @param int $id news id
 		*/
 		public function delete($id){
 			$this->load->model('News_model');
@@ -85,6 +87,8 @@
 
 		/**
 		* Edit news
+		*
+		* @param int $id News id
 		*/
 		public function edit($id){
 			$this->load->model('News_model');
@@ -134,27 +138,32 @@
 
 		/**
 		* Upload file function
+		*
+		* @return Image file name or FALSE
 		*/
 		protected function do_upload(){
-			$config['upload_path']   = './uploads/';
+			$config['upload_path']   = './uploads/news/900x600';
 			$config['allowed_types'] = 'gif|jpg|png|gif|jpeg';
 
 			$this->load->library('upload', $config);
 			if(!$this->upload->do_upload('image')){
-				print_r($this->upload->display_errors());
 				return false;
 			}else{
+				$this->_resize($this->upload->data()['full_path'], '', 900, 600);
+				$this->_resize($this->upload->data()['full_path'], './uploads/news/300x200/', 300, 200);
 				return $this->upload->data('file_name');
 			}
 		}
 
 		/**
 		* Delete image
+		*
+		* @param int $id News id
 		*/
 		private function _delete_file($id){
 			$this->load->model('News_model');
 			$temp = $this->News_model->get($id);
-			if(unlink('./uploads/'.$temp['image'])){
+			if(unlink('./uploads/900x600/'.$temp['image']) && unlink('./uploads/300x200/'.$temp['image'])){
 				return true;
 			}
 			return false;
@@ -192,6 +201,29 @@
 				'per_page'     => $config['per_page'],
 				'uri_segment'  => $config['uri_segment']
 			);
+		}
+
+		/**
+		* Private function
+		* Resize image
+		*
+		* @param string $path full path to image
+		* @param string $new_path
+		* @param int $width image widht
+		* @param int height image height
+		* @return none
+		*/
+		private function _resize($path,$new_path, $width, $height){
+			$resize['image_library']  = 'gd2';
+			$resize['source_image']   = $path;
+			$resize['maintain_ratio'] = FALSE;
+			$resize['overwrite']      = TRUE;
+			$resize['width']          = $width;
+			$resize['height']         = $height;
+			$resize['new_image']      = $new_path;
+			$this->load->library('image_lib');
+			$this->image_lib->initialize($resize);
+			$this->image_lib->resize();
 		}
 	}
 ?>

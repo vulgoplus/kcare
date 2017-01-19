@@ -99,7 +99,12 @@
 		<br clear="all">
 	</div>
 	<div class="col-md-12 signup">
-		<a href="#"><img class="img img-responsive" src="<?php echo base_url('public/images/btn-signup.png') ?>"></a>
+		<a href="#">
+			<button class="btn-blue">
+				<span>Đăng ký ngay</span>
+				Nhận tài liệu &amp; Tư vấn miễn phí
+			</button>
+		</a>
 	</div>
 	<div class="col-md-10 col-md-offset-1 tile" style="padding:0">
 		<div class="col-md-4" style="padding:0">
@@ -298,7 +303,7 @@
 			<span>Khách hàng đang chờ kích hoạt</span>
 		</div>
 	</div>	<br clear="all">
-	<div class="footer">
+	<div class="s-footer">
 		<div class="col-md-10 col-md-offset-1" style="padding-left: 0; padding-right: 0">
 			<div class="col-md-6">
 				<div class="white-border">
@@ -309,8 +314,8 @@
 								<td colspan="2"><b>Quyền lợi bảo hiểm:</b></td>
 							</tr>
 							<tr>
-								<td colspan="2">
-									<select id="footer-program" class="form-control" style="max-width: 200px">
+								<td>
+									<select id="footer-program" class="form-control" style="max-width: 400px">
 										<option value="1">Chương trình 1</option>
 										<option value="2">Chương trình 2</option>
 										<option value="3">Chương trình 3</option>
@@ -318,11 +323,6 @@
 								</td>
 							</tr>
 							<tr>
-								<td>Quyền lợi tối đa:</td>
-								<td><b id="footer-benifit">292.500.000 VNĐ</b></td>
-							</tr>
-							<tr>
-								<td>Tuổi:</td>
 								<td>
 									<select id="footer-age" class="form-control" style="max-width: 150px">
 										<option value="0">--Chọn tuổi--</option>
@@ -330,11 +330,7 @@
 											<option value="<?php echo $i ?>"><?php echo $i ?></option>
 										<?php endfor; ?>
 									</select>
-									<label class="error" id="footer-error" style="font-size: 14px"></label>
 								</td>
-							</tr>
-							<tr>
-								<td>Giới tính:</td>
 								<td>
 									<input type="radio" name="footer-sex" value="1" class="footer-sex" checked> Nam &nbsp;&nbsp;&nbsp;
 									<input type="radio" name="footer-sex" value="0" class="footer-sex"> Nữ
@@ -386,7 +382,8 @@
 			</div><!--End footer signup-->
 		</div>
 		<br clear="all">
-		<hr style="border-top: 1px solid #555">
+	</div>
+	<div class="footer">
 		<div class="col-md-10 col-md-offset-1 footer-c" style="padding:0">
 			<div class="col-md-4 menu">
 				<a href="#">GIỚI THIỆU SẢN PHẨM K-CARE</a><br>
@@ -417,14 +414,22 @@
 	</div>
 	<div class="screen">
 		<div class="col-md-12 signup-form" style="padding: 0">
-			<span class="closex"><i class="fa fa-times"></i></span>
-			<div class="col-md-6" style="padding: 0">
+			<span class="closex mobile-hidden"><i class="fa fa-times"></i></span>
+			<div class="pc-hidden popup-header">
+				<div id="btn-signup">
+					Đăng ký
+				</div>
+				<div id="close">
+					<i class="fa fa-close"></i>
+				</div>
+			</div>
+			<div class="col-md-6 popup-wrapper">
 				<div class="order-info">
 					<div class="order-body">
 						<table width="100%" class="order-table">
 							<thead style="background-color: #BB8D09">
 								<tr>
-									<td colspan="2"><h1>PHÍ VÀ QUYỀN LỢI</h1></td>
+									<td colspan="2" style="padding-top: 0"><h1>PHÍ VÀ QUYỀN LỢI</h1></td>
 								</tr>
 								<tr>
 									<td colspan="2">

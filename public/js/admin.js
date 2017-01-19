@@ -140,4 +140,21 @@ $(document).ready(function(){
 	$('.success').click(function(){
 		$(this).addClass('hidden');
 	});
+
+	$('.view').click(function(e){
+		e.preventDefault();
+		$('#cus-name').text($(this).siblings('input[name="name"]').val());
+		$('#cus-address').text($(this).siblings('input[name="address"]').val());
+		$('#cus-email').text($(this).siblings('input[name="email"]').val());
+		$('#cus-phone').text($(this).siblings('input[name="phone"]').val());
+		$('#cus-program').text($(this).siblings('input[name="program"]').val());
+		$('#cus-sex').text($(this).siblings('input[name="sex"]').val());
+		$('#cus-date').text($(this).siblings('input[name="date"]').val());
+		$('.screen').show();
+		$('.customer-popup').removeClass('hidden').addClass('animated zoomIn');
+	});	
+
+	$('.p-close').click(function(){
+		$('.screen').hide();
+	});
 });

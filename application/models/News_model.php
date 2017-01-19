@@ -71,6 +71,7 @@
 
 		/**
 		* Update News
+		*
 		* @param $id int: News ID
 		* @param $data array: News
 		* @return none
@@ -90,6 +91,8 @@
 
 		/**
 		* Select featured News
+		*
+		* @return array Featured post
 		*/
 		public function featured(){
 			$this->db->select('title,image,alias');
@@ -98,20 +101,14 @@
 		}
 
 		/**
-		* Get posts of the month
+		* Get new posts
+		*
+		* @return array New posts
 		*/
-		public function month_posts(){
-			$this->db->select('title,image,alias');
-			$this->db->limit(5,1);
-			return $this->db->get('news')->result_array();
-		}
-
-		/**
-		* Get popular post
-		*/
-		public function popular_posts(){
-			$this->db->select('title,image,alias');
-			$this->db->limit(10,1);
+		public function new_posts(){
+			$this->db->select('title, image, alias');
+			$this->db->order_by('id','DESC');
+			$this->db->limit(6,1);
 			return $this->db->get('news')->result_array();
 		}
 	}
