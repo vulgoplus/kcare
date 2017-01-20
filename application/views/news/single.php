@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tiêu đề bài viết</title>
+  <title><?php echo $news['title'] ?></title>
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/bootstrap.min.css') ?>">
   <link rel="stylesheet" type="text/css" href="<?php echo base_url('public/css/news/single.css') ?>">
 </head>
@@ -13,53 +13,23 @@
 </div>
 <div class="post-wrapper">
   <div class="post-img">
-    <img src="<?php echo base_url('uploads/news/900x600/title.jpg') ?>">
+    <img src="<?php echo base_url('uploads/news/900x300/'.$news['image']) ?>">
     <div class="single-title">
-      <h1>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua.</h1>
+      <h1><?php echo $news['title'] ?></h1>
       <div class="date">
-        Đăng ngày: 18/01/2017
+        <?php 
+          $str = strtotime($news['date']);
+          $date = date('d/m/Y',$str);
+        ?>
+        Đăng ngày: <?php echo $date ?>
       </div><!--End date-->
     </div><!--End single title-->
   </div><!--End post-img-->
   
   <div class="single-content">
-    <h2>Title 1</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h2>Title 2</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h2>Title 3</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
-    <h2>Title 4</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </p>
+    <?php 
+      echo $news['content']
+    ?>
   </div>
 </div><!--End post-wrapper-->
 
@@ -138,6 +108,9 @@
     </div>
     <br clear="all">
   </div>
+</div>
+<div style="background-color: #000; color: #fff; padding: 15px">
+  Copyright &copy; 2017 VENET
 </div>
 </body>
 </html>

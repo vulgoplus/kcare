@@ -33,9 +33,9 @@
 
 	<!--The navigation-->
 	<div class="left-bar">
-		<a href="<?php echo base_url('admin/customers') ?>" class="left-bar-active"><i class="fa fa-dashboard"></i> Khách hàng đăng ký</a>
+		<a href="<?php echo base_url('admin/customers') ?>" class="left-bar-active"><i class="fa fa-dashboard"></i> Danh sách khách hàng</a>
 		<a href="<?php echo base_url('admin/news') ?>"><i class="fa fa-product-hunt"></i> Tin tức</a>
-		<a href="#"><i class="fa fa-product-hunt"></i> Đăng ký đại lý</a>
+		<a href="<?php echo base_url('admin/agency') ?>"><i class="fa fa-product-hunt"></i> Đăng ký đại lý</a>
 	</div><!--End navigation-->
 
 	<div class="main">

@@ -106,10 +106,21 @@
 		* @return array New posts
 		*/
 		public function new_posts(){
-			$this->db->select('title, image, alias');
+			$this->db->select('title, sumary, image, alias');
 			$this->db->order_by('id','DESC');
 			$this->db->limit(6,1);
 			return $this->db->get('news')->result_array();
+		}
+
+		/**
+		* Get News by alias
+		*
+		* @param string $alias: News alias
+		* @return array News infomation
+		*/
+		public function get_by_alias($alias){
+			$this->db->where('alias',$alias);
+			return $this->db->get('news')->result_array()[0];
 		}
 	}
 ?>

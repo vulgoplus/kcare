@@ -32,7 +32,10 @@
 					<?php foreach ($featured as $item): ?>
 						<div class="carousel-item">
 							<a href="#">
-								<img src="<?php echo base_url('uploads/news/300x200/'.$item['image']) ?>">
+								<img src="<?php echo base_url('uploads/news/300x100/'.$item['image']) ?>">
+								<div class="carousel-title">
+									<?php echo $item['title'] ?>
+								</div>
 							</a>
 						</div>
 					<?php endforeach ?>
@@ -46,12 +49,18 @@
 	<div class="posts-list">
 		<?php $i = 1; ?>
 		<?php foreach ($new_posts as $item): ?>
-			<a class="post-item item-<?php echo $i ?> wow fadeInDown" href="<?php echo base_url('news/single/'.$item['alias']) ?>">
-				<img src="<?php echo base_url('uploads/news/300x200/'.$item['image']) ?>">
+			<div class="post-item item-<?php echo $i ?> wow fadeInDown">
+				<img src="<?php echo base_url('uploads/news/900x300/'.$item['image']) ?>">
 				<div class="post-title">
-					<?php echo $item['title'] ?>
+					<a href="<?php echo base_url('news/single/'.$item['alias']) ?>"><?php echo $item['title'] ?></a>
 				</div>
-			</a>
+				<div class="post-sumary">
+					<p>
+						<?php echo $item['sumary'] ?>
+					</p>
+					<a href="<?php echo base_url('news/single/'.$item['alias']) ?>" class="read-more">Đọc tiếp</a>
+				</div>
+			</div>
 		<?php $i++; endforeach ?>
 		<br clear="all">
 		<div class="pagination">
@@ -60,6 +69,7 @@
 			<a href="#" class="page">3</a>
 		</div>
 	</div>
+	<br clear="all">
 	<div class="footer">
 		
 	</div>

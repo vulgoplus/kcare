@@ -29,17 +29,19 @@ $(document).ready(function(){
 		$('.slick-active > .slide-content').addClass('animated fadeInDown');
 	});
 
-	$('.screen').click(function(){
-		$(this).hide();
-	});
-
 	$('.signup a').click(function(e){
 		e.preventDefault();
 		$('.screen').show();
+		$('.signup-form').addClass('animated zoomIn');
+		$('.signup-form').removeClass('hidden');
 		$('.save-success').hide();
 	});
 
 	$('.signup-form').click(function(e){
+		e.stopPropagation();
+	});
+
+	$('.agency-popup').click(function(e){
 		e.stopPropagation();
 	});
 
@@ -49,6 +51,8 @@ $(document).ready(function(){
 
 	$('.closex').click(function(){
 		$('.screen').hide();
+		$('.signup-form').removeClass('animated zoomIn');
+		$('.signup-form').addClass('hidden');
 	});
 
 	$('#signup-form').validate({
@@ -367,6 +371,27 @@ $(document).ready(function(){
 		$(this).find('i').toggleClass('fa-caret-down fa-caret-right');
 	}); 
 
+
+	countDown();
+
+	$('.agency-close').click(function(){
+		$('.agency-popup').addClass('hidden');
+		$('.agency-popup').removeClass('animated zoomIn');
+		$('.screen').hide();
+	});
+
+	$('#link-agency-signup').click(function(e){
+		e.preventDefault();
+		$('.screen').show();
+		$('.agency-popup').removeClass('hidden');
+		$('.agency-popup').addClass('animated zoomIn');
+	});
+
+	submitAgency();
+
+});
+
+function countDown(){
 	//Clock generate
 	$('#clock').countdown('2017/03/03', function(e){
 		$(this).html(e.strftime('<div class="clock-item"><div class="clock-top">%D</div><div class="clock-down">ngày</div></div>'+
@@ -376,6 +401,21 @@ $(document).ready(function(){
 			)
 		);
 	});
+}
 
-
-});
+function submitAgency(){
+	$('#agency-signup').submit(function(e){
+		e.preventDefault();
+		$.ajax({
+			url:  $('#agency-signup').attr('action'),
+			data: $('#agency-signup').serialize(),
+			type: 'POST',
+			success: function(data){
+				alert(data);
+			},
+			error: function(){
+				alert('Có lỗi xảy ra!');
+			}
+		});
+	});
+}

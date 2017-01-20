@@ -391,7 +391,7 @@
 				<a href="#">BẢN TIN</a> <br>
 				<a href="#">CÂU HỎI THƯỜNG GẶP</a> <br>
 				<a href="#">KHÁCH HÀNG</a> <br>
-				<a href="#">ĐĂNG KÝ ĐẠI LÝ</a> <br>
+				<a href="#" id="link-agency-signup">ĐĂNG KÝ ĐẠI LÝ</a> <br>
 			</div>
 			<div class="col-md-4">
 				<h1></h1>
@@ -413,7 +413,7 @@
 		<br clear="all">
 	</div>
 	<div class="screen">
-		<div class="col-md-12 signup-form" style="padding: 0">
+		<div class="col-md-12 signup-form hidden" style="padding: 0">
 			<span class="closex mobile-hidden"><i class="fa fa-times"></i></span>
 			<div class="pc-hidden popup-header">
 				<div id="btn-signup">
@@ -495,14 +495,14 @@
 										<h1>Phí bảo hiểm:</h1>
 									</td>
 									<td>
-										<h1 class="total" style="color: #f00"></h1></b>
+										<h1 class="total" style="color: #f4bc42"></h1></b>
 									</td>
 								</tr>
 							</tfoot>
 						</table>
-					</div>
-				</div>
-			</div>
+					</div><!--End order-body-->
+				</div> <!--End order-info-->
+			</div> <!--End form wrapper-->
 			<div class="col-md-6">
 				<h1>ĐĂNG KÝ</h1>
 				<hr>
@@ -532,9 +532,56 @@
 						
 					</div>
 				</form>
+			</div> <!--End col-md-6-->
+		</div> <!---End signup-form-->
+
+		<div class="agency-popup hidden">
+			<div class="agency-popup-header">
+				Đăng ký đại lý
+				<span class="agency-close">
+					<i class="fa fa-close"></i>
+				</span>
 			</div>
-		</div>
-	</div>
+			<div class="agency-popup-body">
+				<form class="form-horizontal" id="agency-signup" action="<?php echo base_url('admin/agency/add') ?>" method="post">
+					<div class="form-group">
+						<label class="control-label col-sm-2">Họ tên:</label>
+						<div class="col-sm-10">
+							<input type="text" name="name" class="form-control">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Địa chỉ:</label>
+						<div class="col-sm-10">
+							<input type="text" name="address" class="form-control">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Email:</label>
+						<div class="col-sm-10">
+							<input type="email" name="email" class="form-control">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Số điện thoại:</label>
+						<div class="col-sm-10">
+							<input type="text" name="phone" class="form-control">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2"></label>
+						<div class="col-sm-10">
+							<button class="btn btn-primary">Đăng ký</button>
+						</div>
+					</div>
+				</form>
+			</div><!--End agency-popup-body-->
+		</div><!--End agency-popup-->
+	</div><!--End screen-->
 </div>
 </body>
 </html>

@@ -1,8 +1,9 @@
 <?php 
 	if( !function_exists('create_news_sumary') ) {
 		function create_news_sumary($text){
-			$text = word_limiter($text,20);
 			$text = preg_replace("/<img[^>]+\>/i", " (image) ", $text);
+			$text = strip_tags($text, '<br>');
+			$text = word_limiter($text,50);
 			return $text;
 		}
 

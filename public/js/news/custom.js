@@ -37,6 +37,15 @@ $(document).ready(function(){
     });
 
     wow = new WOW().init();
+
+    maxWith = 0;
+    $('.post-item').each(function(){
+        if($(this).height() > maxWith){
+            maxWith = $(this).height();
+        }
+    });
+
+    $('.post-item').height(maxWith);
 });
 
 function parallax(){

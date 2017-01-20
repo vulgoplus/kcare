@@ -109,8 +109,8 @@
 				'sumary'      => create_news_sumary($this->input->post('content')),
 				'content'     => $this->input->post('content'),
 				'category_id' => $this->input->post('category_id'),
-				'alias'       => create_alias($this->input->post('title')).$id,
-				'date'        => 'CURRENT_TIMESTAMP'
+				'alias'       => create_alias($this->input->post('title')).'-'.$id,
+				'date'        => date('Y-m-d H:i:s')
 			);
 
 
@@ -120,7 +120,7 @@
 			}
 
 			// if upload error 
-			if($news['image'] == false){
+			if(isset($news['image']) && $news['image'] == false){
 				$data['error'] = 'Vui lòng kiểm tra lại định dạng ảnh!';
 				$data['view']  = 'news/edit';
 				$data['news']  = $this->News_model->get($id);
@@ -142,15 +142,15 @@
 		* @return Image file name or FALSE
 		*/
 		protected function do_upload(){
-			$config['upload_path']   = './uploads/news/900x600';
+			$config['upload_path']   = './uploads/news/900x300';
 			$config['allowed_types'] = 'gif|jpg|png|gif|jpeg';
 
 			$this->load->library('upload', $config);
 			if(!$this->upload->do_upload('image')){
 				return false;
 			}else{
-				$this->_resize($this->upload->data()['full_path'], '', 900, 600);
-				$this->_resize($this->upload->data()['full_path'], './uploads/news/300x200/', 300, 200);
+				$this->_resize($this->upload->data()['full_path'], '', 900, 300);
+				$this->_resize($this->upload->data()['full_path'], './uploads/news/300x100/', 300, 100);
 				return $this->upload->data('file_name');
 			}
 		}

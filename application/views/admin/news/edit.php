@@ -31,7 +31,7 @@
 					</div>
 				</div>
 				<div class="img-preview">
-					<img src="<?php echo base_url('uploads/news/300x200/'.$news['image']) ?>">
+					<img src="<?php echo base_url('uploads/news/300x100/'.$news['image']) ?>">
 				</div>
 				<label id="image-error" class="error" for="image"></label>
 			</div>

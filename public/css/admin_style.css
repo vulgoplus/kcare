@@ -268,7 +268,7 @@ header a:hover, header a:visited{
 	cursor: pointer;
 }
 
-.screen{
+.screen, #screen{
 	width: 100%;
 	height: 100%;
 	position: fixed;
@@ -317,6 +317,42 @@ header a:hover, header a:visited{
 	background-color: #000;
 	color: #fff;
 	cursor: pointer;
+}
+
+.agency-popup{
+	background-color: #fff;
+	width: 100%;
+}
+
+.agency-popup-header{
+	padding: 15px;
+	font-size: 1.2em;
+	background-color: #eee;
+	text-align: center;
+	font-weight: bold;
+	position: relative;
+}
+
+.agency-close{
+	position: absolute;
+	padding: 15px;
+	top: 0;
+	right: 0;
+	color: #999;
+	cursor: pointer;
+}
+
+.agency-close:hover{
+	color: #000;
+}
+
+.agency-popup-body{
+	padding: 15px;
+}
+
+.agency-popup-body div{
+	padding: 15px;
+	border-bottom: 1px solid #ccc;
 }
 
 .hidden{
@@ -601,6 +637,11 @@ table td{
 		margin: 100px auto;
 	}
 
+	.agency-popup{
+		width: 60%;
+		margin: 50px auto;
+	}
+
 }
 
 .checkbox label{
@@ -655,5 +696,10 @@ table td{
 	.order-item{
 		width: 80%;
 		margin: 10% auto;
+	}
+
+	.agency-popup{
+		width: 40%;
+		margin-top: 100px;
 	}
 }

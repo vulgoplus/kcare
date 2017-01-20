@@ -18,8 +18,10 @@
 			$this->load->view('news/news',$data);
 		}
 
-		public function single(){
-			$this->load->view('news/single');
+		public function single($alias){
+			$this->load->model('News_model');
+			$data['news'] = $this->News_model->get_by_alias($alias);
+			$this->load->view('news/single',$data);
 		}
 	}
  ?>

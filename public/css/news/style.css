@@ -86,13 +86,29 @@ html,body, .wrapper{
 	border: 1px solid #fff;
 }
 
+.carousel-item{
+	border: 1px solid #2A3037;
+}
+
 .carousel-item a{
 	display: block;
+	color: black
 }
 
 .carousel-item img{
     width: 100%;
     height: auto;
+}
+
+.carousel-title{
+	width: 100%;
+	background-image: -moz-linear-gradient(top,#ffffff,#dedede);
+	background-image: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#dedede));
+	background-image: -webkit-linear-gradient(top,#ffffff,#dedede);
+	background-image: -o-linear-gradient(top,#ffffff,#dedede);
+	background-image: linear-gradient(to bottom,#ffffff,#dedede);
+	height: 50px;
+	padding: 10px;
 }
 
 .new-post{
@@ -108,12 +124,12 @@ html,body, .wrapper{
 .post-item{
 	display: block;
 	position:relative;
-	border: 1px solid #ccc;
 	border-radius: 3px;
 	margin-bottom: 20px;
 	transition: all 0.3s ease;
 	color: #000;
 	width: 100%;
+	background-color: #f5f5f5;
 }
 
 .post-item:hover{
@@ -121,8 +137,14 @@ html,body, .wrapper{
 	color: #000;
 }
 
-.post-item:hover .post-title{
-	font-size: 1.2em;
+.post-title{
+	padding: 15px;
+	font-size: 25px;
+}
+
+.post-sumary{
+	padding: 15px;
+	position: relative;
 }
 
 .post-item img{
@@ -130,16 +152,6 @@ html,body, .wrapper{
 	height: auto;
 }
 
-.post-title{
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	background: rgba(255,255,255,0.5);
-	padding: 10px;
-	font-weight: bold;
-	transition: all 1s ease;
-}
 
 .pagination{
 	text-align: center;

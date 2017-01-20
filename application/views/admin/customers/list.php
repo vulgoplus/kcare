@@ -44,7 +44,7 @@ Danh sách khách hàng
 <div class="customer-pagination">
 	<?php echo $this->pagination->create_links() ?>
 </div>
-<button id="delete-all" data-url="<?php echo base_url('admin/customers/multi_delete') ?>" type="button" class="btn btn-danger">Xóa mục đã chọn</button>
+
 <hr>
 <div class="screen">
 	<div class="customer-popup hidden">
@@ -79,3 +79,9 @@ Danh sách khách hàng
 		</div>
 	</div>
 </div>
+
+<?php if (count($customers) > 0): ?>
+	<button id="delete-all" data-url="<?php echo base_url('admin/customers/multi_delete') ?>" type="button" class="btn btn-danger">Xóa mục đã chọn</button>
+<?php endif ?>
+
+<p></p>

@@ -111,7 +111,7 @@ $(document).ready(function(){
 				id.push($(this).val());
 			});
 			$.ajax({
-				url: x.attr('data-url'),
+				url: x.data('url'),
 				method: 'POST',
 				data: {
 					id : id
@@ -155,6 +155,21 @@ $(document).ready(function(){
 	});	
 
 	$('.p-close').click(function(){
+		$('.screen').hide();
+	});
+
+	$('.aview').click(function(e){
+		e.preventDefault();
+		$('#agency-name').text($(this).siblings('input[name="agency-name"]').val());
+		$('#agency-address').text($(this).siblings('input[name="agency-address"]').val());
+		$('#agency-email').text($(this).siblings('input[name="agency-email"]').val());
+		$('#agency-phone').text($(this).siblings('input[name="agency-phone"]').val());
+		$('#agency-date').text($(this).siblings('input[name="agency-date"]').val());
+		$('.screen').show();
+		$('.agency-popup').removeClass('hidden').addClass('animated zoomIn');
+	});
+
+	$('.agency-close').click(function(){
 		$('.screen').hide();
 	});
 });

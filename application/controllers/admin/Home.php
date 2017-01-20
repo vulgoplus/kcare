@@ -11,8 +11,7 @@
 		}
 
 		public function index(){
-			$data['view'] = 'test';
-			$this->load->view('layouts_master/admin',$data);
+			redirect(base_url('admin/customers'));
 		}
 	}
 ?>
